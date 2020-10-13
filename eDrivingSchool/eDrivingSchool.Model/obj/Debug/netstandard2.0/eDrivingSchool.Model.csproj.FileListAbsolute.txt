@@ -1,0 +1,9 @@
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\bin\Debug\netstandard2.0\eDrivingSchool.Model.deps.json
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\bin\Debug\netstandard2.0\eDrivingSchool.Model.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\bin\Debug\netstandard2.0\eDrivingSchool.Model.pdb
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\obj\Debug\netstandard2.0\eDrivingSchool.Model.csprojAssemblyReference.cache
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\obj\Debug\netstandard2.0\eDrivingSchool.Model.csproj.CoreCompileInputs.cache
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\obj\Debug\netstandard2.0\eDrivingSchool.Model.AssemblyInfoInputs.cache
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\obj\Debug\netstandard2.0\eDrivingSchool.Model.AssemblyInfo.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\obj\Debug\netstandard2.0\eDrivingSchool.Model.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.Model\obj\Debug\netstandard2.0\eDrivingSchool.Model.pdb
