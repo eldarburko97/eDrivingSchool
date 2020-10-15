@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
+             x:Class="Mobile.Views.RegisterPage">
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="10" VerticalOptions="CenterAndExpand">
+            <Entry Placeholder="First name"
+                   Text="{Binding FirstName}"/>
+            <Entry Placeholder="Last name"
+                   Text="{Binding LastName}"/>
+            <Entry Placeholder="Phone"
+                   Text="{Binding Phone}"/>
+            <Entry Placeholder="Email"
+                   Text="{Binding Email}"/>
+            <Entry Placeholder="Address"
+                   Text="{Binding Address}"/>
+            <Label Text="Birthdate"></Label>
+            <DatePicker Date="{Binding Birthdate}">
+                <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            </DatePicker>
+
+            <Entry Placeholder="JMBG"
+                   Text="{Binding JMBG}"/>
+            <Entry Placeholder="Username"
+                   Text="{Binding Username}"/>
+            <Entry Placeholder="Password"
+                   IsPassword="True"
+                   Text="{Binding Password}"/>
+            <Entry Placeholder="Confirm password"
+                   IsPassword="True"
+                   Text="{Binding PasswordConfirm}"/>
+            <StackLayout 
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+
+                <Button 
+                    BackgroundColor="DodgerBlue"
+                    WidthRequest="90"
+                    Text="Register"
+                    Command="{Binding RegisterCommand}"
+                />
+
+                <Button BackgroundColor="DarkOrange"
+                    WidthRequest="90"
+                    Margin="10,0,0,0"
+                    Text="Go to Login"
+                Clicked="GoTo_LoginPage"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
