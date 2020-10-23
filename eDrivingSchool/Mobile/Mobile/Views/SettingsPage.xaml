@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
+             x:Class="Mobile.Views.SettingsPage" Title="Settings">
+    <ContentPage.BindingContext>
+        <vm:SettingsViewModel></vm:SettingsViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+       
+
+        <StackLayout Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+           
+              
+                <StackLayout BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand">
+                <Label HorizontalOptions="Center"
+       VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="If you wish to change password click " />
+                            <Span Text="Here!"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowCommand}"
+                                            />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            
+              
+
+
+               
+
+            
+
+            <StackLayout Margin="0,20,0,0" IsVisible="{Binding EntryVisible}">
+                <Label Text="Password: "></Label>
+                <Entry></Entry>
+            </StackLayout>
+
+            <Label Text="Phone: "></Label>
+            <Entry></Entry>
+
+            <StackLayout Margin="0,20,0,0">
+                <Label Text="Email: "></Label>
+                <Entry></Entry>
+            </StackLayout>
+
+           
+
+            <StackLayout HorizontalOptions="FillAndExpand" >
+                <Button HeightRequest="50" Text="Submit" BackgroundColor="DodgerBlue" TextColor="White"></Button>
+            </StackLayout>
+           
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

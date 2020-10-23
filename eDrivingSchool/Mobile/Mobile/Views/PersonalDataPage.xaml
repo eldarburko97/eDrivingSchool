@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.PersonalDataPage" Title="Personal Data">
+    <ContentPage.Content>
+        <StackLayout>
+        <Grid Padding="10" VerticalOptions="CenterAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Ovdje ide slika"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Grid.Column="1" FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Username: "/>
+                        <Span Text="Eldarko" ></Span>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+
+                        <Span Text="First name: "/>
+                        <Span Text="Eldar" ></Span>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+
+                        <Span Text="Last name: "/>
+                        <Span Text="Burko" ></Span>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+
+                        <Span Text="Address: "/>
+                        <Span Text="Lamele" ></Span>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+
+                        <Span Text="JMBG: "/>
+                        <Span Text="1234567898765" ></Span>
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+
+                        <Span Text="Birthdate: "/>
+                        <Span Text="15/07/1997" ></Span>
+
+
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+           
+        </Grid>
+           
+        </StackLayout>
+
+     
+
+    </ContentPage.Content>
+</ContentPage>

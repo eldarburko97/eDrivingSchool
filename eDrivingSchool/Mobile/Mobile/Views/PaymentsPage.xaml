@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.PaymentsPage" Title="Payments">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Blue" Padding="5" Spacing="0">
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="Salmon" HeightRequest="150" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Type" HorizontalOptions="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Amount" HorizontalOptions="Center"></Label>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Date" HorizontalOptions="Center"></Label>
+                </Grid>
+            </Frame>
+            <ListView Margin="0,20,0,250" ItemsSource="{Binding datagrids}" BackgroundColor="Red">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="LightSlateGray" Padding="0">
+                                <Grid Padding="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Type}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Amount}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding DateOfPayment}" HorizontalOptions="Center"></Label>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+
+                    </DataTemplate>
+
+
+
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+            <StackLayout BackgroundColor="Yellow" Padding="0,0,0,0">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Total: "></Span>
+                            <Span Text="5,900.00"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

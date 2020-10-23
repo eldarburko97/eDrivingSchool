@@ -20,3 +20,7 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\net
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.dll
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.pdb
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\YourProfilePage.xaml.g.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\PersonalDataPage.xaml.g.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\PaymentsPage.xaml.g.cs

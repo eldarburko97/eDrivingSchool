@@ -229,3 +229,7 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\D
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_CopyMdbFiles.stamp
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_CopyPdbFiles.stamp
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\android\assets\machine.config
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\android\assets\System.Runtime.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_CompileToDalvik.stamp
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp
