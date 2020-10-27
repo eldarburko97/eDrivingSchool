@@ -18,6 +18,7 @@ namespace eDrivingSchool.Model
         public string Salary { get; set; }
         public string LicenseNumber { get; set; }
         public string DateOfHiring { get; set; }
+        public int RoleId { get; set; }
         public int DrivingSchoolId { get; set; }
     }
 }

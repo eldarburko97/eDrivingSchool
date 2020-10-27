@@ -22,6 +22,7 @@ namespace eDrivingSchool.WebAPI.Database
         public string Address { get; set; }
         public DateTime Birthdate { get; set; }
         public string JMBG { get; set; }
+        public byte[] Image { get; set; }
 
         public string Salary { get; set; }
         public string LicenseNumber { get; set; }

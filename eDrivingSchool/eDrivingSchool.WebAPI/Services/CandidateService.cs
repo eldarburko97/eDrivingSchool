@@ -38,7 +38,11 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(x => x.FirstName == request.FirstName);
             }
-            var list = query.Where(w => w.RoleId == 3).ToList();
+            if (!string.IsNullOrEmpty(request.Username))
+            {
+                query = query.Where(x => x.Username == request.Username);
+            }
+             var list = query.Where(w => w.RoleId == 3).ToList();
             return _mapper.Map<List<Model.Candidate>>(list);
         }
 

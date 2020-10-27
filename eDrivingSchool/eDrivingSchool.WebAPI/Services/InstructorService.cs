@@ -31,6 +31,20 @@ namespace eDrivingSchool.WebAPI.Services
             return _mapper.Map<Model.Instructor>(entity);
         }
 
+        public override Model.Instructor Update(int id,InstructorInsertRequest model)
+        {
+            var entity = _context.Users.Find(id);
+            if (!string.IsNullOrEmpty(model.Password))
+            {
+                entity.PasswordHash = GenerateHash(entity.PasswordSalt, model.Password);
+            }
+            _mapper.Map(model, entity);
+            _context.Attach(entity);
+            _context.Update(entity);
+            _context.SaveChanges();
+            return _mapper.Map<Model.Instructor>(entity);
+        }
+
         public override List<Model.Instructor> GetAll(InstructorSearchRequest request)
         {
             var query = _context.Set<Database.User>().AsQueryable();

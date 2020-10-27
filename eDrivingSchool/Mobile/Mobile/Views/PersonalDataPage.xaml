@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
              x:Class="Mobile.Views.PersonalDataPage" Title="Personal Data">
+    <ContentPage.BindingContext>
+        <vm:PersonalDataViewModel></vm:PersonalDataViewModel>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
         <Grid Padding="10" VerticalOptions="CenterAndExpand">
@@ -22,32 +26,32 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Username: "/>
-                        <Span Text="Eldarko" ></Span>
+                            <Span Text="{Binding Username}"></Span>
                         <Span Text="{x:Static x:Environment.NewLine}" />
                         <Span Text="{x:Static x:Environment.NewLine}" />
 
                         <Span Text="First name: "/>
-                        <Span Text="Eldar" ></Span>
+                        <Span Text="{Binding FirstName}" ></Span>
                         <Span Text="{x:Static x:Environment.NewLine}" />
                         <Span Text="{x:Static x:Environment.NewLine}" />
 
                         <Span Text="Last name: "/>
-                        <Span Text="Burko" ></Span>
+                            <Span Text="{Binding LastName}" ></Span>
                         <Span Text="{x:Static x:Environment.NewLine}" />
                         <Span Text="{x:Static x:Environment.NewLine}" />
 
                         <Span Text="Address: "/>
-                        <Span Text="Lamele" ></Span>
+                            <Span Text="{Binding Address}" ></Span>
                         <Span Text="{x:Static x:Environment.NewLine}" />
                         <Span Text="{x:Static x:Environment.NewLine}" />
 
                         <Span Text="JMBG: "/>
-                        <Span Text="1234567898765" ></Span>
+                            <Span Text="{Binding JMBG}" ></Span>
                         <Span Text="{x:Static x:Environment.NewLine}" />
                         <Span Text="{x:Static x:Environment.NewLine}" />
 
                         <Span Text="Birthdate: "/>
-                        <Span Text="15/07/1997" ></Span>
+                            <Span Text="{Binding Birthdate}" ></Span>
 
 
                     </FormattedString>

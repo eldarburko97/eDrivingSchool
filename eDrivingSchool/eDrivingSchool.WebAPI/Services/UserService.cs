@@ -42,6 +42,11 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Users.AsQueryable();
 
+            if (!string.IsNullOrWhiteSpace(search?.Username))
+            {
+                query = query.Where(x => x.Username == search.Username);
+            }
+
             if (!string.IsNullOrWhiteSpace(search?.FirstName))
             {
                 query = query.Where(x => x.FirstName == search.FirstName);
@@ -52,7 +57,8 @@ namespace eDrivingSchool.WebAPI.Services
                 query = query.Where(x => x.LastName == search.LastName);
             }
 
-            var entities = query.Where(x => x.RoleId == 1).ToList();
+            // var entities = query.Where(x => x.RoleId == 1).ToList();
+            var entities = query.Where(x => x.RoleId == 2).ToList();
             var result = _mapper.Map<List<Model.User>>(entities);
             return result;
         }
@@ -119,6 +125,10 @@ namespace eDrivingSchool.WebAPI.Services
         public Model.User Update(int id, UserInsertRequest request)
         {
             var entity = _context.Users.Find(id);
+            if (!string.IsNullOrEmpty(request.Password))
+            {
+                entity.PasswordHash = GenerateHash(entity.PasswordSalt, request.Password);
+            }
 
             _mapper.Map(request, entity);
 

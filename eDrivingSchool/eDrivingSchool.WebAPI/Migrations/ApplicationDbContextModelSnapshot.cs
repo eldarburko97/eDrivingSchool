@@ -105,6 +105,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<string>("FirstName");
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<string>("JMBG");
 
                     b.Property<string>("LastName");

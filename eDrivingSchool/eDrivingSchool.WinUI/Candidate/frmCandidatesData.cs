@@ -23,7 +23,8 @@ namespace eDrivingSchool.WinUI.Candidate
         {
             var search = new CandidateSearchRequest
             {
-                FirstName = txtSearch.Text
+                FirstName = txtSearch.Text,
+                Username=txtSearch.Text
             };
             var result = await _apiService.GetAll<List<Model.Candidate>>(search);
             dgvCandidatesData.DataSource = result;
