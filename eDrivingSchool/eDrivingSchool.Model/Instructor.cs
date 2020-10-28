@@ -14,6 +14,7 @@ namespace eDrivingSchool.Model
         public string Address { get; set; }
         public string Birthdate { get; set; }
         public string JMBG { get; set; }
+        public byte[] Image { get; set; }
         public string Username { get; set; }
         public string Salary { get; set; }
         public string LicenseNumber { get; set; }

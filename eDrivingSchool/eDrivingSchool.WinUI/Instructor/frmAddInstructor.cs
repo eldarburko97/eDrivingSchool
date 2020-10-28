@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,22 @@ namespace eDrivingSchool.WinUI.Instructor
                 txtSalary.Text = request.Salary;
                 txtLicenseNumber.Text = request.LicenseNumber;
                 dtpDateOfHiring.Value = Convert.ToDateTime(request.DateOfHiring);
+            }
+        }
+
+        private void BtnAddPhoto_Click(object sender, EventArgs e)
+        {
+            var result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                var fileName = openFileDialog1.FileName;
+                var file = File.ReadAllBytes(fileName);
+                request.Image = file;
+                txtPhoto.Text = fileName;
+
+                Image image = Image.FromFile(fileName);
+                pictureBox1.Image = image;
+                
             }
         }
     }

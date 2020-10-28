@@ -25,7 +25,7 @@ namespace eDrivingSchool.WinUI.Instructor
                 FirstName = txtSearch.Text
             };
             var result = await _apiService.GetAll<List<Model.Instructor>>(search);
-           // dgvInstructorsData.AutoGenerateColumns = false;
+            // dgvInstructorsData.AutoGenerateColumns = false;
             dgvInstructorsData.DataSource = result;
         }
 

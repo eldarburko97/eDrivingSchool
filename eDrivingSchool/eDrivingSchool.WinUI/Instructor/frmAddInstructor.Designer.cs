@@ -53,6 +53,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dtpDateOfHiring = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtPhoto = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnAddPhoto = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -249,7 +255,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(711, 263);
+            this.btnSave.Location = new System.Drawing.Point(896, 428);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(117, 36);
             this.btnSave.TabIndex = 26;
@@ -257,11 +263,55 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(664, 175);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 17);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Photo";
+            // 
+            // txtPhoto
+            // 
+            this.txtPhoto.Location = new System.Drawing.Point(664, 195);
+            this.txtPhoto.Name = "txtPhoto";
+            this.txtPhoto.Size = new System.Drawing.Size(204, 22);
+            this.txtPhoto.TabIndex = 28;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnAddPhoto
+            // 
+            this.btnAddPhoto.Location = new System.Drawing.Point(908, 194);
+            this.btnAddPhoto.Name = "btnAddPhoto";
+            this.btnAddPhoto.Size = new System.Drawing.Size(105, 23);
+            this.btnAddPhoto.TabIndex = 29;
+            this.btnAddPhoto.Text = "Add";
+            this.btnAddPhoto.UseVisualStyleBackColor = true;
+            this.btnAddPhoto.Click += new System.EventHandler(this.BtnAddPhoto_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(1057, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmAddInstructor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 450);
+            this.ClientSize = new System.Drawing.Size(1247, 621);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAddPhoto);
+            this.Controls.Add(this.txtPhoto);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtpDateOfHiring);
             this.Controls.Add(this.label12);
@@ -290,6 +340,7 @@
             this.Name = "frmAddInstructor";
             this.Text = "frmAddInstructor";
             this.Load += new System.EventHandler(this.FrmAddInstructor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,5 +373,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpDateOfHiring;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtPhoto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnAddPhoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

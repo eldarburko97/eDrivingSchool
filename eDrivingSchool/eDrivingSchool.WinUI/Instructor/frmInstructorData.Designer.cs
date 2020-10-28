@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvInstructorsData = new System.Windows.Forms.DataGridView();
+            this.Instructor = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +44,7 @@
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LicenseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateOfHiring = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Instructor = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstructorsData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,14 +65,42 @@
             this.Username,
             this.Salary,
             this.LicenseNumber,
-            this.DateOfHiring});
-            this.dgvInstructorsData.Location = new System.Drawing.Point(22, 98);
+            this.DateOfHiring,
+            this.Image});
+            this.dgvInstructorsData.Location = new System.Drawing.Point(31, 102);
             this.dgvInstructorsData.Name = "dgvInstructorsData";
             this.dgvInstructorsData.ReadOnly = true;
+            this.dgvInstructorsData.RowTemplate.Height = 140;
             this.dgvInstructorsData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInstructorsData.Size = new System.Drawing.Size(1144, 340);
+            this.dgvInstructorsData.Size = new System.Drawing.Size(1249, 340);
             this.dgvInstructorsData.TabIndex = 0;
             this.dgvInstructorsData.DoubleClick += new System.EventHandler(this.DgvInstructorsData_DoubleClick);
+            // 
+            // Instructor
+            // 
+            this.Instructor.AutoSize = true;
+            this.Instructor.Location = new System.Drawing.Point(39, 33);
+            this.Instructor.Name = "Instructor";
+            this.Instructor.Size = new System.Drawing.Size(67, 17);
+            this.Instructor.TabIndex = 1;
+            this.Instructor.Text = "Instructor";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(42, 53);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(320, 22);
+            this.txtSearch.TabIndex = 2;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(692, 53);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // Id
             // 
@@ -158,37 +187,20 @@
             this.DateOfHiring.Name = "DateOfHiring";
             this.DateOfHiring.ReadOnly = true;
             // 
-            // Instructor
+            // Image
             // 
-            this.Instructor.AutoSize = true;
-            this.Instructor.Location = new System.Drawing.Point(39, 33);
-            this.Instructor.Name = "Instructor";
-            this.Instructor.Size = new System.Drawing.Size(67, 17);
-            this.Instructor.TabIndex = 1;
-            this.Instructor.Text = "Instructor";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(42, 53);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(320, 22);
-            this.txtSearch.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(692, 53);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "Image";
+            this.Image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Width = 200;
             // 
             // frmInstructorData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 470);
+            this.ClientSize = new System.Drawing.Size(1297, 491);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.Instructor);
@@ -219,5 +231,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn LicenseNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateOfHiring;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
     }
 }
