@@ -8,7 +8,8 @@ namespace Mobile.Models
     {
         Browse,
         About,
-        YourProfile
+        YourProfile,
+        Forum
     }
     public class HomeMenuItem
     {

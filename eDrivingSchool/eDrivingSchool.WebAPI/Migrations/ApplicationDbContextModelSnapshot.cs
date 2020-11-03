@@ -32,6 +32,27 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Message");
+
+                    b.Property<int>("TopicId");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TopicId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingSchool", b =>
                 {
                     b.Property<int>("Id")
@@ -85,6 +106,27 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Topic", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Message");
+
+                    b.Property<string>("Subject");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Topics");
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.User", b =>
@@ -158,7 +200,28 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("Vehicles");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Comment", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Topic", "Topic")
+                        .WithMany()
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Payment", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Topic", b =>
                 {
                     b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
                         .WithMany()

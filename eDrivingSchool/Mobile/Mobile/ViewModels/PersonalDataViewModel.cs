@@ -1,8 +1,10 @@
 ﻿using eDrivingSchool.Model.Requests;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Mobile.ViewModels
 {
@@ -52,6 +54,15 @@ namespace Mobile.ViewModels
             set { SetProperty(ref _birthdate, value); }
         }
 
+        byte[] _image;
+        public byte[] Image
+        {
+            get { return _image; }
+            set { SetProperty(ref _image, value); }
+        }
+
+
+
         public async Task Init()
         {
             UserSearchRequest request = new UserSearchRequest
@@ -67,6 +78,7 @@ namespace Mobile.ViewModels
                 Address = item.Address;
                 JMBG = item.JMBG;
                 Birthdate = item.Birthdate.ToString("dd MMMM yyyy");
+                Image = item.Image;
             }
         }
     }

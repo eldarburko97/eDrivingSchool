@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,6 +40,20 @@ namespace eDrivingSchool.WinUI.Instructor
             request.DateOfHiring = dtpDateOfHiring.Value;
             request.DrivingSchoolId = 1;
             request.RoleId = 2;
+
+            if (string.IsNullOrWhiteSpace(txtPhoto.Text))
+            {
+                Assembly asm = Assembly.GetExecutingAssembly();
+                Stream stm = asm.GetManifestResourceStream("eDrivingSchool.WinUI.Image.userDefault.png");
+                
+                using (var memoryStream = new MemoryStream())
+                {
+                    stm.CopyTo(memoryStream);
+                    var file= memoryStream.ToArray();
+                    request.Image = file;
+                }
+                
+            }
 
             if (_id.HasValue)
             {

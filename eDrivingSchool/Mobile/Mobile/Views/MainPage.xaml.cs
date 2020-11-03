@@ -38,6 +38,9 @@ namespace Mobile.Views
                     case (int)MenuItemType.YourProfile:
                         MenuPages.Add(id, new NavigationPage(new YourProfilePage()));
                         break;
+                    case (int)MenuItemType.Forum:
+                        MenuPages.Add(id, new NavigationPage(new ForumPage()));
+                        break;
                 }
             }
 

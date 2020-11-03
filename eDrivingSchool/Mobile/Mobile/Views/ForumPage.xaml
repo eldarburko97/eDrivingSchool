@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.ForumPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+            <StackLayout  BackgroundColor="DodgerBlue" Padding="5">
+                <Label Text="Forum" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <Frame BorderColor="DarkSlateGray" CornerRadius="0" BackgroundColor="#EEEEEE" Padding="0" HeightRequest="60">
+                <Grid Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Topics" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0"></Label>
+                    <Label Text="Posts" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Column="1"></Label>
+                    <Label Text="Last Post" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2"></Label>
+                    <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+                </Grid>
+            </Frame>
+
+
+            <ListView ItemsSource="{Binding datagrids}"  SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="0" BorderColor="DarkSlateGray" CornerRadius="0" BackgroundColor="LightBlue" >
+                                <Grid Padding="0" RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4.5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Margin="10,0,0,0" Grid.Row="0" Grid.Column="0" Text="{Binding Topic}" VerticalOptions="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Count}" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding CreatedBy}" VerticalOptions="Center"></Label>
+
+                                    <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+                                    <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           
+                
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

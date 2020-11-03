@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Mobile.ViewModels"
+             xmlns:converters="clr-namespace:Mobile.Converters"
              x:Class="Mobile.Views.PersonalDataPage" Title="Personal Data">
     <ContentPage.BindingContext>
         <vm:PersonalDataViewModel></vm:PersonalDataViewModel>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
         <Grid Padding="10" VerticalOptions="CenterAndExpand">
@@ -14,13 +20,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Ovdje ide slika"></Span>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Image Grid.Column="0" Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
 
             <Label Grid.Column="1" FontSize="Medium">
                 <Label.FormattedText>

@@ -296,9 +296,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(1057, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(1038, 62);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(296, 295);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -307,7 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 621);
+            this.ClientSize = new System.Drawing.Size(1406, 621);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAddPhoto);
             this.Controls.Add(this.txtPhoto);

@@ -17,5 +17,8 @@ namespace eDrivingSchool.WebAPI.Database
         public DbSet<Role> Roles { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Topic> Topics { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+
     }
 }

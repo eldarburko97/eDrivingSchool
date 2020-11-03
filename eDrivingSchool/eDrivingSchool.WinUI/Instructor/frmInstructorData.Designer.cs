@@ -67,12 +67,12 @@
             this.LicenseNumber,
             this.DateOfHiring,
             this.Image});
-            this.dgvInstructorsData.Location = new System.Drawing.Point(31, 102);
+            this.dgvInstructorsData.Location = new System.Drawing.Point(42, 102);
             this.dgvInstructorsData.Name = "dgvInstructorsData";
             this.dgvInstructorsData.ReadOnly = true;
-            this.dgvInstructorsData.RowTemplate.Height = 140;
+            this.dgvInstructorsData.RowTemplate.Height = 200;
             this.dgvInstructorsData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInstructorsData.Size = new System.Drawing.Size(1249, 340);
+            this.dgvInstructorsData.Size = new System.Drawing.Size(1353, 386);
             this.dgvInstructorsData.TabIndex = 0;
             this.dgvInstructorsData.DoubleClick += new System.EventHandler(this.DgvInstructorsData_DoubleClick);
             // 
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1297, 491);
+            this.ClientSize = new System.Drawing.Size(1691, 500);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.Instructor);
