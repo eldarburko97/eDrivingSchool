@@ -52,6 +52,11 @@ namespace Mobile
             var url = $"{_apiUrl}/{_route}/{id}";
             return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
         }
+        public async Task<T> GetByUsername<T>(object username)
+        {
+            var url = $"{_apiUrl}/{_route}/{username}";
+            return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+        }
         public async Task<T> Insert<T>(object request)
         {
             var url = $"{_apiUrl}/{_route}";

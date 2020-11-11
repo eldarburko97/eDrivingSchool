@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
+             x:Class="Mobile.Views.NewTopicPage">
+    <ContentPage.BindingContext>
+        <vm:NewTopicViewModel></vm:NewTopicViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" Text="Post New Topic" FontSize="Large" FontAttributes="Bold"></Label>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="10">
+                <Label Text="Subject"></Label>
+                <Entry Placeholder="Enter Subject" Text="{Binding Subject}"></Entry>
+                <Label Text="Description"></Label>
+                <Entry Placeholder="Enter Description" Text="{Binding Description}"></Entry>
+                <Label Text="Message"></Label>
+                <Editor Placeholder="Enter Message" Text="{Binding Message}"></Editor>
+                <Button Text="Post" BackgroundColor="DodgerBlue" TextColor="White" Command="{Binding PostNewTopicCommand}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

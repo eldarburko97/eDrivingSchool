@@ -30,6 +30,12 @@ namespace eDrivingSchool.WebAPI.Controllers
         {
             return _service.GetById(id);
         }
+        /*
+        [HttpGet("{username}")]
+        public T GetByUsername(string username)
+        {
+            return _service.GetByUsername(username);
+        }*/
         [HttpPost]
         public T Insert(TInsert request)
         {

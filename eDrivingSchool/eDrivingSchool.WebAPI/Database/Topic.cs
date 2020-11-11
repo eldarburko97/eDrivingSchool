@@ -13,5 +13,6 @@ namespace eDrivingSchool.WebAPI.Database
         public string Subject { get; set; }
         public string Description { get; set; }
         public string Message { get; set; }
+        public DateTime Date { get; set; }
     }
 }

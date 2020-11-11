@@ -37,6 +37,13 @@ namespace eDrivingSchool.WebAPI.Services
             return _mapper.Map<T>(entity);
         }
 
+        /*
+        public T GetByUsername(int id)
+        {
+            var entity = _context.Set<TDatabase>().Find(id);
+            return _mapper.Map<T>(entity);
+        }*/
+
         public virtual T Insert(TInsert model)
         {
             var entity = _mapper.Map<TDatabase>(model);

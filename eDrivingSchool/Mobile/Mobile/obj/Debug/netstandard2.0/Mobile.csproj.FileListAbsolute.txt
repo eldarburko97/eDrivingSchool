@@ -25,3 +25,4 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\net
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\PaymentsPage.xaml.g.cs
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\ForumPage.xaml.g.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\NewTopicPage.xaml.g.cs

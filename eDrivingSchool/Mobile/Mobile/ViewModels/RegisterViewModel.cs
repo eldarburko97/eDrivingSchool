@@ -95,16 +95,16 @@ namespace Mobile.ViewModels
 
             try
             {
-                candidate.FirstName = _firstName;
-                candidate.LastName = _lastName;
-                candidate.Username = _username;
-                candidate.Password = _password;
-                candidate.PasswordConfirm = _passwordConfirm;
-                candidate.Phone = _phone;
-                candidate.Email = _email;
-                candidate.Address = _address;
-                candidate.JMBG = _jmbg;
-                candidate.Birthdate = _birthdate;
+                candidate.FirstName = FirstName;
+                candidate.LastName = LastName;
+                candidate.Username = Username;
+                candidate.Password = Password;
+                candidate.PasswordConfirm = PasswordConfirm;
+                candidate.Phone = Phone;
+                candidate.Email = Email;
+                candidate.Address = Address;
+                candidate.JMBG = JMBG;
+                candidate.Birthdate = Birthdate;
                 candidate.DrivingSchoolId = 1;
                 candidate.RoleId = 3;
                 await _service.Register<dynamic>(candidate);

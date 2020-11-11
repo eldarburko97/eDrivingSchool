@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using eDrivingSchool.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,10 @@ namespace eDrivingSchool.WebAPI.Mappers
             CreateMap<Database.User, Model.Candidate>().ReverseMap();
             CreateMap<Database.Payment, Model.Requests.PaymentInsertRequest>().ReverseMap();
             CreateMap<Database.Payment, Model.Payment>().ReverseMap();
+            CreateMap<Database.Topic, Model.Requests.TopicInsertRequest>().ReverseMap();
+            CreateMap<Database.Topic, Model.Topic>().ReverseMap();
+            CreateMap<Database.Comment, Model.Comment>().ReverseMap();
+            CreateMap<Database.Comment,CommentInsertRequest>().ReverseMap();
         }
     }
 }

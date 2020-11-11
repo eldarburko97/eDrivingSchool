@@ -20,5 +20,6 @@ namespace eDrivingSchool.WebAPI.Services
         Model.User Login(UserLoginRequest request);
         Model.User Register(UserInsertRequest request);
         Model.User Authenticate(string username, string password);
+        Model.User GetUserByUsername(string username);
     }
 }

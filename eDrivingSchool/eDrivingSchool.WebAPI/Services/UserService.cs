@@ -155,5 +155,11 @@ namespace eDrivingSchool.WebAPI.Services
             byte[] inArray = algorithm.ComputeHash(dst);
             return Convert.ToBase64String(inArray);
         }
+
+        public Model.User GetUserByUsername(string username)
+        {
+            var entity = _context.Users.Where(w => w.Username == username).FirstOrDefault();
+            return _mapper.Map<Model.User>(entity);
+        }
     }
 }
