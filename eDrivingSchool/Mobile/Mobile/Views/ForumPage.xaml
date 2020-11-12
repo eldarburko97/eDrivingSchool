@@ -30,7 +30,7 @@
             </Frame>
 
             <StackLayout   HeightRequest="340">
-                <ListView   ItemsSource="{Binding TopicList}"  SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False" >
+                <ListView ItemsSource="{Binding TopicList}"  SeparatorVisibility="None" HasUnevenRows="False" ItemSelected="ListView_ItemSelected" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

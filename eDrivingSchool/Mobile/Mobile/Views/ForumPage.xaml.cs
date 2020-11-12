@@ -42,5 +42,13 @@ namespace Mobile.Views
         {
             await Navigation.PushAsync(new NewTopicPage());
         }
+
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem != null)
+            {
+               await Navigation.PushAsync(new CommentsPage((e.SelectedItem as Topic).Id));
+            }
+        }
     }
 }

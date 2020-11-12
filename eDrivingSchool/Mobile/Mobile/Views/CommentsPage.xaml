@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
+             xmlns:converters="clr-namespace:Mobile.Converters"
+             x:Class="Mobile.Views.CommentsPage">
+    <ContentPage.BindingContext>
+        <vm:CommentsViewModel></vm:CommentsViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="DodgerBlue">
+                <Label Margin="5" Text="Ping" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <ListView ItemsSource="{Binding CommentList}"  SeparatorVisibility="None" HasUnevenRows="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="0" BorderColor="DarkSlateGray" CornerRadius="0" BackgroundColor="LightBlue" >
+                                <Grid Padding="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="6.5*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+                                    <StackLayout Padding="10" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                        <Image HeightRequest="100" WidthRequest="100"  Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
+                                        <Label HorizontalTextAlignment="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding User}" FontAttributes="Bold"></Span>
+                                                    <Span Text="{x:Static x:Environment.NewLine}" />
+                                                    <Span Text="Posted: " FontAttributes="Bold"></Span>
+                                                    <Span Text="11/12/2020" FontAttributes="Bold"></Span>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </StackLayout>
+                                    <StackLayout Padding="12" Grid.Column="1" >
+                                        <Label Text="{Binding Message }"></Label>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
