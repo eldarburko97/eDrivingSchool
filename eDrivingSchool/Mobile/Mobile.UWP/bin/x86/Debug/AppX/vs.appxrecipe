@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-12T22:38:36.803</Modified>
+      <Modified>2020-11-15T23:33:39.884</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\Mobile.UWP.exe">
       <PackagePath>entrypoint\Mobile.UWP.exe</PackagePath>
-      <Modified>2020-11-12T22:38:35.590</Modified>
+      <Modified>2020-11-15T23:33:39.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Eldar\.nuget\packages\flurl\2.8.2\lib\netstandard2.0\Flurl.dll">
       <PackagePath>Flurl.dll</PackagePath>
@@ -736,7 +736,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\bin\Debug\netstandard2.0\Mobile.dll">
       <PackagePath>Mobile.dll</PackagePath>
-      <Modified>2020-11-12T22:38:27.016</Modified>
+      <Modified>2020-11-15T23:33:34.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\bin\Debug\netstandard2.0\eDrivingSchool.Model.dll">
       <PackagePath>eDrivingSchool.Model.dll</PackagePath>
@@ -907,11 +907,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-11-12T22:38:35.307</Modified>
+      <Modified>2020-11-15T23:33:38.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-11-12T22:38:35.307</Modified>
+      <Modified>2020-11-15T23:33:38.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -927,7 +927,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\Core\Mobile.UWP.exe">
       <PackagePath>Mobile.UWP.exe</PackagePath>
-      <Modified>2020-11-12T22:38:36.791</Modified>
+      <Modified>2020-11-15T23:33:39.856</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

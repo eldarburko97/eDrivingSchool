@@ -21,7 +21,7 @@ namespace Mobile.Views
             InitializeComponent();
         }
 
-        public CommentsPage(int Id)
+        public CommentsPage(int Id) // TopicId
         {
             InitializeComponent();
             _id = Id;
@@ -32,6 +32,11 @@ namespace Mobile.Views
         {
             base.OnAppearing();
             await model.Init(_id);
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewCommentPage(_id));
         }
     }
 }

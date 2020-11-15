@@ -17,7 +17,7 @@
             <StackLayout BackgroundColor="DodgerBlue">
                 <Label Margin="5" Text="Ping" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
-            <ListView ItemsSource="{Binding CommentList}"  SeparatorVisibility="None" HasUnevenRows="False">
+            <ListView ItemsSource="{Binding CommentList}"  SeparatorVisibility="None" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -53,6 +53,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Post Reply" BackgroundColor="DodgerBlue" TextColor="White" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

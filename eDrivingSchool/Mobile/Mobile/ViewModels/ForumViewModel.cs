@@ -1,4 +1,5 @@
 ﻿using eDrivingSchool.Model;
+using eDrivingSchool.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,6 +15,7 @@ namespace Mobile.ViewModels
         private readonly APIService _service = new APIService("Topics");
         private readonly APIService _userService = new APIService("Users");
         private readonly APIService _commentService = new APIService("Comments");
+        public CommentSearchRequest request = new CommentSearchRequest();
         public ForumViewModel()
         {
             InitCommand = new Command(async () => await Init());
@@ -29,7 +31,8 @@ namespace Mobile.ViewModels
             {
                 var user = await _userService.GetById<User>(topic.UserId);
                 topic.User = user.FirstName + user.LastName; //User that posted topic
-                var _commentList = await _commentService.GetAll<List<Comment>>(topic.Id);
+                request.TopicId = topic.Id;
+                var _commentList = await _commentService.GetAll<List<Comment>>(request);
                 topic.Comments = _commentList.Count; // Number of comments
                 var _lastComment = _commentList[_commentList.Count - 1]; // Last comment of topic
                 var user_lastComment = await _userService.GetById<User>(_lastComment.UserId);

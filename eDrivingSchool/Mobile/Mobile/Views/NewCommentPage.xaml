@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.NewCommentPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" Text="Post New Comment" FontSize="Large" FontAttributes="Bold"></Label>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="10">
+                <Label Text="Message"></Label>
+                <Editor Placeholder="Enter Message" Text="{Binding Message}" AutoSize="TextChanges"></Editor>
+                <Button Text="Post" BackgroundColor="DodgerBlue" TextColor="White" Command="{Binding PostNewCommentCommand}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

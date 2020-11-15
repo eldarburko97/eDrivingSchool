@@ -17,16 +17,16 @@ namespace eDrivingSchool.WebAPI.Services
             _context = context;
             _mapper = mapper;
         }
-        public  List<Model.Comment> GetAll(CommentSearchRequest searchRequest)
+        public override List<Model.Comment> GetAll(CommentSearchRequest searchRequest)
         {
             var query = _context.Set<Database.Comment>().AsQueryable();
 
-           if(searchRequest.TopicId != 0)
+            if (searchRequest.TopicId != 0)
             {
-                query.Where(w => w.TopicId == searchRequest.TopicId);
+                query = query.Where(w => w.TopicId == searchRequest.TopicId);
             }
             var list = query.ToList();
-            return _mapper.Map<List<Model.Comment>>(list);
+            return _mapper.Map<List<Model.Comment>>(query);
         }
     }
 }
