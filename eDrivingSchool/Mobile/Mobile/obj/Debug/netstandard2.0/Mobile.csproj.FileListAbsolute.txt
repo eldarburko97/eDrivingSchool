@@ -28,3 +28,4 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\net
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\NewTopicPage.xaml.g.cs
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\CommentsPage.xaml.g.cs
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\NewCommentPage.xaml.g.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\CertificatesPage.xaml.g.cs

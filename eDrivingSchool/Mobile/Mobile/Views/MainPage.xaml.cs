@@ -41,6 +41,9 @@ namespace Mobile.Views
                     case (int)MenuItemType.Forum:
                         MenuPages.Add(id, new NavigationPage(new ForumPage()));
                         break;
+                    case (int)MenuItemType.Certificates:
+                        MenuPages.Add(id, new NavigationPage(new CertificatesPage()));
+                        break;
                 }
             }
 

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.CertificatesPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="Certificates" FontAttributes="Bold" FontSize="Large"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
+            <Grid Padding="5,15,5,15" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="Vrsta potvrde: "></Label>
+                <Picker Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" x:Name="List" HorizontalOptions="FillAndExpand"></Picker>
+                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" Text="Svrha: "></Label>
+                <Editor HeightRequest="100" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" Placeholder="Type here" AutoSize="TextChanges"></Editor>
+            </Grid>
+            <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
+            <StackLayout Padding="0,10,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <Label Text="Ukupni iznos kredita: 0.00 KM" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+            </StackLayout>
+            <StackLayout Padding="5,5,5,0">
+                <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"></Button>
+            </StackLayout>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Margin="5,0,0,0" Grid.Row="0" Grid.Column="0" Text="Svrha" ></Label>
+                <Label Grid.Row="0" Grid.Column="1" Text="Datum" HorizontalTextAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="2" Text="Status" ></Label>
+                <Label Grid.Row="0" Grid.Column="3" Text="Details"></Label>
+            </Grid>
+            <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
+            <ListView x:Name="Certificates" SeparatorVisibility="None" HasUnevenRows="True" HeightRequest="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="0,20,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3.5*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Svrha}" Margin="5,0,0,0" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="1" Text="{Binding Datum}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="2" Text="{Binding Status}" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="3" Text="Details" VerticalTextAlignment="Center"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

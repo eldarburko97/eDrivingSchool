@@ -21,34 +21,34 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame Padding="0" BorderColor="DarkSlateGray" CornerRadius="0" BackgroundColor="LightBlue" >
-                                <Grid Padding="0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="6.5*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
-                                    <StackLayout Padding="10" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                        <Image HeightRequest="100" WidthRequest="100"  Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
-                                        <Label HorizontalTextAlignment="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="{Binding User}" FontAttributes="Bold"></Span>
-                                                    <Span Text="{x:Static x:Environment.NewLine}" />
-                                                    <Span Text="Posted: " FontAttributes="Bold"></Span>
-                                                    <Span Text="11/12/2020" FontAttributes="Bold"></Span>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                    </StackLayout>
-                                    <StackLayout Padding="12" Grid.Column="1" >
-                                        <Label Text="{Binding Message }"></Label>
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
+                            <Grid Padding="0,10,0,0" RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="6.5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Frame BorderColor="DarkSlateGray" Grid.Row="0" Grid.Column="0" BackgroundColor="LightBlue" Grid.ColumnSpan="2" CornerRadius="0">
+                                </Frame>
+                                <BoxView BackgroundColor="DarkSlateGray" WidthRequest="0.5" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+                                <StackLayout Padding="10" Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Image HeightRequest="100" WidthRequest="100"  Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
+                                    <Label HorizontalTextAlignment="Center">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding User}" FontAttributes="Bold"></Span>
+                                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                                <Span Text="Posted: " FontAttributes="Bold"></Span>
+                                                <Span Text="11/12/2020" FontAttributes="Bold"></Span>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout Padding="12" Grid.Column="1" >
+                                    <Label Text="{Binding Message }"></Label>
+                                </StackLayout>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

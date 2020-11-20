@@ -9,7 +9,8 @@ namespace Mobile.Models
         Browse,
         About,
         YourProfile,
-        Forum
+        Forum,
+        Certificates
     }
     public class HomeMenuItem
     {

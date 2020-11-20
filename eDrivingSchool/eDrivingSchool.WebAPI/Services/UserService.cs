@@ -58,7 +58,7 @@ namespace eDrivingSchool.WebAPI.Services
             }
 
             // var entities = query.Where(x => x.RoleId == 1).ToList();
-            var entities = query.Where(x => x.RoleId == 2).ToList();
+            var entities = query.Where(x => x.RoleId == 2 || x.RoleId == 3).ToList();
             var result = _mapper.Map<List<Model.User>>(entities);
             return result;
         }

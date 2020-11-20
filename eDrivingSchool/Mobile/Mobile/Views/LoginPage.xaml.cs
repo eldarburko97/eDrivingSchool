@@ -22,7 +22,7 @@ namespace Mobile.Views
             var mainPage = new MainPage()
             {
                 Master = new MenuPage(),
-                Detail = new NavigationPage(new RegisterPage())
+                Detail = new NavigationPage(new RegisterPage()) // Ovo ovdje treba popraviti 
             };
             Application.Current.MainPage = mainPage;
         }
