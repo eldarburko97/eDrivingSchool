@@ -32,6 +32,38 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Certificate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Type");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Certificates");
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Certificate_Request", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CertificateId");
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<string>("Status");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Certificate_Requests");
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Comment", b =>
                 {
                     b.Property<int>("Id")
