@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
              x:Class="Mobile.Views.CertificatesPage">
+    <ContentPage.BindingContext>
+        <vm:CertificatesViewModel></vm:CertificatesViewModel>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <Label Text="Certificates" FontAttributes="Bold" FontSize="Large"
@@ -18,13 +22,20 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="Vrsta potvrde: "></Label>
-                <Picker Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" x:Name="List" HorizontalOptions="FillAndExpand"></Picker>
+                <Picker ItemsSource="{Binding CertificateList}" ItemDisplayBinding="{Binding Type}" Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand"></Picker>
                 <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" Text="Svrha: "></Label>
                 <Editor HeightRequest="100" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" Placeholder="Type here" AutoSize="TextChanges"></Editor>
             </Grid>
             <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
             <StackLayout Padding="0,10,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-                <Label Text="Ukupni iznos kredita: 0.00 KM" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+                <Label HorizontalTextAlignment="Center" FontSize="Large">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Ukupni iznos kredita: "></Span>
+                            <Span Text="{Binding Price}"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
             <StackLayout Padding="5,5,5,0">
                 <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"></Button>

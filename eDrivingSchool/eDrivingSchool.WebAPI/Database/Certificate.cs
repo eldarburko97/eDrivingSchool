@@ -9,5 +9,6 @@ namespace eDrivingSchool.WebAPI.Database
     {
         public int Id { get; set; }
         public string Type { get; set; }
+        public int Price { get; set; }
     }
 }

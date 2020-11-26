@@ -38,6 +38,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("Price");
+
                     b.Property<string>("Type");
 
                     b.HasKey("Id");

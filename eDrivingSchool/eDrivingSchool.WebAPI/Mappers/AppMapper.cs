@@ -33,6 +33,7 @@ namespace eDrivingSchool.WebAPI.Mappers
             CreateMap<Database.Topic, Model.Topic>().ReverseMap();
             CreateMap<Database.Comment, Model.Comment>().ReverseMap();
             CreateMap<Database.Comment,CommentInsertRequest>().ReverseMap();
+            CreateMap<Database.Certificate, Model.Certificate>().ReverseMap();
         }
     }
 }
