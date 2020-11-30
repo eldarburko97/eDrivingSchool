@@ -51,6 +51,14 @@ namespace Mobile.Views
         {
             base.OnAppearing();
             await model.Init();
+            await model.ShowCertificateRequests();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            var certificate_request = button.BindingContext as Certificate_Request;
+            model.CancelCommand.Execute(certificate_request);
         }
     }
 }

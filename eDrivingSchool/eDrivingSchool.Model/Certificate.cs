@@ -6,9 +6,12 @@ namespace eDrivingSchool.Model
 {
     public class Certificate
     {
-        public string Svrha { get; set; }
+        public int Id { get; set; }
+        public string Purpose { get; set; }
         public string Datum { get; set; }
         public string Status { get; set; }
         public string Type { get; set; }
+        public decimal Price { get; set; }
+        public string Svrha { get; set; }
     }
 }

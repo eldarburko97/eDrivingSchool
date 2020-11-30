@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eDrivingSchool.Model.Requests
 {
-   public class CertificateInsertRequest
+    public class CertificateInsertRequest
     {
     }
 }

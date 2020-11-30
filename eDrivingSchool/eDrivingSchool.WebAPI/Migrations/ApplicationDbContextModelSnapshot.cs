@@ -38,7 +38,7 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Price");
+                    b.Property<decimal>("Price");
 
                     b.Property<string>("Type");
 
@@ -56,6 +56,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.Property<int>("CertificateId");
 
                     b.Property<DateTime>("Date");
+
+                    b.Property<string>("Purpose");
 
                     b.Property<string>("Status");
 

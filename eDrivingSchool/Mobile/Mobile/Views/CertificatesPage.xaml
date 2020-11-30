@@ -22,23 +22,24 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="Vrsta potvrde: "></Label>
-                <Picker ItemsSource="{Binding CertificateList}" ItemDisplayBinding="{Binding Type}" Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand"></Picker>
-                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" Text="Svrha: "></Label>
-                <Editor HeightRequest="100" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" Placeholder="Type here" AutoSize="TextChanges"></Editor>
+                <Picker ItemsSource="{Binding CertificateList}" SelectedItem="{Binding SelectedCertificate}" ItemDisplayBinding="{Binding Type}" Margin="10,0,0,0" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand"></Picker>
+                <Label Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Start" Text="Purpose: "></Label>
+                <Editor HeightRequest="100" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" Placeholder="Type here" AutoSize="TextChanges" Text="{Binding Purpose}"></Editor>
             </Grid>
             <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
             <StackLayout Padding="0,10,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
                 <Label HorizontalTextAlignment="Center" FontSize="Large">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Ukupni iznos kredita: "></Span>
+                            <Span Text="Total amount: "></Span>
                             <Span Text="{Binding Price}"></Span>
+                            <Span Text=" BAM"></Span>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
             </StackLayout>
             <StackLayout Padding="5,5,5,0">
-                <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"></Button>
+                <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit" Command="{Binding SubmitCommand}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"></Button>
             </StackLayout>
             <Grid >
                 <Grid.RowDefinitions>
@@ -46,17 +47,17 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3.5*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Margin="5,0,0,0" Grid.Row="0" Grid.Column="0" Text="Svrha" ></Label>
-                <Label Grid.Row="0" Grid.Column="1" Text="Datum" HorizontalTextAlignment="Center"></Label>
-                <Label Grid.Row="0" Grid.Column="2" Text="Status" ></Label>
-                <Label Grid.Row="0" Grid.Column="3" Text="Details"></Label>
+                <Label Margin="5,0,0,0" Grid.Row="0" Grid.Column="0" Text="Type" ></Label>
+                <Label Grid.Row="0" Grid.Column="1" Text="Date" HorizontalTextAlignment="Center"></Label>
+                <Label Grid.Row="0" Grid.Column="2" Text="Status" HorizontalTextAlignment="Center" ></Label>
+                
             </Grid>
             <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
-            <ListView x:Name="Certificates" SeparatorVisibility="None" HasUnevenRows="True" HeightRequest="300">
+            <ListView SelectedItem="{Binding SelectedCertificate_Request}" HorizontalOptions="FillAndExpand" ItemsSource="{Binding Certificate_Requests_List}" SeparatorVisibility="None" HasUnevenRows="True" HeightRequest="250">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -66,20 +67,24 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3.5*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition> 
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Text="{Binding Svrha}" Margin="5,0,0,0" VerticalTextAlignment="Center"></Label>
-                                <Label Grid.Column="1" Text="{Binding Datum}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
-                                <Label Grid.Column="2" Text="{Binding Status}" VerticalTextAlignment="Center"></Label>
-                                <Label Grid.Column="3" Text="Details" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="0" Text="{Binding Certificate.Type}" Margin="5,0,0,0"  VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="1" Text="{Binding Date, StringFormat='{0:MM/dd/yyyy}'}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                <Label Grid.Column="2" Text="{Binding Status}" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"></Label>
+                                <Button Clicked="Button_Clicked" Grid.Column="3" Text="Cancel" BorderWidth="1" BackgroundColor="White" TextColor="DodgerBlue" HorizontalOptions="Center" VerticalOptions="Center" ></Button>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+            <BoxView Margin="5,0,5,0" HeightRequest="2" BackgroundColor="DodgerBlue"></BoxView>
+            <StackLayout Padding="5" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"> 
+                <Label Text="{Binding Purpose2}"></Label>
+                <Label Text="{Binding Details}"></Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

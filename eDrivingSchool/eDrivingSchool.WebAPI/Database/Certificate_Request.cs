@@ -9,7 +9,9 @@ namespace eDrivingSchool.WebAPI.Database
     {
         public int Id { get; set; }
         public int CertificateId { get; set; }
+        public Certificate Certificate { get; set; }
         public int UserId { get; set; }
+        public string Purpose { get; set; }
         public DateTime Date { get; set; }
         public string Status { get; set; }
     }
