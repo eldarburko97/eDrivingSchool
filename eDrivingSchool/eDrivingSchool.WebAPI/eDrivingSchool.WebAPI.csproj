@@ -12,6 +12,8 @@
     <Compile Remove="Migrations\20201127081159_Price%28int-double%29.Designer.cs" />
     <Compile Remove="Migrations\20201127215203_ColumnPurpose.cs" />
     <Compile Remove="Migrations\20201127215203_ColumnPurpose.Designer.cs" />
+    <Compile Remove="Migrations\20201207115416_Relations.cs" />
+    <Compile Remove="Migrations\20201207115416_Relations.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

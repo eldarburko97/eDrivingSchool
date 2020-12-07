@@ -21,6 +21,8 @@ namespace eDrivingSchool.WebAPI.Database
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Certificate> Certificates { get; set; }
         public DbSet<Certificate_Request> Certificate_Requests { get; set; }
+        public DbSet<Instructor_Category> Instructors_Categories { get; set; }
+        public DbSet<Instructor_Category_Candidate> Instructors_Categories_Candidates { get; set; }
 
 
     }

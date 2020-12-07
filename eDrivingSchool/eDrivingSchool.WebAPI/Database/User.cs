@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eDrivingSchool.WebAPI.Database
 {
-    public class User
+    public class User   //This class represents Administrator, Instructors and Candidates
     {
         public int Id { get; set; }
         [Required]
