@@ -12,5 +12,7 @@ namespace eDrivingSchool.Model
         public int Year { get; set; }
         public int Power { get; set; }
         public int Mileage { get; set; }
+        public int TechnicalInspectionId { get; set; }
+        public byte[] Image { get; set; }
     }
 }

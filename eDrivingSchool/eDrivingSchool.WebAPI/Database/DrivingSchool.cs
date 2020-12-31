@@ -12,6 +12,6 @@ namespace eDrivingSchool.WebAPI.Database
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string Logo { get; set; }
+        public byte[] Logo { get; set; }
     }
 }

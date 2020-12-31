@@ -1,6 +1,10 @@
 ﻿using eDrivingSchool.WinUI.Candidate;
+using eDrivingSchool.WinUI.Category;
+using eDrivingSchool.WinUI.DrivingSchool;
 using eDrivingSchool.WinUI.Instructor;
 using eDrivingSchool.WinUI.Payment;
+using eDrivingSchool.WinUI.TechnicalInspection;
+using eDrivingSchool.WinUI.Vehicle;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -140,6 +144,48 @@ namespace eDrivingSchool.WinUI
         private void PaymentDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPaymentData frm = new frmPaymentData();
+            frm.Show();
+        }
+
+        private void dataOfSchoolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDrivingSchoolData frm = new frmDrivingSchoolData();
+            frm.Show();
+        }
+
+        private void addNewVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddVehicle frm = new frmAddVehicle();
+            frm.Show();
+        }
+
+        private void dataOfVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVehiclesData frm = new frmVehiclesData();
+            frm.Show();
+        }
+
+        private void addNewCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddCategory frm = new frmAddCategory();
+            frm.Show();
+        }
+
+        private void dataOfCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCategoriesData frm = new frmCategoriesData();
+            frm.Show();
+        }
+
+        private void addNewTechnicalInspectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddTechnicalInspection frm = new frmAddTechnicalInspection();
+            frm.Show();
+        }
+
+        private void dataOfTechnicalInspectionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTechnicalInspectionData frm = new frmTechnicalInspectionData();
             frm.Show();
         }
     }

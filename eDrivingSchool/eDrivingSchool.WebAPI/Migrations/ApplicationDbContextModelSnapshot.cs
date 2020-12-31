@@ -105,7 +105,7 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("Logo");
+                    b.Property<byte[]>("Logo");
 
                     b.Property<string>("Name");
 
@@ -188,6 +188,25 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.TechnicalInspection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TechnicalInspections");
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Topic", b =>
                 {
                     b.Property<int>("Id")
@@ -267,6 +286,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<float>("Mileage");
 
                     b.Property<string>("Model");
@@ -275,9 +296,13 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("Power");
 
+                    b.Property<int>("TechnicalInspectionId");
+
                     b.Property<int>("Year");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TechnicalInspectionId");
 
                     b.ToTable("Vehicles");
                 });
@@ -360,6 +385,14 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasOne("eDrivingSchool.WebAPI.Database.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Vehicle", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.TechnicalInspection", "TechnicalInspection")
+                        .WithMany()
+                        .HasForeignKey("TechnicalInspectionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

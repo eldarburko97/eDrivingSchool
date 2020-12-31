@@ -40,7 +40,11 @@ namespace eDrivingSchool.WebAPI
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICRUDService<Model.DrivingSchool, object, Model.Requests.DrivingSchoolInsertRequest, Model.Requests.DrivingSchoolInsertRequest>, DrivingSchoolService>();
             services.AddScoped<ICRUDService<Model.Vehicle, Model.Requests.VehicleSearchRequest, Model.Requests.VehicleInsertRequest, Model.Requests.VehicleInsertRequest>, VehicleService>();
-            services.AddScoped<ICRUDService<Model.Category, object, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>, CRUDService<Model.Category, object, Database.Category, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>>();
+            services.AddScoped<ICRUDService<Model.Category, object, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>, CRUDService<Model.Category, object,Database.Category, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>>();
+            services.AddScoped<ICRUDService<Model.TechnicalInspection, Model.Requests.TechnicalInspectionSearchRequest, Model.Requests.TechnicalInspectionInsertRequest, Model.Requests.TechnicalInspectionInsertRequest>, TechnicalInspectionService>();
+
+
+
             services.AddScoped<ICRUDService<Model.Instructor, InstructorSearchRequest, Model.Requests.InstructorInsertRequest, Model.Requests.InstructorInsertRequest>, InstructorService>();
             services.AddScoped<ICRUDService<Model.Candidate, CandidateSearchRequest, CandidateInsertRequest, CandidateInsertRequest>, CandidateService>();
             services.AddScoped<ICRUDService<Model.Payment, PaymentSearchRequest, PaymentInsertRequest, PaymentInsertRequest>, PaymentService>();

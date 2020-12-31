@@ -19,11 +19,10 @@ namespace eDrivingSchool.WebAPI.Database
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<TechnicalInspection> TechnicalInspections { get; set; }
         public DbSet<Certificate> Certificates { get; set; }
         public DbSet<Certificate_Request> Certificate_Requests { get; set; }
         public DbSet<Instructor_Category> Instructors_Categories { get; set; }
         public DbSet<Instructor_Category_Candidate> Instructors_Categories_Candidates { get; set; }
-
-
     }
 }

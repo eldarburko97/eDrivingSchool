@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "jhRSXfojSs8/42gjELrEpoky3d/IoM2u3nIk84x/bu9M7d3qfF6+9oQyBfTCiivdG+oqDgc47JH05kzrAjlZow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ZZO5\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

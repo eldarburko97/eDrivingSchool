@@ -19,6 +19,9 @@ namespace eDrivingSchool.WebAPI.Mappers
             CreateMap<Database.Vehicle, Model.Requests.VehicleInsertRequest>().ReverseMap();
             CreateMap<Database.Category, Model.Category>().ReverseMap();
             CreateMap<Model.Category, Model.Requests.CategoryInsertRequest>().ReverseMap();
+            CreateMap<Database.TechnicalInspection, Model.TechnicalInspection>().ReverseMap();
+            CreateMap<Model.TechnicalInspection, Model.Requests.TechnicalInspectionInsertRequest>().ReverseMap();
+            CreateMap<Database.TechnicalInspection, Model.Requests.TechnicalInspectionInsertRequest>().ReverseMap();
             CreateMap<Database.Category, Model.Requests.CategoryInsertRequest>().ReverseMap();
             CreateMap<Database.User, Model.User>().ReverseMap();
             CreateMap<Model.User, Model.Requests.UserInsertRequest>().ReverseMap();

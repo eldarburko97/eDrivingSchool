@@ -233,3 +233,11 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\D
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\android\assets\System.Runtime.dll
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_CompileToDalvik.stamp
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\build.props
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\adb.props
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\Mobile.Android.csprojAssemblyReference.cache
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\stamp\_BuildLibraryImportsCache.stamp
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\res.flag
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\Mobile.Android.dll
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.Android\obj\Debug\81\Mobile.Android.pdb

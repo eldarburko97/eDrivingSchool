@@ -1245,24 +1245,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eldar\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\ZZO5\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.iOS\\Mobile.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.iOS\\Mobile.iOS.csproj",
       "projectName": "Mobile.iOS",
-      "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.iOS\\Mobile.iOS.csproj",
-      "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.iOS\\obj\\",
+      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.iOS\\Mobile.iOS.csproj",
+      "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ZZO5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1276,8 +1276,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
-              "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
+            "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
+              "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
             }
           }
         }

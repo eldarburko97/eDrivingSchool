@@ -10,6 +10,6 @@ namespace eDrivingSchool.Model.Requests
         public string Phone { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public string Logo { get; set; }
+        public byte[] Logo { get; set; }
     }
 }

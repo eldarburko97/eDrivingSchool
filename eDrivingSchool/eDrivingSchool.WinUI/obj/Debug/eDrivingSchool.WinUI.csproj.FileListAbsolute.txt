@@ -25,3 +25,38 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\De
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Candidate.frmCandidatesData.resources
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Payment.frmAddPayment.resources
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Payment.frmPaymentData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\eDrivingSchool.WinUI.exe.config
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\eDrivingSchool.WinUI.exe
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\eDrivingSchool.WinUI.pdb
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\eDrivingSchool.Model.dll
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\Flurl.dll
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\Flurl.Http.dll
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\eDrivingSchool.Model.pdb
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\Flurl.xml
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\Flurl.Http.xml
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.csprojAssemblyReference.cache
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Candidate.frmAddCandidate.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Candidate.frmCandidatesData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.frmLogin.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.frmMain.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.frmRegister.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Instructor.frmAddInstructor.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Instructor.frmInstructorData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Payment.frmAddPayment.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Payment.frmPaymentData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Properties.Resources.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.csproj.GenerateResource.cache
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.csproj.CoreCompileInputs.cache
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.csproj.CopyComplete
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.exe
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.pdb
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Category.frmAddCategory.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Category.frmCategoriesData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.DrivingSchool.frmDrivingSchoolData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.DrivingSchool.frmDrivingSchoolDetails.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.TechnicalInspection.frmAddTechnicalInspection.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.TechnicalInspection.frmTechnicalInspectionData.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Vehicle.frmAddVehicle.resources
+C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Vehicle.frmVehiclesData.resources

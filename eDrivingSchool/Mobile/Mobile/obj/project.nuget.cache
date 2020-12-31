@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "ofr7tasWX/6T88Hm6JyuCCUz9wfc4NFn49EMiCKuGZtaJN5lqResv4wcN2QDTZKCxbvIIz7g/f2kJ7QmGbaHuw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ZZO5\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\xamarin.essentials\\1.0.1\\xamarin.essentials.1.0.1.nupkg.sha512",
+    "C:\\Users\\ZZO5\\.nuget\\packages\\xamarin.forms\\3.6.0.264807\\xamarin.forms.3.6.0.264807.nupkg.sha512"
+  ],
+  "logs": []
+}

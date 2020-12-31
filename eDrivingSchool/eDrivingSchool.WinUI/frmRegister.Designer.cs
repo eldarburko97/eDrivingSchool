@@ -124,6 +124,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(66, 381);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(204, 22);
             this.txtPassword.TabIndex = 9;
             // 
@@ -140,6 +141,7 @@
             // 
             this.txtPasswordConfirm.Location = new System.Drawing.Point(351, 381);
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
+            this.txtPasswordConfirm.PasswordChar = '*';
             this.txtPasswordConfirm.Size = new System.Drawing.Size(204, 22);
             this.txtPasswordConfirm.TabIndex = 11;
             // 
@@ -181,6 +183,7 @@
             // txtJMBG
             // 
             this.txtJMBG.Location = new System.Drawing.Point(351, 162);
+            this.txtJMBG.MaxLength = 13;
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Size = new System.Drawing.Size(204, 22);
             this.txtJMBG.TabIndex = 16;
@@ -208,7 +211,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label1);
             this.Name = "frmRegister";
-            this.Text = "frmRegister";
+            this.Text = "Register form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

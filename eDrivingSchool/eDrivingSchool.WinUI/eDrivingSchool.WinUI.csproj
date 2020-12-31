@@ -68,6 +68,30 @@
     <Compile Include="Candidate\frmCandidatesData.Designer.cs">
       <DependentUpon>frmCandidatesData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Category\frmAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmAddCategory.Designer.cs">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\frmCategoriesData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\frmCategoriesData.Designer.cs">
+      <DependentUpon>frmCategoriesData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingSchool\frmDrivingSchoolData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivingSchool\frmDrivingSchoolData.Designer.cs">
+      <DependentUpon>frmDrivingSchoolData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingSchool\frmDrivingSchoolDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivingSchool\frmDrivingSchoolDetails.Designer.cs">
+      <DependentUpon>frmDrivingSchoolDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +142,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechnicalInspection\frmAddTechnicalInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechnicalInspection\frmAddTechnicalInspection.Designer.cs">
+      <DependentUpon>frmAddTechnicalInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicalInspection\frmTechnicalInspectionData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechnicalInspection\frmTechnicalInspectionData.Designer.cs">
+      <DependentUpon>frmTechnicalInspectionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\frmAddVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\frmAddVehicle.Designer.cs">
+      <DependentUpon>frmAddVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\frmVehiclesData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\frmVehiclesData.Designer.cs">
+      <DependentUpon>frmVehiclesData.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Candidate\frmAddCandidate.resx">
       <DependentUpon>frmAddCandidate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\frmCandidatesData.resx">
       <DependentUpon>frmCandidatesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\frmCategoriesData.resx">
+      <DependentUpon>frmCategoriesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolData.resx">
+      <DependentUpon>frmDrivingSchoolData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolDetails.resx">
+      <DependentUpon>frmDrivingSchoolDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -154,6 +214,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TechnicalInspection\frmAddTechnicalInspection.resx">
+      <DependentUpon>frmAddTechnicalInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechnicalInspection\frmTechnicalInspectionData.resx">
+      <DependentUpon>frmTechnicalInspectionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\frmAddVehicle.resx">
+      <DependentUpon>frmAddVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\frmVehiclesData.resx">
+      <DependentUpon>frmVehiclesData.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -169,13 +241,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Image\userDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\eDrivingSchool.Model\eDrivingSchool.Model.csproj">
       <Project>{f473c106-6e56-49a7-88d7-85bcef44adad}</Project>
       <Name>eDrivingSchool.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Image\userDefault.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

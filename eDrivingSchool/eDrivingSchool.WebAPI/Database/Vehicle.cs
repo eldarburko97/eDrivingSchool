@@ -13,5 +13,8 @@ namespace eDrivingSchool.WebAPI.Database
         public int Year { get; set; }
         public int Power { get; set; }
         public float Mileage { get; set; }
+        public int TechnicalInspectionId { get; set; }
+        public TechnicalInspection TechnicalInspection { get; set; }
+        public byte[] Image { get; set; }
     }
 }

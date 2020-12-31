@@ -11,5 +11,7 @@ namespace eDrivingSchool.Model.Requests
         public int Year { get; set; }
         public int Power { get; set; }
         public float Mileage { get; set; }
+        public int TechnicalInspectionId { get; set; }
+        public byte[] Image { get; set; }
     }
 }

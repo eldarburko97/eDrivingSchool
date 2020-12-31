@@ -45,6 +45,7 @@ namespace eDrivingSchool.WinUI
 
                 frmMain frm = new frmMain();
                 frm.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
