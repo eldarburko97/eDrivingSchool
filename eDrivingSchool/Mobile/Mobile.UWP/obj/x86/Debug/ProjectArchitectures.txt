@@ -1,1 +1,1 @@
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\Mobile.UWP.csproj;x86
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\Mobile.UWP.csproj;x86

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ofr7tasWX/6T88Hm6JyuCCUz9wfc4NFn49EMiCKuGZtaJN5lqResv4wcN2QDTZKCxbvIIz7g/f2kJ7QmGbaHuw==",
+  "dgSpecHash": "Sy65sBi6EyYYY2cz5KpxooNcAcq/X9/R8XobYS8De18TLjRSOQCnUUDFCvXOvSOBp7FcJN09QWJZe2PWW7iFww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
+  "projectFilePath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZZO5\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
     "C:\\Users\\ZZO5\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",

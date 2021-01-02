@@ -35,3 +35,23 @@ C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingS
 C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.dll
 C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.pdb
 C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.genruntimeconfig.cache
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.deps.json
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.runtimeconfig.json
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.runtimeconfig.dev.json
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.dll
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.pdb
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.Model.dll
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\bin\Debug\netcoreapp2.2\eDrivingSchool.Model.pdb
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.csprojAssemblyReference.cache
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.AssemblyInfoInputs.cache
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.AssemblyInfo.cs
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.RazorAssemblyInfo.cache
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.RazorAssemblyInfo.cs
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.csproj.CopyComplete
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.dll
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.pdb
+C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WebAPI\obj\Debug\netcoreapp2.2\eDrivingSchool.WebAPI.genruntimeconfig.cache

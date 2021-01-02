@@ -13186,11 +13186,12 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -13359,11 +13360,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
       "projectName": "eDrivingSchool.WebAPI",
-      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
+      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
       "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -13385,8 +13386,8 @@
         "netcoreapp2.2": {
           "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
-              "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
+            "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
+              "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
             }
           }
         }

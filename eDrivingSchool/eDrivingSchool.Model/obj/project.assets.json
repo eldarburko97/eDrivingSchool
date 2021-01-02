@@ -228,11 +228,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
       "projectName": "eDrivingSchool.Model",
-      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
       "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\obj\\",
+      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

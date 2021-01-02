@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {}
+    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
+    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
         "projectName": "eDrivingSchool.Model",
-        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
         "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\obj\\",
+        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -70,14 +70,14 @@
         }
       }
     },
-    "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {
+    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
         "projectName": "Mobile.UWP",
-        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
+        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
         "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\obj\\",
+        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -99,8 +99,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
-                "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
+              "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
+                "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
               }
             }
           }
@@ -153,14 +153,14 @@
         }
       }
     },
-    "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
+    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
+        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
         "projectName": "Mobile",
-        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
+        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
         "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\obj\\",
+        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -182,8 +182,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
-                "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-seminarski rad\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
+              "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
+                "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
               }
             }
           }
