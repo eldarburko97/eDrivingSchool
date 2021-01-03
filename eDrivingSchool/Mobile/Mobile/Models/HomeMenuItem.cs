@@ -10,7 +10,8 @@ namespace Mobile.Models
         About,
         YourProfile,
         Forum,
-        Certificates
+        Certificates,
+        TheoryTestApplications
     }
     public class HomeMenuItem
     {

@@ -12105,11 +12105,12 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
+      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -13353,25 +13354,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ZZO5\\.nuget\\packages\\": {},
+    "C:\\Users\\Eldar\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
       "projectName": "eDrivingSchool.WebAPI",
-      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
-      "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\eDrivingSchool.WebAPI.csproj",
+      "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ZZO5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -13384,10 +13385,9 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
-              "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
+            "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
+              "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
             }
           }
         }
@@ -13400,7 +13400,6 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
-        "targetAlias": "netcoreapp2.2",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -13437,16 +13436,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

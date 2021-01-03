@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {}
+    "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
+    "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
         "projectName": "eDrivingSchool.Model",
-        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
-        "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\obj\\",
+        "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj",
+        "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ZZO5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -31,7 +31,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -43,7 +42,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -57,27 +55,21 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     },
-    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {
+    "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
         "projectName": "Mobile.UWP",
-        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
-        "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\obj\\",
+        "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
+        "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -85,7 +77,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ZZO5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -99,8 +91,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
-                "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
+              "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
+                "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
               }
             }
           }
@@ -153,21 +145,21 @@
         }
       }
     },
-    "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
+    "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
+        "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
         "projectName": "Mobile",
-        "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
-        "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\obj\\",
+        "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj",
+        "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ZZO5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -180,10 +172,9 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
-                "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
+              "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj": {
+                "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\eDrivingSchool.Model\\eDrivingSchool.Model.csproj"
               }
             }
           }
@@ -196,11 +187,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Flurl.Http": {
               "target": "Package",
               "version": "[2.4.2, )"
+            },
+            "IntelliAbb.Xamarin.Controls": {
+              "target": "Package",
+              "version": "[1.0.148, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -218,16 +212,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

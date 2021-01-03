@@ -95,3 +95,11 @@ C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.W
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.csproj.CopyComplete
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.exe
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.pdb
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Category.frmAddCategory.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Category.frmCategoriesData.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.DrivingSchool.frmDrivingSchoolData.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.DrivingSchool.frmDrivingSchoolDetails.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.TechnicalInspection.frmAddTechnicalInspection.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.TechnicalInspection.frmTechnicalInspectionData.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Vehicle.frmAddVehicle.resources
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\eDrivingSchool.WinUI\obj\Debug\eDrivingSchool.WinUI.Vehicle.frmVehiclesData.resources

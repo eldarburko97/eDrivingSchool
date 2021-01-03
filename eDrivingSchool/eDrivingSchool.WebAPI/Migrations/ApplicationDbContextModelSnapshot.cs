@@ -118,7 +118,7 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category", b =>
                 {
-                    b.Property<int>("UserCategoryId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -126,7 +126,7 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("UserId");
 
-                    b.HasKey("UserCategoryId");
+                    b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
@@ -137,15 +137,19 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", b =>
                 {
-                    b.Property<int>("InstructorCategoryCandidateId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Instructor_CategoryId");
 
+                    b.Property<bool>("Polozio");
+
+                    b.Property<bool>("Prijavljen");
+
                     b.Property<int>("UserId");
 
-                    b.HasKey("InstructorCategoryCandidateId");
+                    b.HasKey("Id");
 
                     b.HasIndex("Instructor_CategoryId");
 
@@ -205,6 +209,25 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TechnicalInspections");
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.TheoryTestApplications", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<bool>("FirstAid");
+
+                    b.Property<int>("Instructor_Category_CandidateId");
+
+                    b.Property<int>("Status");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TheoryTestApplications");
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Topic", b =>

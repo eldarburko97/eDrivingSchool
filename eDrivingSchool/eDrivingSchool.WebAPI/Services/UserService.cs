@@ -108,7 +108,7 @@ namespace eDrivingSchool.WebAPI.Services
         public Model.User Register(UserInsertRequest request)
         {
             var entity = _mapper.Map<Database.User>(request);
-            _context.Add(entity);
+            
 
             if (request.Password != request.PasswordConfirm)
             {
@@ -118,6 +118,7 @@ namespace eDrivingSchool.WebAPI.Services
             entity.PasswordSalt = GenerateSalt();
             entity.PasswordHash = GenerateHash(entity.PasswordSalt, request.Password);
 
+            _context.Users.Add(entity);
             _context.SaveChanges();
             return _mapper.Map<Model.User>(entity);
         }

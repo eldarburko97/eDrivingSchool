@@ -17,7 +17,6 @@ C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\net
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\bin\Debug\netstandard2.0\Mobile.pdb
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
-C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.dll
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.pdb
 C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\YourProfilePage.xaml.g.cs
@@ -91,3 +90,5 @@ C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile\ob
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.csproj.CopyComplete
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.dll
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Mobile.pdb
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\Views\TheoryTestApplicationsPage.xaml.g.cs
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile\obj\Debug\netstandard2.0\XamlC.stamp

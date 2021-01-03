@@ -25,6 +25,18 @@
           "lib/netstandard2.0/Flurl.Http.dll": {}
         }
       },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.1.8": {
         "type": "package",
         "dependencies": {
@@ -317,6 +329,99 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/tizen-armel/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "tizen-armel"
+          },
+          "runtimes/tizen-x86/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "tizen-x86"
+          },
+          "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          },
+          "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          },
+          "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          },
+          "runtimes/win7-x64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win7-x64"
+          },
+          "runtimes/win7-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win7-x86"
+          }
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -431,6 +536,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -465,6 +571,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -934,6 +1052,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll": {},
+          "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll": {},
+          "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -1031,6 +1189,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -1065,6 +1224,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -1535,6 +1706,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll": {},
+          "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll": {},
+          "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -1632,6 +1843,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -1666,6 +1878,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -1960,6 +2184,41 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -2054,6 +2313,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -2088,6 +2348,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -2557,6 +2829,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll": {},
+          "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll": {},
+          "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -2654,6 +2966,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -2688,6 +3001,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -3158,6 +3483,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll": {},
+          "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll": {},
+          "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -3255,6 +3620,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -3289,6 +3655,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -3758,6 +4136,46 @@
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll": {},
+          "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll": {},
+          "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -3855,6 +4273,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -3889,6 +4308,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Flurl.Http.dll": {}
+        }
+      },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -4359,6 +4790,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SkiaSharp/1.60.3": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll": {},
+          "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll": {},
+          "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll": {}
+        }
+      },
+      "SkiaSharp.Views/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.UWP.dll": {}
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "SkiaSharp.Views": "1.60.3",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SkiaSharp.Views.Forms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -4456,6 +4927,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
           "eDrivingSchool.Model": "1.0.0"
@@ -4508,6 +4980,22 @@
         "lib/netstandard1.3/Flurl.Http.xml",
         "lib/netstandard2.0/Flurl.Http.dll",
         "lib/netstandard2.0/Flurl.Http.xml"
+      ]
+    },
+    "IntelliAbb.Xamarin.Controls/1.0.148": {
+      "sha512": "rJzqyBhDM87Dxv1TUl0ySbEuU7fpTLZl6dkjDx0A90u0pEzhHPAOqtQlKaRmj2098pmwFX+lIOXXmgc8raqGLA==",
+      "type": "package",
+      "path": "intelliabb.xamarin.controls/1.0.148",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "intelliabb.xamarin.controls.1.0.148.nupkg.sha512",
+        "intelliabb.xamarin.controls.nuspec",
+        "lib/monoandroid81/IntelliAbb.Xamarin.Controls.dll",
+        "lib/netstandard2.0/IntelliAbb.Xamarin.Controls.dll",
+        "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.dll",
+        "lib/uap10.0.16299/IntelliAbb.Xamarin.Controls.pri",
+        "lib/xamarinios10/IntelliAbb.Xamarin.Controls.dll"
       ]
     },
     "Microsoft.Net.Native.Compiler/2.1.8": {
@@ -4889,7 +5377,7 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
@@ -8246,6 +8734,110 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
+    "SkiaSharp/1.60.3": {
+      "sha512": "9L8luXSspkXMhRuBx7CPjEVNJ2CJljpc5XMkDUITCQnhuJJadyCwYSWcAsgEqeRqmAimI2TyJWu73BRsvKTFZg==",
+      "type": "package",
+      "path": "skiasharp/1.60.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net45/SkiaSharp.targets",
+        "build/tizen40/SkiaSharp.targets",
+        "lib/MonoAndroid/SkiaSharp.dll",
+        "lib/MonoAndroid/SkiaSharp.xml",
+        "lib/Xamarin.Mac20/SkiaSharp.dll",
+        "lib/Xamarin.Mac20/SkiaSharp.xml",
+        "lib/Xamarin.TVOS/SkiaSharp.dll",
+        "lib/Xamarin.TVOS/SkiaSharp.xml",
+        "lib/Xamarin.WatchOS/SkiaSharp.dll",
+        "lib/Xamarin.WatchOS/SkiaSharp.xml",
+        "lib/Xamarin.iOS/SkiaSharp.dll",
+        "lib/Xamarin.iOS/SkiaSharp.xml",
+        "lib/net45/SkiaSharp.dll",
+        "lib/net45/SkiaSharp.xml",
+        "lib/netstandard1.3/SkiaSharp.dll",
+        "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0/SkiaSharp.dll",
+        "lib/uap10.0/SkiaSharp.xml",
+        "runtimes/osx/native/libSkiaSharp.dylib",
+        "runtimes/tizen-armel/native/libSkiaSharp.so",
+        "runtimes/tizen-x86/native/libSkiaSharp.so",
+        "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win7-x64/native/libSkiaSharp.dll",
+        "runtimes/win7-x86/native/libSkiaSharp.dll",
+        "skiasharp.1.60.3.nupkg.sha512",
+        "skiasharp.nuspec",
+        "xamarin.interactive/SkiaSharp.Workbooks.dll"
+      ]
+    },
+    "SkiaSharp.Views/1.60.3": {
+      "sha512": "Dg73Uu7zQ8OGF7xrSM7ZhP4DqRKg3qNo/d2dov8F70qLGXKSUhraIgH/NYex3TJPCXod5EDt1YCmwC7pckgH/Q==",
+      "type": "package",
+      "path": "skiasharp.views/1.60.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid/SkiaSharp.Views.Android.dll",
+        "lib/MonoAndroid/SkiaSharp.Views.Android.xml",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Mac.dll",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Mac.xml",
+        "lib/Xamarin.TVOS/SkiaSharp.Views.tvOS.dll",
+        "lib/Xamarin.TVOS/SkiaSharp.Views.tvOS.xml",
+        "lib/Xamarin.WatchOS/SkiaSharp.Views.watchOS.dll",
+        "lib/Xamarin.WatchOS/SkiaSharp.Views.watchOS.xml",
+        "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll",
+        "lib/Xamarin.iOS/SkiaSharp.Views.iOS.xml",
+        "lib/net45/SkiaSharp.Views.Desktop.dll",
+        "lib/net45/SkiaSharp.Views.Desktop.xml",
+        "lib/net45/SkiaSharp.Views.Gtk.dll",
+        "lib/net45/SkiaSharp.Views.Gtk.xml",
+        "lib/net45/SkiaSharp.Views.WPF.dll",
+        "lib/net45/SkiaSharp.Views.WPF.xml",
+        "lib/tizen40/SkiaSharp.Views.Tizen.dll",
+        "lib/tizen40/SkiaSharp.Views.Tizen.xml",
+        "lib/uap10.0/SkiaSharp.Views.UWP.dll",
+        "lib/uap10.0/SkiaSharp.Views.UWP.xml",
+        "skiasharp.views.1.60.3.nupkg.sha512",
+        "skiasharp.views.nuspec"
+      ]
+    },
+    "SkiaSharp.Views.Forms/1.60.3": {
+      "sha512": "AwxqM2sskGH0EKCbf1KmKbMq0NEj85k6VuTn8B1ghivCFn2VomsfxtILUsIpSjydE67VdYStVUbn/fEtsHsPgQ==",
+      "type": "package",
+      "path": "skiasharp.views.forms/1.60.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid/SkiaSharp.Views.Forms.dll",
+        "lib/MonoAndroid/SkiaSharp.Views.Forms.xml",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Forms.dll",
+        "lib/Xamarin.Mac20/SkiaSharp.Views.Forms.xml",
+        "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll",
+        "lib/Xamarin.iOS/SkiaSharp.Views.Forms.xml",
+        "lib/netstandard1.3/SkiaSharp.Views.Forms.dll",
+        "lib/netstandard1.3/SkiaSharp.Views.Forms.xml",
+        "lib/tizen40/SkiaSharp.Views.Forms.dll",
+        "lib/tizen40/SkiaSharp.Views.Forms.xml",
+        "lib/uap10.0/SkiaSharp.Views.Forms.dll",
+        "lib/uap10.0/SkiaSharp.Views.Forms.xml",
+        "skiasharp.views.forms.1.60.3.nupkg.sha512",
+        "skiasharp.views.forms.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -8593,18 +9185,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ZZO5\\.nuget\\packages\\": {},
+    "C:\\Users\\Eldar\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
       "projectName": "Mobile.UWP",
-      "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
-      "packagesPath": "C:\\Users\\ZZO5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\obj\\",
+      "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\Mobile.UWP.csproj",
+      "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8612,7 +9204,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\ZZO5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eldar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -8626,8 +9218,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
-              "projectPath": "C:\\Users\\ZZO5\\Desktop\\RS2-SEMINAR\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
+            "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj": {
+              "projectPath": "C:\\Users\\Eldar\\Desktop\\eDrivingSchool\\eDrivingSchool\\Mobile\\Mobile\\Mobile.csproj"
             }
           }
         }

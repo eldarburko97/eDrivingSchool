@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": ""
+    "signature": "672110007ea5fad37ad00277a4c35aaac1bb67b6"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
       "Mobile/1.0.0": {
         "dependencies": {
           "Flurl.Http": "2.4.2",
+          "IntelliAbb.Xamarin.Controls": "1.0.148",
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.6.0.264807",
@@ -40,6 +41,17 @@
           }
         }
       },
+      "IntelliAbb.Xamarin.Controls/1.0.148": {
+        "dependencies": {
+          "SkiaSharp.Views.Forms": "1.60.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IntelliAbb.Xamarin.Controls.dll": {
+            "assemblyVersion": "1.0.148.0",
+            "fileVersion": "1.0.148.0"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
@@ -51,6 +63,26 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "SkiaSharp/1.60.3": {
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.3.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/1.60.3": {
+        "dependencies": {
+          "SkiaSharp": "1.60.3",
+          "Xamarin.Forms": "3.6.0.264807"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.3.0"
           }
         }
       },
@@ -138,6 +170,13 @@
       "path": "flurl.http/2.4.2",
       "hashPath": "flurl.http.2.4.2.nupkg.sha512"
     },
+    "IntelliAbb.Xamarin.Controls/1.0.148": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rJzqyBhDM87Dxv1TUl0ySbEuU7fpTLZl6dkjDx0A90u0pEzhHPAOqtQlKaRmj2098pmwFX+lIOXXmgc8raqGLA==",
+      "path": "intelliabb.xamarin.controls/1.0.148",
+      "hashPath": "intelliabb.xamarin.controls.1.0.148.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -158,6 +197,20 @@
       "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "SkiaSharp/1.60.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9L8luXSspkXMhRuBx7CPjEVNJ2CJljpc5XMkDUITCQnhuJJadyCwYSWcAsgEqeRqmAimI2TyJWu73BRsvKTFZg==",
+      "path": "skiasharp/1.60.3",
+      "hashPath": "skiasharp.1.60.3.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Forms/1.60.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AwxqM2sskGH0EKCbf1KmKbMq0NEj85k6VuTn8B1ghivCFn2VomsfxtILUsIpSjydE67VdYStVUbn/fEtsHsPgQ==",
+      "path": "skiasharp.views.forms/1.60.3",
+      "hashPath": "skiasharp.views.forms.1.60.3.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

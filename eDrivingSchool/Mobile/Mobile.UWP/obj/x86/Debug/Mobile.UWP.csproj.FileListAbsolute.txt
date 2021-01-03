@@ -863,3 +863,14 @@ C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UW
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160679180000000.json
 C:\Users\ZZO5\Desktop\RS2-SEMINAR\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758516200000000.json
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\IntelliAbb.Xamarin.Controls.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\libEGL.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\libGLESv2.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\libSkiaSharp.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\SkiaSharp.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\SkiaSharp.Views.UWP.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\bin\x86\Debug\SkiaSharp.Views.Forms.dll
+C:\Users\Eldar\Desktop\eDrivingSchool\eDrivingSchool\Mobile\Mobile.UWP\obj\x86\Debug\IntelliAbb.Xamarin.Controls.pri.xml

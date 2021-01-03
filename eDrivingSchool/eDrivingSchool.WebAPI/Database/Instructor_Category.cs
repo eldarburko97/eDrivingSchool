@@ -10,7 +10,7 @@ namespace eDrivingSchool.WebAPI.Database
     public class Instructor_Category // This class represents relation between Instructor (table User with RoleId == 2) and Category
     {
         [Key]
-        public int UserCategoryId { get; set; }
+        public int Id { get; set; }
 
         public int UserId { get; set; }
         [ForeignKey("UserId")]
