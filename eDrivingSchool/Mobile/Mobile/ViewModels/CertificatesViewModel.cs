@@ -130,7 +130,7 @@ namespace Mobile.ViewModels
         async Task Cancel(object certificate_request)
         {
             var item = certificate_request as Certificate_Request;
-            await _certificate_requestService.Delete<Certificate_Request>(item.Id);
+            await _certificate_requestService.Delete<Certificate_Request>(item.CertificateRequestId);
             await Application.Current.MainPage.DisplayAlert("", "You have successfully cancelled your request", "OK");
             Application.Current.MainPage = new CertificatesPage();
         }

@@ -31,12 +31,13 @@
     FillColor="DodgerBlue"
     CheckColor="White"
     Shape="Rectangle" 
-     Grid.Column="1" />
+     Grid.Column="1" IsCheckedChanged="AwesomeCheckbox_IsCheckedChanged" IsChecked="{Binding isChecked}" />
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <Button Text="Submit" BackgroundColor="DodgerBlue" TextColor="White"  Clicked="Button_Clicked"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

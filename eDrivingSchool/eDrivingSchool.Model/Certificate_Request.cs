@@ -6,7 +6,7 @@ namespace eDrivingSchool.Model
 {
     public class Certificate_Request
     {
-        public int Id { get; set; }
+        public int CertificateRequestId { get; set; }
         public int CertificateId { get; set; }
         public Certificate Certificate { get; set; }
         public string Purpose { get; set; }

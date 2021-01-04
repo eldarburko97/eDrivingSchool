@@ -22,11 +22,16 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.Instructor_Category_Candidate>().AsQueryable();
 
-
-
-            if (request != null && request.Instructor_CategoryId != 0 )
+            if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0)
             {
-                query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.Polozio == false && x.Prijavljen == false);
+                query = query.Where(w => w.Instructor_CategoryId == request.Instructor_CategoryId && w.UserId == request.UserId && w.Polozio == false && w.Prijavljen == false);
+            }
+            else
+            {
+                if (request != null && request.Instructor_CategoryId != 0)
+                {
+                    query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.Polozio == false && x.Prijavljen == false);
+                }
             }
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category_Candidate>>(list);

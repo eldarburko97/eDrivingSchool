@@ -40,7 +40,7 @@ namespace eDrivingSchool.WebAPI
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICRUDService<Model.DrivingSchool, object, Model.Requests.DrivingSchoolInsertRequest, Model.Requests.DrivingSchoolInsertRequest>, DrivingSchoolService>();
             services.AddScoped<ICRUDService<Model.Vehicle, Model.Requests.VehicleSearchRequest, Model.Requests.VehicleInsertRequest, Model.Requests.VehicleInsertRequest>, VehicleService>();
-            services.AddScoped<ICRUDService<Model.Category, object, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>, CRUDService<Model.Category, object,Database.Category, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>>();
+            services.AddScoped<ICRUDService<Model.Category, object, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>, CRUDService<Model.Category, object, Database.Category, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>>();
             services.AddScoped<ICRUDService<Model.TechnicalInspection, Model.Requests.TechnicalInspectionSearchRequest, Model.Requests.TechnicalInspectionInsertRequest, Model.Requests.TechnicalInspectionInsertRequest>, TechnicalInspectionService>();
 
 
@@ -54,6 +54,7 @@ namespace eDrivingSchool.WebAPI
             services.AddScoped<ICRUDService<Model.Certificate_Request, Certificate_RequestSearch, Certificate_RequestInsert, Certificate_RequestInsert>, Certificate_RequestService>();
             services.AddScoped<ICRUDService<Model.Instructor_Category, InstructorCategorySearchRequest, InstructorCategoryInsertRequest, InstructorCategoryInsertRequest>, Instructor_CategoryService>();
             services.AddScoped<ICRUDService<Model.Instructor_Category_Candidate, InstructorCategoryCandidateSearchRequest, InstructorCategoryCandidateInsertRequest, InstructorCategoryCandidateInsertRequest>, Instructor_Category_CandidateService>();
+            services.AddScoped<ICRUDService<Model.TheoryTestApplications, TheoryTestApplicationsSearchRequest, TheoryTestApplicationsInsertRequest, TheoryTestApplicationsInsertRequest>, TheoryTestApplicationsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,7 +70,7 @@ namespace eDrivingSchool.WebAPI
                 app.UseHsts();
             }
             app.UseAuthentication();
-          //  app.UseHttpsRedirection();
+            //  app.UseHttpsRedirection();
             app.UseMvc();
             app.UseSwagger();
             app.UseSwaggerUI(c =>

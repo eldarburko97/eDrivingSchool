@@ -16,10 +16,13 @@ namespace Mobile.Views
     {
         //  public List<Candidate> candidates { get; set; } = new List<Candidate>();
         private TheoryTestApplicationsViewModel model = null;
+        public List<Candidate> candidates { get; set; } = null;
+       // public List<Candidate> candidates { get; set; } = new List<Candidate>();
         public TheoryTestApplicationsPage()
         {
             InitializeComponent();
             BindingContext = model = new TheoryTestApplicationsViewModel();
+            candidates = new List<Candidate>();
             /*
             candidates.Add(new Candidate { FirstName = "Candidate1", LastName = "Candidate11" });
             candidates.Add(new Candidate { FirstName = "Candidate2", LastName = "Candidate22" });
@@ -34,6 +37,25 @@ namespace Mobile.Views
         {
             base.OnAppearing();
             await model.Init();
+        }
+
+        private void AwesomeCheckbox_IsCheckedChanged(object sender, TappedEventArgs e)
+        {
+            var checkbox = sender as IntelliAbb.Xamarin.Controls.Checkbox;
+            var candidate = checkbox.BindingContext as Candidate;
+            if (candidate.isChecked)
+            {
+                candidates.Add(candidate);
+            }
+            else
+            {
+                candidates.Remove(candidate);
+            }
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await model.Submit(candidates);
         }
     }
 }

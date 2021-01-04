@@ -227,6 +227,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Instructor_Category_CandidateId");
+
                     b.ToTable("TheoryTestApplications");
                 });
 
@@ -387,6 +389,14 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.TheoryTestApplications", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
+                        .WithMany()
+                        .HasForeignKey("Instructor_Category_CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
