@@ -49,6 +49,11 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.User>().AsQueryable();
 
+            if (!string.IsNullOrEmpty(request.Username))
+            {
+                query = query.Where(w => w.Username == request.Username);
+            }
+
             if (!string.IsNullOrEmpty(request.FirstName))
             {
                 query = query.Where(x => x.FirstName == request.FirstName);

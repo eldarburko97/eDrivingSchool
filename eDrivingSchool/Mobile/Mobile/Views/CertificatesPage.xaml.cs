@@ -21,6 +21,7 @@ namespace Mobile.Views
         {
             InitializeComponent();
             BindingContext = model = new CertificatesViewModel();
+            /*
             list = new List<string>();
             list.Add("item1");
             list.Add("item2");
@@ -43,7 +44,7 @@ namespace Mobile.Views
             certificates.Add(new Certificate { Svrha = "Ljekarsko uvjernje o zdravstvenom stanju", Datum = "23.01.2019", Status = "Izdata" });
             certificates.Add(new Certificate { Svrha = "Ljekarsko uvjernje o zdravstvenom stanju", Datum = "23.01.2019", Status = "Izdata" });
             certificates.Add(new Certificate { Svrha = "Ljekarsko uvjernje o zdravstvenom stanju", Datum = "23.01.2019", Status = "Izdata" });
-            certificates.Add(new Certificate { Svrha = "Ljekarsko uvjernje o zdravstvenom stanju", Datum = "23.01.2019", Status = "Izdata" });
+            certificates.Add(new Certificate { Svrha = "Ljekarsko uvjernje o zdravstvenom stanju", Datum = "23.01.2019", Status = "Izdata" });*/
             // Certificates.ItemsSource = certificates;
         }
 
