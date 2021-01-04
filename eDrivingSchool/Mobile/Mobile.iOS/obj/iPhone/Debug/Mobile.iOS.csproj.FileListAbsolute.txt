@@ -1,8 +1,0 @@
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\optimized\
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\Mobile.iOS.csprojAssemblyReference.cache
-C:\Users\ZZO5\Desktop\RS2-seminarski rad\eDrivingSchool\eDrivingSchool\Mobile\Mobile.iOS\obj\iPhone\Debug\Mobile.iOS.csproj.CoreCompileInputs.cache
