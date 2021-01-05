@@ -65,6 +65,8 @@ namespace Mobile.ViewModels
 
             var instructors_categories = await _instructor_categoriesService.GetAll<List<Instructor_Category>>(request2);
             InstructorCategoryCandidateSearchRequest request3 = new InstructorCategoryCandidateSearchRequest();
+            InstructorCategoryCandidateInsertRequest request4 = new InstructorCategoryCandidateInsertRequest();
+            int count = 0;
             foreach (var instructor_category in instructors_categories)
             {
                 request3.Instructor_CategoryId = instructor_category.Id;
@@ -77,11 +79,15 @@ namespace Mobile.ViewModels
                         insert_request.Instructor_Category_CandidateId = instructor_category_candidate.Id;
                         insert_request.Date = DateTime.Now;
                         insert_request.FirstAid = true;
-                        insert_request.Status = 0;
+                        insert_request.Status = Status.Active;
                         await _theoryTestApplicationsService.Insert<TheoryTestApplications>(insert_request);
+                        count++;
+                        request4.Prijavljen = true;
+                        await _instructor_categories_candidateService.Update<Instructor_Category_Candidate>(instructor_category_candidate.Id, request4);
                     }
                 }
             }
+            await Application.Current.MainPage.DisplayAlert("", "You have successfully submitted " + count + " request", "OK");
         }
     }
 }

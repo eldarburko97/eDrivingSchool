@@ -143,7 +143,11 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("Instructor_CategoryId");
 
-                    b.Property<bool>("Polozio");
+                    b.Property<bool>("PolozenPrakticniTest");
+
+                    b.Property<bool>("PolozenTeorijskiTest");
+
+                    b.Property<bool>("PolozenTestPrvePomoci");
 
                     b.Property<bool>("Prijavljen");
 

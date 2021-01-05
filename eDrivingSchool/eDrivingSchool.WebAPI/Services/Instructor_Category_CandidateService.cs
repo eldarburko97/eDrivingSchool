@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eDrivingSchool.WebAPI.Services
 {
-    public class Instructor_Category_CandidateService : CRUDService<Model.Instructor_Category_Candidate, InstructorCategoryCandidateSearchRequest, Database.Instructor_Category, InstructorCategoryCandidateInsertRequest, InstructorCategoryCandidateInsertRequest>
+    public class Instructor_Category_CandidateService : CRUDService<Model.Instructor_Category_Candidate, InstructorCategoryCandidateSearchRequest, Database.Instructor_Category_Candidate, InstructorCategoryCandidateInsertRequest, InstructorCategoryCandidateInsertRequest>
     {
         private ApplicationDbContext _context;
         private IMapper _mapper;
@@ -24,13 +24,13 @@ namespace eDrivingSchool.WebAPI.Services
 
             if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0)
             {
-                query = query.Where(w => w.Instructor_CategoryId == request.Instructor_CategoryId && w.UserId == request.UserId && w.Polozio == false && w.Prijavljen == false);
+                query = query.Where(w => w.Instructor_CategoryId == request.Instructor_CategoryId && w.UserId == request.UserId && w.PolozenTeorijskiTest == false && w.Prijavljen == false);
             }
             else
             {
                 if (request != null && request.Instructor_CategoryId != 0)
                 {
-                    query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.Polozio == false && x.Prijavljen == false);
+                    query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.PolozenTeorijskiTest == false && x.Prijavljen == false);
                 }
             }
             var list = query.ToList();

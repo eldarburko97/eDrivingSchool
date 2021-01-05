@@ -6,5 +6,6 @@ namespace eDrivingSchool.Model.Requests
 {
     public class InstructorCategoryCandidateInsertRequest
     {
+        public bool Prijavljen { get; set; }
     }
 }
