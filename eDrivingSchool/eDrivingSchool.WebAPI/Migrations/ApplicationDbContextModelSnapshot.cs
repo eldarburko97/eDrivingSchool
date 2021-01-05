@@ -95,6 +95,33 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingLesson", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<float>("AverageFuelConsumption");
+
+                    b.Property<string>("Damage");
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<float>("Mileage");
+
+                    b.Property<int>("UserId");
+
+                    b.Property<int>("VehicleId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("DrivingLessons");
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingSchool", b =>
                 {
                     b.Property<int>("Id")
@@ -325,6 +352,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("Power");
 
+                    b.Property<string>("RegistrationNumber");
+
                     b.Property<int>("TechnicalInspectionId");
 
                     b.Property<int>("Year");
@@ -359,6 +388,19 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingLesson", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Vehicle", "Vehicle")
+                        .WithMany()
+                        .HasForeignKey("VehicleId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -16,5 +16,6 @@ namespace eDrivingSchool.WebAPI.Database
         public int TechnicalInspectionId { get; set; }
         public TechnicalInspection TechnicalInspection { get; set; }
         public byte[] Image { get; set; }
+        public string RegistrationNumber { get; set; }
     }
 }
