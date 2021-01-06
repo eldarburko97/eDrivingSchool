@@ -55,7 +55,8 @@ namespace Mobile.Views
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
                  new HomeMenuItem {Id = MenuItemType.YourProfile, Title="Your Profile" },
                   new HomeMenuItem {Id = MenuItemType.Forum, Title="Forum" },
-                   new HomeMenuItem {Id = MenuItemType.TheoryTestApplications, Title="Theory test applications" }
+                   new HomeMenuItem {Id = MenuItemType.TheoryTestApplications, Title="Theory test applications" },
+                   new HomeMenuItem {Id = MenuItemType.Lessons, Title="Lessons" }
             };
 
            

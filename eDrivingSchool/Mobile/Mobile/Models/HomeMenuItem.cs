@@ -11,7 +11,8 @@ namespace Mobile.Models
         YourProfile,
         Forum,
         Certificates,
-        TheoryTestApplications
+        TheoryTestApplications,
+        Lessons
     }
     public class HomeMenuItem
     {

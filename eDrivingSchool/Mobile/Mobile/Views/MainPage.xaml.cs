@@ -47,6 +47,9 @@ namespace Mobile.Views
                     case (int)MenuItemType.TheoryTestApplications:
                         MenuPages.Add(id, new NavigationPage(new TheoryTestApplicationsPage()));
                         break;
+                    case (int)MenuItemType.Lessons:
+                        MenuPages.Add(id, new NavigationPage(new NewLessonPage()));
+                        break;
                 }
             }
 

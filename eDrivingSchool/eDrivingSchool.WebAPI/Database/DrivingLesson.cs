@@ -17,7 +17,7 @@ namespace eDrivingSchool.WebAPI.Database
         public int VehicleId { get; set; }
         [ForeignKey("VehicleId")]
         public Vehicle Vehicle { get; set; }
-        public float Mileage { get; set; }   // Number of kilometers traveled
+        public float Mileage { get; set; }   // Number of kilometers traveled on driving lesson
         public float AverageFuelConsumption { get; set; }
         public string Damage { get; set; }
         public DateTime Date { get; set; }

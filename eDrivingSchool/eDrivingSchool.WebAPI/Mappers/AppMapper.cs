@@ -45,6 +45,8 @@ namespace eDrivingSchool.WebAPI.Mappers
             CreateMap<Database.Instructor_Category_Candidate, InstructorCategoryCandidateInsertRequest>().ReverseMap();
             CreateMap<Database.TheoryTestApplications, Model.TheoryTestApplications>().ReverseMap();
             CreateMap<Database.TheoryTestApplications, TheoryTestApplicationsInsertRequest>().ReverseMap();
+            CreateMap<Database.DrivingLesson, Model.DrivingLesson>().ReverseMap();
+            CreateMap<Database.DrivingLesson, DrivingLessonInsertRequest>().ReverseMap();
         }
     }
 }

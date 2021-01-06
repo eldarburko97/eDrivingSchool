@@ -55,6 +55,7 @@ namespace eDrivingSchool.WebAPI
             services.AddScoped<ICRUDService<Model.Instructor_Category, InstructorCategorySearchRequest, InstructorCategoryInsertRequest, InstructorCategoryInsertRequest>, Instructor_CategoryService>();
             services.AddScoped<ICRUDService<Model.Instructor_Category_Candidate, InstructorCategoryCandidateSearchRequest, InstructorCategoryCandidateInsertRequest, InstructorCategoryCandidateInsertRequest>, Instructor_Category_CandidateService>();
             services.AddScoped<ICRUDService<Model.TheoryTestApplications, TheoryTestApplicationsSearchRequest, TheoryTestApplicationsInsertRequest, TheoryTestApplicationsInsertRequest>, TheoryTestApplicationsService>();
+            services.AddScoped<ICRUDService<Model.DrivingLesson, DrivingLessonSearchRequest, DrivingLessonInsertRequest, DrivingLessonInsertRequest>, DrivingLessonService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
