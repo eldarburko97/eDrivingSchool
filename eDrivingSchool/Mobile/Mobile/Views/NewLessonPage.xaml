@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Mobile.ViewModels"
              x:Class="Mobile.Views.NewLessonPage">
+    <ContentPage.BindingContext>
+        <vm:DrivingLessonViewModel></vm:DrivingLessonViewModel>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label HorizontalOptions="Center" VerticalOptions="Center" Text=" Add lesson" FontAttributes="Bold" FontSize="Large"></Label>
@@ -20,7 +24,7 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Text="Candidate"></Label>
-                <Picker Grid.Row="0" Grid.Column="1"></Picker>
+                    <Picker Grid.Row="0" Grid.Column="1" ItemsSource="{Binding CandidatesList}" ItemDisplayBinding="{Binding FirstName}"></Picker>
                 <Label Grid.Row="1" Grid.Column="0" Text="Vehicle"></Label>
                 <Picker Grid.Row="1" Grid.Column="1"></Picker>
                 <Label Grid.Row="2" Grid.Column="0" Text="Mileage"></Label>
@@ -33,7 +37,7 @@
                 <DatePicker Grid.Row="5" Grid.Column="1"></DatePicker>
             </Grid>
             </StackLayout>
-            <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit"></Button>
+            <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit" Command="{Binding SubmitCommand}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

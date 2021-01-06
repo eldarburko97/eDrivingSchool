@@ -22,16 +22,20 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.Instructor_Category_Candidate>().AsQueryable();
 
-            if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0)
+            if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0)    // Selects list of checked candidates of logged in instructor and instructor's category
             {
                 query = query.Where(w => w.Instructor_CategoryId == request.Instructor_CategoryId && w.UserId == request.UserId && w.PolozenTeorijskiTest == false && w.Prijavljen == false);
             }
             else
             {
-                if (request != null && request.Instructor_CategoryId != 0)
+                if (request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == false && request.Prijavljen == false)  // Selects records of logged in instructors and his category
                 {
                     query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.PolozenTeorijskiTest == false && x.Prijavljen == false);
                 }
+            }
+            if(request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == true && request.PolozenPrakticniTest == false && request.Prijavljen == false) // Selects candidates (candidates who are assigned to logged in instructor) who have passed theory test
+            {
+                query = query.Where(z => z.Instructor_CategoryId == request.Instructor_CategoryId && z.PolozenTeorijskiTest == request.PolozenTeorijskiTest && z.PolozenPrakticniTest == request.PolozenPrakticniTest && z.Prijavljen == request.Prijavljen);
             }
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category_Candidate>>(list);
