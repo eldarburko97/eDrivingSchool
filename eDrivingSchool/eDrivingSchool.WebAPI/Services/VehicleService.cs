@@ -27,7 +27,12 @@ namespace eDrivingSchool.WebAPI.Services
                 query = query.Where(x => x.Name.Contains(request.Name));
             }
             var list = query.ToList();
-            return _mapper.Map<List<Model.Vehicle>>(list);
+            var vehicles = _mapper.Map<List<Model.Vehicle>>(list);
+            foreach (var vehicle in vehicles)
+            {
+                vehicle.vehicle = vehicle.Name + " " + vehicle.RegistrationNumber;
+            }
+            return vehicles;
         }
     }
 }

@@ -42,8 +42,16 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(x => x.Username == request.Username);
             }
-             var list = query.Where(w => w.RoleId == 3).ToList();
+            var list = query.Where(w => w.RoleId == 3).ToList();
             return _mapper.Map<List<Model.Candidate>>(list);
+        }
+
+        public override Model.Candidate GetById(int id)
+        {
+            var entity = _context.Set<Database.User>().Find(id);
+            var candidate = _mapper.Map<Model.Candidate>(entity);
+            candidate.candidate = candidate.FirstName + " " + candidate.LastName;
+            return candidate;
         }
 
         public static string GenerateSalt()

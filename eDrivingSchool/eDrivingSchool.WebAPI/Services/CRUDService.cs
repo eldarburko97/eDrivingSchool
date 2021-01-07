@@ -31,7 +31,7 @@ namespace eDrivingSchool.WebAPI.Services
             return _mapper.Map<List<T>>(list);
         }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
             var entity = _context.Set<TDatabase>().Find(id);
             return _mapper.Map<T>(entity);

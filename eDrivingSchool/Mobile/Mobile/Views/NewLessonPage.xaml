@@ -24,17 +24,17 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Text="Candidate"></Label>
-                    <Picker Grid.Row="0" Grid.Column="1" ItemsSource="{Binding CandidatesList}" ItemDisplayBinding="{Binding FirstName}"></Picker>
+                    <Picker Grid.Row="0" Grid.Column="1" ItemsSource="{Binding CandidatesList}" ItemDisplayBinding="{Binding candidate}" SelectedItem="{Binding SelectedCandidate}"></Picker>
                 <Label Grid.Row="1" Grid.Column="0" Text="Vehicle"></Label>
-                <Picker Grid.Row="1" Grid.Column="1"></Picker>
+                    <Picker Grid.Row="1" Grid.Column="1" ItemsSource="{Binding VehiclesList}" ItemDisplayBinding="{Binding vehicle}" SelectedItem="{Binding SelectedVehicle}"></Picker>
                 <Label Grid.Row="2" Grid.Column="0" Text="Mileage"></Label>
-                <Entry Grid.Row="2" Grid.Column="1" Placeholder="Mileage"></Entry>
+                <Entry Grid.Row="2" Grid.Column="1" Placeholder="Mileage" Text="{Binding Mileage}"></Entry>
                 <Label Grid.Row="3" Grid.Column="0" Text="Average fuel consumption"></Label>
-                <Entry Grid.Row="3" Grid.Column="1" Placeholder="Average fuel consumption"></Entry>
+                <Entry Grid.Row="3" Grid.Column="1" Placeholder="Average fuel consumption" Text="{Binding AverageFuelConsumption}"></Entry>
                 <Label Grid.Row="4" Grid.Column="0" Text="Damage"></Label>
-                <Entry Grid.Row="4" Grid.Column="1" Placeholder="Damage"></Entry>
+                <Entry Grid.Row="4" Grid.Column="1" Placeholder="Damage" Text="{Binding Damage}"></Entry>
                 <Label Grid.Row="5" Grid.Column="0" Text="Date"></Label>
-                <DatePicker Grid.Row="5" Grid.Column="1"></DatePicker>
+                <DatePicker Grid.Row="5" Grid.Column="1" Date="{Binding Date}"></DatePicker>
             </Grid>
             </StackLayout>
             <Button BackgroundColor="DodgerBlue" TextColor="White" Text="Submit" Command="{Binding SubmitCommand}"></Button>

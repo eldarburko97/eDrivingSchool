@@ -12,5 +12,6 @@ namespace eDrivingSchool.Model
         public float AverageFuelConsumption { get; set; }
         public string Damage { get; set; }
         public DateTime Date { get; set; }
+        public int InstructorId { get; set; }
     }
 }

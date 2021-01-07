@@ -16,5 +16,6 @@ namespace eDrivingSchool.Model
         public string JMBG { get; set; }
         public string Username { get; set; }
         public bool isChecked { get; set; }
+        public string candidate { get; set; }   // First_name + last_name
     }
 }

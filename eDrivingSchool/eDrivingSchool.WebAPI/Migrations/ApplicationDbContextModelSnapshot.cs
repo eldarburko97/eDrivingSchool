@@ -107,6 +107,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<DateTime>("Date");
 
+                    b.Property<int>("InstructorId");
+
                     b.Property<float>("Mileage");
 
                     b.Property<int>("UserId");
@@ -114,6 +116,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.Property<int>("VehicleId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InstructorId");
 
                     b.HasIndex("UserId");
 
@@ -393,6 +397,11 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingLesson", b =>
                 {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "Instructor")
+                        .WithMany()
+                        .HasForeignKey("InstructorId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")

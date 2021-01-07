@@ -21,5 +21,8 @@ namespace eDrivingSchool.WebAPI.Database
         public float AverageFuelConsumption { get; set; }
         public string Damage { get; set; }
         public DateTime Date { get; set; }
+        [ForeignKey("Instructor")]
+        public int InstructorId { get; set; }
+        public User Instructor { get; set; }
     }
 }
