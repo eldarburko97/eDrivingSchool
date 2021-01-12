@@ -22,9 +22,9 @@ namespace eDrivingSchool.WebAPI.Services
         public override List<Model.Payment> GetAll(PaymentSearchRequest request)
         {
             var query = _context.Payments.AsQueryable();
-            if (!string.IsNullOrEmpty(request.Type))
+            if (!string.IsNullOrEmpty(request.Category))
             {
-                query = query.Where(x => x.Type == request.Type);
+                query = query.Where(x => x.Category == request.Category);
             }
             var list = query.Include("User").ToList();
             return _mapper.Map<List<Model.Payment>>(list);

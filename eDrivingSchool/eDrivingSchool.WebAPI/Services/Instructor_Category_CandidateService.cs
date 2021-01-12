@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eDrivingSchool.Model.Requests;
 using eDrivingSchool.WebAPI.Database;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,11 @@ namespace eDrivingSchool.WebAPI.Services
             if(request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == true && request.PolozenPrakticniTest == false && request.Prijavljen == false) // Selects candidates (candidates who are assigned to logged in instructor) who have passed theory test
             {
                 query = query.Where(z => z.Instructor_CategoryId == request.Instructor_CategoryId && z.PolozenTeorijskiTest == request.PolozenTeorijskiTest && z.PolozenPrakticniTest == request.PolozenPrakticniTest && z.Prijavljen == request.Prijavljen);
+            }
+
+            if(request.Paid == false)
+            {
+                query = query.Where(p => p.Paid == request.Paid).Include(i => i.Instructor_Category);
             }
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category_Candidate>>(list);

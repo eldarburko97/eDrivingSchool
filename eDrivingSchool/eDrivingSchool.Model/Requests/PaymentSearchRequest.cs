@@ -6,6 +6,6 @@ namespace eDrivingSchool.Model.Requests
 {
    public class PaymentSearchRequest
     {
-        public string Type { get; set; }
+        public string Category { get; set; }
     }
 }

@@ -34,9 +34,10 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateOfPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPaymentsData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,15 +67,18 @@
             this.Id,
             this.FirstName,
             this.LastName,
-            this.Type,
+            this.Category,
             this.Amount,
-            this.DateOfPayment});
+            this.DateOfPayment,
+            this.Note});
             this.dgvPaymentsData.Location = new System.Drawing.Point(12, 103);
             this.dgvPaymentsData.Name = "dgvPaymentsData";
             this.dgvPaymentsData.ReadOnly = true;
             this.dgvPaymentsData.RowTemplate.Height = 24;
-            this.dgvPaymentsData.Size = new System.Drawing.Size(784, 335);
+            this.dgvPaymentsData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPaymentsData.Size = new System.Drawing.Size(979, 335);
             this.dgvPaymentsData.TabIndex = 2;
+            this.dgvPaymentsData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvPaymentsData_MouseDoubleClick);
             // 
             // Id
             // 
@@ -98,12 +102,12 @@
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
             // 
-            // Type
+            // Category
             // 
-            this.Type.DataPropertyName = "Type";
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
+            this.Category.DataPropertyName = "Category";
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
             // 
             // Amount
             // 
@@ -119,11 +123,18 @@
             this.DateOfPayment.Name = "DateOfPayment";
             this.DateOfPayment.ReadOnly = true;
             // 
+            // Note
+            // 
+            this.Note.DataPropertyName = "Note";
+            this.Note.HeaderText = "Note";
+            this.Note.Name = "Note";
+            this.Note.ReadOnly = true;
+            // 
             // frmPaymentData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1044, 450);
             this.Controls.Add(this.dgvPaymentsData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -143,8 +154,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateOfPayment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Note;
     }
 }

@@ -31,5 +31,7 @@ namespace eDrivingSchool.WebAPI.Services
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category>>(list);
         }
+
+       
     }
 }

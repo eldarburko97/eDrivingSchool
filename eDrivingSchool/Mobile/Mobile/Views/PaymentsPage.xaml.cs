@@ -17,6 +17,7 @@ namespace Mobile.Views
         public PaymentsPage()
         {
             InitializeComponent();
+            /*
             datagrids = new List<Payment>();
             datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
             datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
@@ -135,7 +136,7 @@ namespace Mobile.Views
             datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
             datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
             datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            BindingContext = this;
+            BindingContext = this;*/
         }
     }
 }

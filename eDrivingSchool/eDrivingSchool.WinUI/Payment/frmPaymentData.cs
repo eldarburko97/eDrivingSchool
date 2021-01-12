@@ -23,7 +23,7 @@ namespace eDrivingSchool.WinUI.Payment
         {
             var search = new PaymentSearchRequest
             {
-                Type = txtSearch.Text
+                Category = txtSearch.Text
             };
             var result = await _apiService.GetAll<List<Model.Payment>>(search);
             foreach (var payment in result)
@@ -33,6 +33,13 @@ namespace eDrivingSchool.WinUI.Payment
             }
             dgvPaymentsData.AutoGenerateColumns = false;
             dgvPaymentsData.DataSource = result;
+        }
+
+        private void DgvPaymentsData_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var id = dgvPaymentsData.SelectedRows[0].Cells[0].Value;
+            frmAddPayment frm = new frmAddPayment(int.Parse(id.ToString()));
+            frm.Show();
         }
     }
 }

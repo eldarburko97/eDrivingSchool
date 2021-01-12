@@ -174,6 +174,10 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("Instructor_CategoryId");
 
+                    b.Property<int>("NumberOfLessons");
+
+                    b.Property<bool>("Paid");
+
                     b.Property<bool>("PolozenPrakticniTest");
 
                     b.Property<bool>("PolozenTeorijskiTest");
@@ -201,9 +205,11 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<float>("Amount");
 
+                    b.Property<string>("Category");
+
                     b.Property<DateTime>("DateOfPayment");
 
-                    b.Property<string>("Type");
+                    b.Property<string>("Note");
 
                     b.Property<int>("UserId");
 

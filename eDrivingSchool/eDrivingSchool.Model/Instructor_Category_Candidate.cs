@@ -8,5 +8,7 @@ namespace eDrivingSchool.Model
     {
         public int Id { get; set; }
         public int UserId { get; set; }
+        public int Instructor_CategoryId { get; set; }
+        public Instructor_Category Instructor_Category { get; set; }
     }
 }
