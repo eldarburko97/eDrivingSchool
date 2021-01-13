@@ -26,6 +26,10 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(x => x.Category == request.Category);
             }
+            if(request != null && request.UserId != 0)
+            {
+                query = query.Where(w => w.UserId == request.UserId);
+            }
             var list = query.Include("User").ToList();
             return _mapper.Map<List<Model.Payment>>(list);
         }

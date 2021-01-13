@@ -1,4 +1,5 @@
 ﻿using eDrivingSchool.Model;
+using Mobile.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,130 +14,18 @@ namespace Mobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PaymentsPage : ContentPage
     {
-        public IList<Payment> datagrids { get; set; }
+        private PaymentsViewModel model = null;
         public PaymentsPage()
         {
             InitializeComponent();
-            /*
-            datagrids = new List<Payment>();
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            datagrids.Add(new Payment() { Id = 1, Type = "Školarina", Amount = 900, DateOfPayment = "10/21/2020" });
-            BindingContext = this;*/
+            BindingContext = model = new PaymentsViewModel();
+        }
+
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await model.Init();
         }
     }
 }
