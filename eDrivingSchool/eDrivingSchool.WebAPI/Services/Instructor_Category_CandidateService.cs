@@ -23,23 +23,23 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.Instructor_Category_Candidate>().AsQueryable();
 
-            if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0)    // Selects list of checked candidates of logged in instructor and instructor's category
+            if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0 && request.PolozenTeorijskiTest == false && request.Prijavljen == false)    // Selects list of checked candidates of logged in instructor and instructor's category
             {
-                query = query.Where(w => w.Instructor_CategoryId == request.Instructor_CategoryId && w.UserId == request.UserId && w.PolozenTeorijskiTest == false && w.Prijavljen == false);
+                query = query.Where(w => w.Instructor_CategoryId == request.Instructor_CategoryId && w.UserId == request.UserId && w.PolozenTeorijskiTest == request.PolozenTeorijskiTest && w.Prijavljen == request.Prijavljen);
             }
-            else
+            else if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0 && request.PolozenTeorijskiTest == true && request.PolozenPrakticniTest == false && request.Prijavljen == false)
             {
-                if (request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == false && request.Prijavljen == false)  // Selects records of logged in instructors and his category
-                {
-                    query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.PolozenTeorijskiTest == false && x.Prijavljen == false);
-                }
+                query = query.Where(q => q.Instructor_CategoryId == request.Instructor_CategoryId && q.UserId == request.UserId && q.PolozenTeorijskiTest == request.PolozenTeorijskiTest && q.PolozenPrakticniTest == request.PolozenPrakticniTest && q.Prijavljen == request.Prijavljen);
             }
-            if(request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == true && request.PolozenPrakticniTest == false && request.Prijavljen == false) // Selects candidates (candidates who are assigned to logged in instructor) who have passed theory test
+            else if (request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == false && request.Prijavljen == false) // Selects records of logged in instructors and his category
+            {
+                query = query.Where(x => x.Instructor_CategoryId == request.Instructor_CategoryId && x.PolozenTeorijskiTest == false && x.Prijavljen == false).Include(i => i.Instructor_Category);
+            }
+            else if (request != null && request.Instructor_CategoryId != 0 && request.PolozenTeorijskiTest == true && request.PolozenPrakticniTest == false && request.Prijavljen == false) // Selects candidates (candidates who are assigned to logged in instructor) who have passed theory test
             {
                 query = query.Where(z => z.Instructor_CategoryId == request.Instructor_CategoryId && z.PolozenTeorijskiTest == request.PolozenTeorijskiTest && z.PolozenPrakticniTest == request.PolozenPrakticniTest && z.Prijavljen == request.Prijavljen);
             }
-
-            if(request.Paid == false)
+            else if (request.Paid == false)
             {
                 query = query.Where(p => p.Paid == request.Paid).Include(i => i.Instructor_Category);
             }

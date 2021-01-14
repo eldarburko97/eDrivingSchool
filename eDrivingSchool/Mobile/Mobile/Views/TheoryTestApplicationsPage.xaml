@@ -26,8 +26,11 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding FirstName}" Margin="5,0,0,0"  VerticalTextAlignment="Center"></Label>
-                                    <ia:Checkbox x:Name="AwesomeCheckbox"
+
+                                        <Label Text="{Binding candidate_category}" Grid.Column="0" Margin="5,0,0,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium">
+                                          
+                                        </Label>
+                                        <ia:Checkbox x:Name="AwesomeCheckbox"
     OutlineColor="DodgerBlue"
     FillColor="DodgerBlue"
     CheckColor="White"

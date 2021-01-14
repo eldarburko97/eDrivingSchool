@@ -17,7 +17,7 @@ namespace Mobile.ViewModels
         private readonly APIService _instructorsService = new APIService("Instructors");
         private readonly APIService _instructor_categories_candidateService = new APIService("Instructors_Categories_Candidates");
         private readonly APIService _candidatesService = new APIService("Candidates");
-
+        private readonly APIService _categoriesService = new APIService("Categories");
 
         InstructorSearchRequest request = new InstructorSearchRequest();
         InstructorCategorySearchRequest request2 = new InstructorCategorySearchRequest();
@@ -34,7 +34,7 @@ namespace Mobile.ViewModels
 
         public async Task Init()
         {
-            if(CandidatesList.Count > 0)
+            if (CandidatesList.Count > 0)
             {
                 CandidatesList.Clear();
             }
@@ -47,13 +47,18 @@ namespace Mobile.ViewModels
             var instructors_categories = await _instructor_categoriesService.GetAll<List<Instructor_Category>>(request2); // Returns all categories of logged in instructor
 
             InstructorCategoryCandidateSearchRequest request3 = new InstructorCategoryCandidateSearchRequest();
+            request3.PolozenTeorijskiTest = false;
+            request3.Prijavljen = false;
             foreach (var instructor_category in instructors_categories)
             {
                 request3.Instructor_CategoryId = instructor_category.Id;
                 var instructors_categories_candidates = await _instructor_categories_candidateService.GetAll<List<Instructor_Category_Candidate>>(request3); // Returns all users of logged in instructors and all categories of that instructor
                 foreach (var instructor_category_candidate in instructors_categories_candidates)
                 {
+                    int category_id = instructor_category_candidate.Instructor_Category.CategoryId;
+                    var category = await _categoriesService.GetById<Category>(category_id);
                     var candidate = await _candidatesService.GetById<Candidate>(instructor_category_candidate.UserId);
+                    candidate.candidate_category = candidate.FirstName + " " + candidate.LastName + " " + "(" + category.Name + ")";
                     CandidatesList.Add(candidate);
                 }
             }
@@ -76,13 +81,15 @@ namespace Mobile.ViewModels
                 foreach (var candidate in Candidates)
                 {
                     request3.UserId = candidate.Id;
+                    request3.PolozenTeorijskiTest = false;
+                    request3.Prijavljen = false;
                     var instructors_categories_candidates = await _instructor_categories_candidateService.GetAll<List<Instructor_Category_Candidate>>(request3);
                     foreach (var instructor_category_candidate in instructors_categories_candidates)
                     {
                         insert_request.Instructor_Category_CandidateId = instructor_category_candidate.Id;
                         insert_request.Date = DateTime.Now;
                         insert_request.FirstAid = true;
-                        insert_request.Status = Status.Active;
+                        insert_request.Status = Status.Inactive;
                         await _theoryTestApplicationsService.Insert<TheoryTestApplications>(insert_request);
                         count++;
                         request4.Prijavljen = true;

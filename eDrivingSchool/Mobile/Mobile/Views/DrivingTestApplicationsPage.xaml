@@ -9,43 +9,45 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-          
+
             <Label Text="Driving test applications" FontSize="Large" FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-           
+
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="15,25,15,0">
                 <ListView Margin="0,15,0,0" HeightRequest="300" HorizontalOptions="FillAndExpand" VerticalOptions="Center" ItemsSource="{Binding CandidatesList}" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                <Grid Padding="0,20,0,0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition></ColumnDefinition>
-                                        <ColumnDefinition></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding FirstName}" Margin="5,0,0,0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"></Label>
-                                    <ia:Checkbox x:Name="AwesomeCheckbox"
+                                    <Grid Padding="0,20,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding candidate_category}" Grid.Column="0" Margin="5,0,0,0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium">
+
+                                        </Label>
+                                        <ia:Checkbox x:Name="AwesomeCheckbox"
     OutlineColor="DodgerBlue"
     FillColor="DodgerBlue"
     CheckColor="White"
     Shape="Rectangle" 
-     Grid.Column="1" IsChecked="{Binding isChecked}" />
-                                </Grid>
+     Grid.Column="1" IsCheckedChanged="AwesomeCheckbox_IsCheckedChanged" IsChecked="{Binding isChecked}" />
+                                    </Grid>
                                     <BoxView HeightRequest="1" BackgroundColor="DodgerBlue"></BoxView>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Text="Submit" BackgroundColor="DodgerBlue" TextColor="White"></Button>
+                <Button Text="Submit" BackgroundColor="DodgerBlue" TextColor="White" Clicked="Button_Clicked"></Button>
             </StackLayout>
-           
-           
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Mobile.ViewModels
 {
@@ -14,6 +15,8 @@ namespace Mobile.ViewModels
         private readonly APIService _instructorsService = new APIService("Instructors");
         private readonly APIService _instructor_categoriesService = new APIService("Instructors_Categories");
         private readonly APIService _candidatesService = new APIService("Candidates");
+        private readonly APIService _categoriesService = new APIService("Categories");
+        private readonly APIService _driving_test_applicationsService = new APIService("DrivingTestApplications");
 
         InstructorSearchRequest request = new InstructorSearchRequest();
         InstructorCategorySearchRequest request2 = new InstructorCategorySearchRequest();
@@ -46,10 +49,48 @@ namespace Mobile.ViewModels
                 var instructors_categories_candidates = await _instructor_categories_candidateService.GetAll<List<Instructor_Category_Candidate>>(request3); // Returns all users of logged in instructors and all categories of that instructor
                 foreach (var instructor_category_candidate in instructors_categories_candidates)
                 {
+                    int category_id = instructor_category_candidate.Instructor_Category.CategoryId;
+                    var category = await _categoriesService.GetById<Category>(category_id);
                     var candidate = await _candidatesService.GetById<Candidate>(instructor_category_candidate.UserId);
+                    candidate.candidate_category = candidate.FirstName + " " + candidate.LastName + " " + "(" + category.Name + ")";
                     CandidatesList.Add(candidate);
                 }
             }
+        }
+        public async Task Submit(object candidates)
+        {
+            var Candidates = candidates as List<Candidate>;
+            DrivingTestApplicationsInsertRequest insert_request = new DrivingTestApplicationsInsertRequest();
+
+
+
+            var instructors_categories = await _instructor_categoriesService.GetAll<List<Instructor_Category>>(request2);
+            InstructorCategoryCandidateSearchRequest request3 = new InstructorCategoryCandidateSearchRequest();
+            InstructorCategoryCandidateInsertRequest request4 = new InstructorCategoryCandidateInsertRequest();
+            int count = 0;
+            foreach (var instructor_category in instructors_categories)
+            {
+                request3.Instructor_CategoryId = instructor_category.Id;
+                foreach (var candidate in Candidates)
+                {
+                    request3.UserId = candidate.Id;
+                    request3.PolozenTeorijskiTest = true;
+                    request3.PolozenPrakticniTest = false;
+                    request3.Prijavljen = false;
+                    var instructors_categories_candidates = await _instructor_categories_candidateService.GetAll<List<Instructor_Category_Candidate>>(request3);
+                    foreach (var instructor_category_candidate in instructors_categories_candidates)
+                    {
+                        insert_request.Instructor_Category_CandidateId = instructor_category_candidate.Id;
+                        insert_request.Date = DateTime.Now;
+                        insert_request.Status = Status.Inactive;
+                        await _driving_test_applicationsService.Insert<DrivingTestApplications>(insert_request);
+                        count++;
+                        request4.Prijavljen = true;
+                        await _instructor_categories_candidateService.Update<Instructor_Category_Candidate>(instructor_category_candidate.Id, request4);
+                    }
+                }
+            }
+            await Application.Current.MainPage.DisplayAlert("", "You have successfully submitted " + count + " request", "OK");
         }
     }
 }
