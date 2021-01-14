@@ -6,5 +6,6 @@ namespace eDrivingSchool.Model.Requests
 {
     public class TheoryTestApplicationsSearchRequest
     {
+        public Status Status { get; set; }
     }
 }
