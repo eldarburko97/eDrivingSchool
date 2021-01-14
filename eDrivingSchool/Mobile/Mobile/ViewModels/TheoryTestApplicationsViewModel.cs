@@ -34,7 +34,10 @@ namespace Mobile.ViewModels
 
         public async Task Init()
         {
-
+            if(CandidatesList.Count > 0)
+            {
+                CandidatesList.Clear();
+            }
             request.Username = APIService.Username;
             var instructors = await _instructorsService.GetAll<List<Instructor>>(request);
             var instructor = instructors[0];            // Returns logged in instructor

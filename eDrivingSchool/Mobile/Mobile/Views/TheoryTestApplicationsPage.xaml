@@ -8,15 +8,16 @@
         <vm:TheoryTestApplicationsViewModel></vm:TheoryTestApplicationsViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="Theory test applications" FontAttributes="Bold" FontSize="Large"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <StackLayout>
-                <ListView ItemsSource="{Binding CandidatesList}" HorizontalOptions="FillAndExpand"  SeparatorVisibility="None" HasUnevenRows="True">
+            <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="15,25,15,0">
+                <ListView Margin="0,15,0,0" HeightRequest="300"  ItemsSource="{Binding CandidatesList}" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
+                                <StackLayout>
                                 <Grid Padding="0,20,0,0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition></RowDefinition>
@@ -33,12 +34,16 @@
     Shape="Rectangle" 
      Grid.Column="1" IsCheckedChanged="AwesomeCheckbox_IsCheckedChanged" IsChecked="{Binding isChecked}" />
                                 </Grid>
+                                    <BoxView HeightRequest="1" BackgroundColor="DodgerBlue"></BoxView>
+                                </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
                 <Button Text="Submit" BackgroundColor="DodgerBlue" TextColor="White"  Clicked="Button_Clicked"></Button>
             </StackLayout>
+           
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
