@@ -26,5 +26,6 @@ namespace eDrivingSchool.WebAPI.Database
         public DbSet<Instructor_Category_Candidate> Instructors_Categories_Candidates { get; set; }
         public DbSet<TheoryTestApplications> TheoryTestApplications { get; set; }
         public DbSet<DrivingLesson> DrivingLessons { get; set; }
+        public DbSet<DrivingTestApplications> DrivingTestApplications { get; set; }
     }
 }

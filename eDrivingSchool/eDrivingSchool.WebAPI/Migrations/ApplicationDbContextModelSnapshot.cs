@@ -147,6 +147,25 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("DrivingSchool");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingTestApplications", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<int>("Instructor_Category_CandidateId");
+
+                    b.Property<int>("Status");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Instructor_Category_CandidateId");
+
+                    b.ToTable("DrivingTestApplications");
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category", b =>
                 {
                     b.Property<int>("Id")
@@ -416,6 +435,14 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasOne("eDrivingSchool.WebAPI.Database.Vehicle", "Vehicle")
                         .WithMany()
                         .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingTestApplications", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
+                        .WithMany()
+                        .HasForeignKey("Instructor_Category_CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

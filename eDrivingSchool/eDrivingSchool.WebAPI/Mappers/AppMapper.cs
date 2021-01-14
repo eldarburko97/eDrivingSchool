@@ -35,7 +35,7 @@ namespace eDrivingSchool.WebAPI.Mappers
             CreateMap<Database.Topic, Model.Requests.TopicInsertRequest>().ReverseMap();
             CreateMap<Database.Topic, Model.Topic>().ReverseMap();
             CreateMap<Database.Comment, Model.Comment>().ReverseMap();
-            CreateMap<Database.Comment,CommentInsertRequest>().ReverseMap();
+            CreateMap<Database.Comment, CommentInsertRequest>().ReverseMap();
             CreateMap<Database.Certificate, Model.Certificate>().ReverseMap();
             CreateMap<Database.Certificate_Request, Certificate_RequestInsert>().ReverseMap();
             CreateMap<Database.Certificate_Request, Model.Certificate_Request>().ReverseMap();
@@ -47,6 +47,8 @@ namespace eDrivingSchool.WebAPI.Mappers
             CreateMap<Database.TheoryTestApplications, TheoryTestApplicationsInsertRequest>().ReverseMap();
             CreateMap<Database.DrivingLesson, Model.DrivingLesson>().ReverseMap();
             CreateMap<Database.DrivingLesson, DrivingLessonInsertRequest>().ReverseMap();
+            CreateMap<Database.DrivingTestApplications, Model.DrivingTestApplications>().ReverseMap();
+            CreateMap<Database.DrivingTestApplications, DrivingTestApplicationsInsertRequest>().ReverseMap();
         }
     }
 }
