@@ -178,6 +178,12 @@
     <Compile Include="TheoryTest\frmTheoryTestData.Designer.cs">
       <DependentUpon>frmTheoryTestData.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheoryTest\frmTheoryTestUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheoryTest\frmTheoryTestUpdate.Designer.cs">
+      <DependentUpon>frmTheoryTestUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehicle\frmAddVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheoryTest\frmTheoryTestData.resx">
       <DependentUpon>frmTheoryTestData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheoryTest\frmTheoryTestUpdate.resx">
+      <DependentUpon>frmTheoryTestUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\frmAddVehicle.resx">
       <DependentUpon>frmAddVehicle.cs</DependentUpon>

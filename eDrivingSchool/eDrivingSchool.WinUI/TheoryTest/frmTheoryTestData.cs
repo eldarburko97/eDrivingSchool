@@ -49,5 +49,12 @@ namespace eDrivingSchool.WinUI.TheoryTest
             dgvTheoryTestData.AutoGenerateColumns = false;
             dgvTheoryTestData.DataSource = list;
         }
+
+        private void DgvTheoryTestData_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var id = dgvTheoryTestData.SelectedRows[0].Cells[0].Value;
+            frmTheoryTestUpdate frm = new frmTheoryTestUpdate(int.Parse(id.ToString()));
+            frm.Show();
+        }
     }
 }

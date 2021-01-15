@@ -78,6 +78,7 @@
             this.dgvTheoryTestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTheoryTestData.Size = new System.Drawing.Size(1014, 362);
             this.dgvTheoryTestData.TabIndex = 3;
+            this.dgvTheoryTestData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvTheoryTestData_MouseDoubleClick);
             // 
             // Id
             // 
