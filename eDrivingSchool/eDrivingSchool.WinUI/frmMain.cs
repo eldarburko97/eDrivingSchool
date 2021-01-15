@@ -4,6 +4,7 @@ using eDrivingSchool.WinUI.DrivingSchool;
 using eDrivingSchool.WinUI.Instructor;
 using eDrivingSchool.WinUI.Payment;
 using eDrivingSchool.WinUI.TechnicalInspection;
+using eDrivingSchool.WinUI.TheoryTest;
 using eDrivingSchool.WinUI.TheoryTestApplications;
 using eDrivingSchool.WinUI.Vehicle;
 using System;
@@ -198,6 +199,12 @@ namespace eDrivingSchool.WinUI
         private void TheoryTestApplicationsDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTheoryTestApplicationsData frm = new frmTheoryTestApplicationsData();
+            frm.Show();
+        }
+
+        private void TheoryTestDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTheoryTestData frm = new frmTheoryTestData();
             frm.Show();
         }
     }

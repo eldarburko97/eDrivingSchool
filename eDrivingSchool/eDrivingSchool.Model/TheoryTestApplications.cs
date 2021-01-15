@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace eDrivingSchool.Model
 {
     public enum Status
     {
+        [Description("Inactive")]
         Inactive,
+        [Description("Active")]
         Active,
+        [Description("Expired")]
         Expired
     }
     public class TheoryTestApplications
     {
+        public int Id { get; set; }
         public int Instructor_Category_CandidateId { get; set; }
         public Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
         public DateTime Date { get; set; }

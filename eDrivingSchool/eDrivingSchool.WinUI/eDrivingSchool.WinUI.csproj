@@ -80,11 +80,11 @@
     <Compile Include="Category\frmCategoriesData.Designer.cs">
       <DependentUpon>frmCategoriesData.cs</DependentUpon>
     </Compile>
-    <Compile Include="DrivingLicenceCondition\frmDrivingLicenceData.cs">
+    <Compile Include="Driving Licences\frmDrivingLicencesData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DrivingLicenceCondition\frmDrivingLicenceData.Designer.cs">
-      <DependentUpon>frmDrivingLicenceData.cs</DependentUpon>
+    <Compile Include="Driving Licences\frmDrivingLicencesData.Designer.cs">
+      <DependentUpon>frmDrivingLicencesData.cs</DependentUpon>
     </Compile>
     <Compile Include="DrivingSchool\frmDrivingSchoolData.cs">
       <SubType>Form</SubType>
@@ -166,6 +166,18 @@
     <Compile Include="TheoryTestApplications\frmTheoryTestApplicationsData.Designer.cs">
       <DependentUpon>frmTheoryTestApplicationsData.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheoryTestApplications\frmTheoryTestApplicationsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheoryTestApplications\frmTheoryTestApplicationsUpdate.Designer.cs">
+      <DependentUpon>frmTheoryTestApplicationsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheoryTest\frmTheoryTestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheoryTest\frmTheoryTestData.Designer.cs">
+      <DependentUpon>frmTheoryTestData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehicle\frmAddVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,8 +202,8 @@
     <EmbeddedResource Include="Category\frmCategoriesData.resx">
       <DependentUpon>frmCategoriesData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DrivingLicenceCondition\frmDrivingLicenceData.resx">
-      <DependentUpon>frmDrivingLicenceData.cs</DependentUpon>
+    <EmbeddedResource Include="Driving Licences\frmDrivingLicencesData.resx">
+      <DependentUpon>frmDrivingLicencesData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolData.resx">
       <DependentUpon>frmDrivingSchoolData.cs</DependentUpon>
@@ -237,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheoryTestApplications\frmTheoryTestApplicationsData.resx">
       <DependentUpon>frmTheoryTestApplicationsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheoryTestApplications\frmTheoryTestApplicationsUpdate.resx">
+      <DependentUpon>frmTheoryTestApplicationsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheoryTest\frmTheoryTestData.resx">
+      <DependentUpon>frmTheoryTestData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\frmAddVehicle.resx">
       <DependentUpon>frmAddVehicle.cs</DependentUpon>

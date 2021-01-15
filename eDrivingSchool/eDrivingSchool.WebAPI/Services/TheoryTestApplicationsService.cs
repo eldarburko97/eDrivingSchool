@@ -38,5 +38,15 @@ namespace eDrivingSchool.WebAPI.Services
             var list = query.ToList();
             return _mapper.Map<List<Model.TheoryTestApplications>>(list);
         }
+
+        public override Model.TheoryTestApplications GetById(int id)
+        {
+            // var entity = _context.Set<Database.TheoryTestApplications>().Find(id);
+            var query = _context.Set<Database.TheoryTestApplications>().AsQueryable();
+            query = query.Where(w => w.Id == id).Include(i => i.Instructor_Category_Candidate).ThenInclude(t => t.User);
+            var list = query.ToList();
+            var entity = list[0];
+            return _mapper.Map<Model.TheoryTestApplications>(entity);
+        }
     }
 }

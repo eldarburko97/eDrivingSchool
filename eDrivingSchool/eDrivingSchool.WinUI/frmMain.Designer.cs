@@ -50,13 +50,13 @@
             this.technicalInspectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewTechnicalInspectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataOfTechnicalInspectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drivingLicenceConditionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drivingLicenceDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoryTestApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoryTestApplicationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.theoryTestApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.theoryTestApplicationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoryTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoryTestDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -72,11 +72,11 @@
             this.candidatesToolStripMenuItem,
             this.paymentsToolStripMenuItem,
             this.technicalInspectionsToolStripMenuItem,
-            this.drivingLicenceConditionToolStripMenuItem,
-            this.theoryTestApplicationsToolStripMenuItem});
+            this.theoryTestApplicationsToolStripMenuItem,
+            this.theoryTestToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1129, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1436, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -233,39 +233,6 @@
             this.dataOfTechnicalInspectionsToolStripMenuItem.Text = "Data of technical inspections";
             this.dataOfTechnicalInspectionsToolStripMenuItem.Click += new System.EventHandler(this.dataOfTechnicalInspectionsToolStripMenuItem_Click);
             // 
-            // drivingLicenceConditionToolStripMenuItem
-            // 
-            this.drivingLicenceConditionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.drivingLicenceDataToolStripMenuItem});
-            this.drivingLicenceConditionToolStripMenuItem.Name = "drivingLicenceConditionToolStripMenuItem";
-            this.drivingLicenceConditionToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
-            this.drivingLicenceConditionToolStripMenuItem.Text = "Driving licence condition";
-            // 
-            // drivingLicenceDataToolStripMenuItem
-            // 
-            this.drivingLicenceDataToolStripMenuItem.Name = "drivingLicenceDataToolStripMenuItem";
-            this.drivingLicenceDataToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.drivingLicenceDataToolStripMenuItem.Text = "Driving licence data";
-            this.drivingLicenceDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingLicenceDataToolStripMenuItem_Click);
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 533);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1129, 25);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
-            this.toolStripStatusLabel.Text = "Status";
-            // 
             // theoryTestApplicationsToolStripMenuItem
             // 
             this.theoryTestApplicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -281,11 +248,44 @@
             this.theoryTestApplicationsDataToolStripMenuItem.Text = "Theory test applications data";
             this.theoryTestApplicationsDataToolStripMenuItem.Click += new System.EventHandler(this.TheoryTestApplicationsDataToolStripMenuItem_Click);
             // 
+            // statusStrip
+            // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1436, 25);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
+            this.toolStripStatusLabel.Text = "Status";
+            // 
+            // theoryTestToolStripMenuItem
+            // 
+            this.theoryTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.theoryTestDataToolStripMenuItem});
+            this.theoryTestToolStripMenuItem.Name = "theoryTestToolStripMenuItem";
+            this.theoryTestToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.theoryTestToolStripMenuItem.Text = "Theory test";
+            // 
+            // theoryTestDataToolStripMenuItem
+            // 
+            this.theoryTestDataToolStripMenuItem.Name = "theoryTestDataToolStripMenuItem";
+            this.theoryTestDataToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.theoryTestDataToolStripMenuItem.Text = "Theory test data";
+            this.theoryTestDataToolStripMenuItem.Click += new System.EventHandler(this.TheoryTestDataToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 558);
+            this.ClientSize = new System.Drawing.Size(1436, 558);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -328,10 +328,10 @@
         private System.Windows.Forms.ToolStripMenuItem technicalInspectionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewTechnicalInspectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataOfTechnicalInspectionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem drivingLicenceConditionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem drivingLicenceDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem theoryTestApplicationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem theoryTestApplicationsDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoryTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoryTestDataToolStripMenuItem;
     }
 }
 
