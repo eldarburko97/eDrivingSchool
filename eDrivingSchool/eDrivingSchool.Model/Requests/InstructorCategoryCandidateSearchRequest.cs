@@ -12,6 +12,7 @@ namespace eDrivingSchool.Model.Requests
         public bool PolozenPrakticniTest { get; set; }
         public bool Prijavljen { get; set; }
         public bool PolozenTeorijskiTest { get; set; }
+        public bool PolozenTestPrvePomoci { get; set; }
         public bool Paid { get; set; }
     }
 }

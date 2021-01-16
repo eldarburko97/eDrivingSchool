@@ -41,6 +41,7 @@ namespace Mobile.ViewModels
 
             InstructorCategoryCandidateSearchRequest request3 = new InstructorCategoryCandidateSearchRequest();
             request3.PolozenTeorijskiTest = true;
+            request3.PolozenTestPrvePomoci = true;
             request3.PolozenPrakticniTest = false;
             request3.Prijavljen = false;
             foreach (var instructor_category in instructors_categories)

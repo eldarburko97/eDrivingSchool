@@ -17,6 +17,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
         APIService _candidatesService = new APIService("Candidates");
         APIService _instructors_categoriesService = new APIService("Instructors_Categories");
         APIService _categoriesService = new APIService("Categories");
+        APIService _theory_test_applicationsService = new APIService("TheoryTestApplications");
         private int? _id = null;
         public frmTheoryTestUpdate(int? id = null)
         {
@@ -41,12 +42,12 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 checkBoxPolozenTestPrvePomoci.Checked = instructor_category_candidate.PolozenTestPrvePomoci;
                 checkBoxPrijavljen.Checked = instructor_category_candidate.Prijavljen;
             }
-           
+
         }
 
         private async void BtnSave_Click(object sender, EventArgs e)
         {
-           var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(_id);
+            var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(_id);
             InstructorCategoryCandidateInsertRequest update_request = new InstructorCategoryCandidateInsertRequest
             {
                 Instructor_CategoryId = instructor_category_candidate.Instructor_CategoryId,
@@ -59,6 +60,20 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 Paid = instructor_category_candidate.Paid
             };
             await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);
+            TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest
+            {
+                Instructor_Category_CandidateId = instructor_category_candidate.Id,
+                Status = Model.Status.Active
+            };
+            var list = await _theory_test_applicationsService.GetAll<List<Model.TheoryTestApplications>>(search_request);
+            TheoryTestApplicationsInsertRequest update_request2 = new TheoryTestApplicationsInsertRequest();
+            foreach (var item in list)
+            {
+                update_request2.Instructor_Category_CandidateId = item.Instructor_Category_CandidateId;
+                update_request2.Date = item.Date;
+                update_request2.Status = Model.Status.Expired;
+                await _theory_test_applicationsService.Update<Model.TheoryTestApplications>(item.Id, update_request2);
+            }
         }
     }
 }

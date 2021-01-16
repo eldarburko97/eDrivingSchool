@@ -48,6 +48,7 @@ namespace Mobile.ViewModels
 
             InstructorCategoryCandidateSearchRequest request3 = new InstructorCategoryCandidateSearchRequest();
             request3.PolozenTeorijskiTest = false;
+            request3.PolozenTestPrvePomoci = false;
             request3.Prijavljen = false;
             foreach (var instructor_category in instructors_categories)
             {
@@ -82,6 +83,7 @@ namespace Mobile.ViewModels
                 {
                     request3.UserId = candidate.Id;
                     request3.PolozenTeorijskiTest = false;
+                    request3.PolozenTestPrvePomoci = false;
                     request3.Prijavljen = false;
                     var instructors_categories_candidates = await _instructor_categories_candidateService.GetAll<List<Instructor_Category_Candidate>>(request3);
                     foreach (var instructor_category_candidate in instructors_categories_candidates)
@@ -92,6 +94,13 @@ namespace Mobile.ViewModels
                         insert_request.Status = Status.Inactive;
                         await _theoryTestApplicationsService.Insert<TheoryTestApplications>(insert_request);
                         count++;
+                        request4.Instructor_CategoryId = instructor_category_candidate.Instructor_CategoryId;
+                        request4.UserId = instructor_category_candidate.UserId;
+                        request4.PolozenTestPrvePomoci = instructor_category_candidate.PolozenTestPrvePomoci;
+                        request4.PolozenTeorijskiTest = instructor_category_candidate.PolozenTeorijskiTest;
+                        request4.PolozenPrakticniTest = instructor_category_candidate.PolozenPrakticniTest;
+                        request4.NumberOfLessons = instructor_category_candidate.NumberOfLessons;
+                        request4.Paid = instructor_category_candidate.Paid;
                         request4.Prijavljen = true;
                         await _instructor_categories_candidateService.Update<Instructor_Category_Candidate>(instructor_category_candidate.Id, request4);
                     }

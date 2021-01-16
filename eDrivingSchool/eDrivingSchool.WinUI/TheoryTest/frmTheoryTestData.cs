@@ -26,6 +26,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
 
         private async void BtnSearch_Click(object sender, EventArgs e)
         {
+            
             TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest();
             Model.Status status;
             if (Enum.TryParse(txtSearch.Text, out status))
@@ -55,6 +56,28 @@ namespace eDrivingSchool.WinUI.TheoryTest
             var id = dgvTheoryTestData.SelectedRows[0].Cells[0].Value;
             frmTheoryTestUpdate frm = new frmTheoryTestUpdate(int.Parse(id.ToString()));
             frm.Show();
+        }
+
+        private async void FrmTheoryTestData_Load(object sender, EventArgs e)
+        {
+            TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest();
+            search_request.Status = Model.Status.Active;
+            var result = await _theory_test_applicationsService.GetAll<List<Model.TheoryTestApplications>>(search_request);
+            List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
+            foreach (var item in result)
+            {
+                var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(item.Instructor_Category_CandidateId);
+                var candidate = await _candidatesService.GetById<Model.Candidate>(instructor_category_candidate.UserId);
+                var instructor_category = await _instructors_categoriesService.GetById<Model.Instructor_Category>(instructor_category_candidate.Instructor_CategoryId);
+                var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
+                instructor_category_candidate.FirstName = candidate.FirstName;
+                instructor_category_candidate.LastName = candidate.LastName;
+                instructor_category_candidate.Username = candidate.Username;
+                instructor_category_candidate.Category = category.Name;
+                list.Add(instructor_category_candidate);
+            }
+            dgvTheoryTestData.AutoGenerateColumns = false;
+            dgvTheoryTestData.DataSource = list;
         }
     }
 }

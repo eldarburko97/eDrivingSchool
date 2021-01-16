@@ -23,15 +23,19 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.TheoryTestApplications>().AsQueryable();
 
-            if (request != null && request.Status == Model.Status.Inactive)
+            if (request != null && request.Status == Model.Status.Active && request.Instructor_Category_CandidateId != 0)
+            {
+                query = query.Where(x => x.Status == (int)request.Status && x.Instructor_Category_CandidateId == request.Instructor_Category_CandidateId).Include(i => i.Instructor_Category_Candidate).ThenInclude(t => t.User);
+            }
+            else if (request != null && request.Status == Model.Status.Inactive)
             {
                 query = query.Where(x => x.Status == (int)request.Status).Include(i => i.Instructor_Category_Candidate).ThenInclude(t => t.User);
             }
-            if (request != null && request.Status == Model.Status.Active)
+            else if (request != null && request.Status == Model.Status.Active)
             {
                 query = query.Where(x => x.Status == (int)request.Status).Include(i => i.Instructor_Category_Candidate).ThenInclude(t => t.User);
             }
-            if (request != null && request.Status == Model.Status.Expired)
+            else if (request != null && request.Status == Model.Status.Expired)
             {
                 query = query.Where(x => x.Status == (int)request.Status).Include(i => i.Instructor_Category_Candidate).ThenInclude(t => t.User);
             }

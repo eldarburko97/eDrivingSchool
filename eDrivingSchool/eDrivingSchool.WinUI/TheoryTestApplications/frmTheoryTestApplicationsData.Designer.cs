@@ -122,6 +122,7 @@
             this.Controls.Add(this.txtSearch);
             this.Name = "frmTheoryTestApplicationsData";
             this.Text = "frmTheoryTestApplicationsData";
+            this.Load += new System.EventHandler(this.FrmTheoryTestApplicationsData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheoryTestApplicationsData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
