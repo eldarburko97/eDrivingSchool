@@ -15,6 +15,8 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
     {
         private APIService _theory_test_applicationsService = new APIService("TheoryTestApplications");
         private APIService _instructor_categories_candidatesService = new APIService("Instructors_Categories_Candidates");
+        private APIService _categoriesService = new APIService("Categories");
+        private APIService _instructors_categoriesService = new APIService("Instructors_Categories");
         private int? _id = null;
         public frmTheoryTestApplicationsUpdate(int? id = null)
         {
@@ -30,8 +32,14 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
                 var _theory_test_application = await _theory_test_applicationsService.GetById<Model.TheoryTestApplications>(_id);
                 txtFirstName.Text = _theory_test_application.Instructor_Category_Candidate.User.FirstName;
                 txtLastName.Text = _theory_test_application.Instructor_Category_Candidate.User.LastName;
+                txtUsername.Text = _theory_test_application.Instructor_Category_Candidate.User.Username;
+                var instructor_category = await _instructors_categoriesService.GetById<Model.Instructor_Category>(_theory_test_application.Instructor_Category_Candidate.Instructor_CategoryId);
+                var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
+                txtCategory.Text = category.Name;
                 dtpDate.Value = _theory_test_application.Date;
                 txtStatus.Text = _theory_test_application.Status.ToString();
+                
+
             }
         }
 

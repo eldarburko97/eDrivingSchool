@@ -98,6 +98,30 @@
     <Compile Include="DrivingSchool\frmDrivingSchoolDetails.Designer.cs">
       <DependentUpon>frmDrivingSchoolDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="DrivingTestApplications\frmDrivingTestApplicationsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivingTestApplications\frmDrivingTestApplicationsData.Designer.cs">
+      <DependentUpon>frmDrivingTestApplicationsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingTestApplications\frmDrivingTestApplicationsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivingTestApplications\frmDrivingTestApplicationsUpdate.Designer.cs">
+      <DependentUpon>frmDrivingTestApplicationsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingTest\frmDrivingTestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivingTest\frmDrivingTestData.Designer.cs">
+      <DependentUpon>frmDrivingTestData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrivingTest\frmDrivingTestUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrivingTest\frmDrivingTestUpdate.Designer.cs">
+      <DependentUpon>frmDrivingTestUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +240,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolDetails.resx">
       <DependentUpon>frmDrivingSchoolDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivingTestApplications\frmDrivingTestApplicationsData.resx">
+      <DependentUpon>frmDrivingTestApplicationsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivingTestApplications\frmDrivingTestApplicationsUpdate.resx">
+      <DependentUpon>frmDrivingTestApplicationsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivingTest\frmDrivingTestData.resx">
+      <DependentUpon>frmDrivingTestData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrivingTest\frmDrivingTestUpdate.resx">
+      <DependentUpon>frmDrivingTestUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

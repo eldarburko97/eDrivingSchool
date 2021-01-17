@@ -86,7 +86,14 @@ namespace Mobile.ViewModels
                         insert_request.Status = Status.Inactive;
                         await _driving_test_applicationsService.Insert<DrivingTestApplications>(insert_request);
                         count++;
+                        request4.Instructor_CategoryId = instructor_category_candidate.Instructor_CategoryId;
+                        request4.UserId = instructor_category_candidate.UserId;
+                        request4.PolozenTestPrvePomoci = instructor_category_candidate.PolozenTestPrvePomoci;
+                        request4.PolozenTeorijskiTest = instructor_category_candidate.PolozenTeorijskiTest;
+                        request4.PolozenPrakticniTest = instructor_category_candidate.PolozenPrakticniTest;
                         request4.Prijavljen = true;
+                        request4.NumberOfLessons = instructor_category_candidate.NumberOfLessons;
+                        request4.Paid = instructor_category_candidate.Paid;
                         await _instructor_categories_candidateService.Update<Instructor_Category_Candidate>(instructor_category_candidate.Id, request4);
                     }
                 }

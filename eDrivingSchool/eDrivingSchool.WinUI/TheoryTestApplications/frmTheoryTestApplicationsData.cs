@@ -40,6 +40,10 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
             {
                 theory_test_application.FirstName = theory_test_application.Instructor_Category_Candidate.User.FirstName;
                 theory_test_application.LastName = theory_test_application.Instructor_Category_Candidate.User.LastName;
+                theory_test_application.Username = theory_test_application.Instructor_Category_Candidate.User.Username;
+                var instructor_category = await _instructors_categoriesService.GetById<Model.Instructor_Category>(theory_test_application.Instructor_Category_Candidate.Instructor_CategoryId);
+                var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
+                theory_test_application.Category = category.Name;
             }
             dgvTheoryTestApplicationsData.DataSource = result;
         }

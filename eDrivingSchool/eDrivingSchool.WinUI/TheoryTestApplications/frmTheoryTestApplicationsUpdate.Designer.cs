@@ -37,6 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +78,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 167);
+            this.label6.Location = new System.Drawing.Point(32, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 17);
             this.label6.TabIndex = 11;
@@ -82,7 +86,7 @@
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(35, 187);
+            this.dtpDate.Location = new System.Drawing.Point(35, 304);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(246, 22);
             this.dtpDate.TabIndex = 12;
@@ -90,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 237);
+            this.label3.Location = new System.Drawing.Point(32, 346);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 13;
@@ -98,7 +102,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(35, 335);
+            this.btnSave.Location = new System.Drawing.Point(52, 415);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 15;
@@ -108,16 +112,52 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(35, 257);
+            this.txtStatus.Location = new System.Drawing.Point(35, 366);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(169, 22);
             this.txtStatus.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(35, 181);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(169, 22);
+            this.txtUsername.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 221);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Category";
+            // 
+            // txtCategory
+            // 
+            this.txtCategory.Location = new System.Drawing.Point(36, 241);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(169, 22);
+            this.txtCategory.TabIndex = 20;
             // 
             // frmTheoryTestApplicationsUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
@@ -146,5 +186,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCategory;
     }
 }
