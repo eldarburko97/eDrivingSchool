@@ -157,6 +157,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("Instructor_Category_CandidateId");
 
+                    b.Property<bool>("Passed");
+
                     b.Property<int>("Status");
 
                     b.HasKey("Id");
@@ -284,6 +286,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.Property<int>("Instructor_Category_CandidateId");
 
                     b.Property<int>("Status");
+
+                    b.Property<bool>("TheoryTest");
 
                     b.HasKey("Id");
 

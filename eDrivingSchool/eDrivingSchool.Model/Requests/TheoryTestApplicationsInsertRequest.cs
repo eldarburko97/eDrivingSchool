@@ -9,6 +9,7 @@ namespace eDrivingSchool.Model.Requests
         public int Instructor_Category_CandidateId { get; set; }
         public DateTime Date { get; set; }
         public bool FirstAid { get; set; }
+        public bool TheoryTest { get; set; }
         public Status Status { get; set; }
     }
 }

@@ -15,5 +15,7 @@ namespace eDrivingSchool.Model
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Category { get; set; }
+        public bool DrivingTestPassed { get; set; }
+        public bool Passed { get; set; }
     }
 }

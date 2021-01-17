@@ -29,7 +29,7 @@ namespace eDrivingSchool.WinUI.DrivingTest
             DrivingTestApplicationsSearchRequest search_request = new DrivingTestApplicationsSearchRequest();
             search_request.Status = Model.Status.Active;
             var result = await _driving_test_applicationsService.GetAll<List<Model.DrivingTestApplications>>(search_request);
-            List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
+           // List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
             foreach (var item in result)
             {
                 var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(item.Instructor_Category_CandidateId);
@@ -40,10 +40,16 @@ namespace eDrivingSchool.WinUI.DrivingTest
                 instructor_category_candidate.LastName = candidate.LastName;
                 instructor_category_candidate.Username = candidate.Username;
                 instructor_category_candidate.Category = category.Name;
-                list.Add(instructor_category_candidate);
+                // list.Add(instructor_category_candidate);
+                item.FirstName = candidate.FirstName;
+                item.LastName = candidate.LastName;
+                item.Username = candidate.Username;
+                item.Category = category.Name;
+                item.DrivingTestPassed = item.Passed;
             }
             dgvDrivingTestData.AutoGenerateColumns = false;
-            dgvDrivingTestData.DataSource = list;
+           // dgvDrivingTestData.DataSource = list;
+            dgvDrivingTestData.DataSource = result;
         }
 
         private async void BtnSearch_Click(object sender, EventArgs e)
@@ -55,7 +61,7 @@ namespace eDrivingSchool.WinUI.DrivingTest
                 search_request.Status = status;
             }
             var result = await _driving_test_applicationsService.GetAll<List<Model.DrivingTestApplications>>(search_request);
-            List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
+          //  List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
             foreach (var item in result)
             {
                 var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(item.Instructor_Category_CandidateId);
@@ -66,10 +72,16 @@ namespace eDrivingSchool.WinUI.DrivingTest
                 instructor_category_candidate.LastName = candidate.LastName;
                 instructor_category_candidate.Username = candidate.Username;
                 instructor_category_candidate.Category = category.Name;
-                list.Add(instructor_category_candidate);
+                //  list.Add(instructor_category_candidate);
+                item.FirstName = candidate.FirstName;
+                item.LastName = candidate.LastName;
+                item.Username = candidate.Username;
+                item.Category = category.Name;
+                item.DrivingTestPassed = item.Passed;
             }
             dgvDrivingTestData.AutoGenerateColumns = false;
-            dgvDrivingTestData.DataSource = list;
+           // dgvDrivingTestData.DataSource = list;
+            dgvDrivingTestData.DataSource = result;
         }
 
         private void DgvDrivingTestData_MouseDoubleClick(object sender, MouseEventArgs e)

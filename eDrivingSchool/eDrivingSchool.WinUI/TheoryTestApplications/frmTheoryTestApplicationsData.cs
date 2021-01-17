@@ -50,7 +50,7 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
 
         private void DgvTheoryTestApplicationsData_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+
             var id = dgvTheoryTestApplicationsData.SelectedRows[0].Cells[0].Value;
             frmTheoryTestApplicationsUpdate frm = new frmTheoryTestApplicationsUpdate(int.Parse(id.ToString()));
             frm.Show();
@@ -59,7 +59,7 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
         private async void FrmTheoryTestApplicationsData_Load(object sender, EventArgs e)
         {
             TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest();
-            search_request.Status = Model.Status.Active;
+            search_request.Status = Model.Status.Inactive;
             var result = await _theory_test_applicationsService.GetAll<List<Model.TheoryTestApplications>>(search_request);
             foreach (var theory_test_application in result)
             {

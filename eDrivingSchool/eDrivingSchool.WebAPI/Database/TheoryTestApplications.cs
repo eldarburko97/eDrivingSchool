@@ -16,6 +16,7 @@ namespace eDrivingSchool.WebAPI.Database
         public Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
         public DateTime Date { get; set; }
         public bool FirstAid { get; set; }
+        public bool TheoryTest { get; set; }
         public int Status { get; set; }
     }
 }

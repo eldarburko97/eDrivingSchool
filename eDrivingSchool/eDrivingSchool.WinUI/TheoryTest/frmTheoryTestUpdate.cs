@@ -59,7 +59,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 NumberOfLessons = instructor_category_candidate.NumberOfLessons,
                 Paid = instructor_category_candidate.Paid
             };
-            await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);
+            var updated = await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);
             TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest
             {
                 Instructor_Category_CandidateId = instructor_category_candidate.Id,
@@ -71,6 +71,8 @@ namespace eDrivingSchool.WinUI.TheoryTest
             {
                 update_request2.Instructor_Category_CandidateId = item.Instructor_Category_CandidateId;
                 update_request2.Date = item.Date;
+                update_request2.FirstAid = !updated.PolozenTestPrvePomoci;
+                update_request2.TheoryTest = !updated.PolozenTeorijskiTest;
                 update_request2.Status = Model.Status.Expired;
                 await _theory_test_applicationsService.Update<Model.TheoryTestApplications>(item.Id, update_request2);
             }

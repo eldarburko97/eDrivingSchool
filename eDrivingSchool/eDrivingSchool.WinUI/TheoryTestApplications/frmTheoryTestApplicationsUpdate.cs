@@ -38,7 +38,7 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
                 txtCategory.Text = category.Name;
                 dtpDate.Value = _theory_test_application.Date;
                 txtStatus.Text = _theory_test_application.Status.ToString();
-                
+
 
             }
         }
@@ -54,7 +54,8 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
             {
                 insert_request.Status = status;
             }
-
+            insert_request.FirstAid = _theory_test_application.FirstAid;
+            insert_request.TheoryTest = _theory_test_application.TheoryTest;
             if (_id.HasValue)
             {
                 var updated = await _theory_test_applicationsService.Update<Model.TheoryTestApplications>(_id, insert_request);

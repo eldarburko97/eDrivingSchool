@@ -31,12 +31,12 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvDrivingTestData = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instructor_Category_CandidateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PolozenPrakticniTest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DrivingTestPassed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivingTestData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,28 +63,28 @@
             this.dgvDrivingTestData.AllowUserToDeleteRows = false;
             this.dgvDrivingTestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDrivingTestData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
+            this.Instructor_Category_CandidateId,
             this.FirstName,
             this.LastName,
             this.Username,
             this.Category,
-            this.PolozenPrakticniTest});
+            this.DrivingTestPassed});
             this.dgvDrivingTestData.Location = new System.Drawing.Point(12, 66);
             this.dgvDrivingTestData.Name = "dgvDrivingTestData";
             this.dgvDrivingTestData.ReadOnly = true;
             this.dgvDrivingTestData.RowTemplate.Height = 24;
             this.dgvDrivingTestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDrivingTestData.Size = new System.Drawing.Size(1094, 362);
+            this.dgvDrivingTestData.Size = new System.Drawing.Size(1290, 362);
             this.dgvDrivingTestData.TabIndex = 4;
             this.dgvDrivingTestData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvDrivingTestData_MouseDoubleClick);
             // 
-            // Id
+            // Instructor_Category_CandidateId
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.Instructor_Category_CandidateId.DataPropertyName = "Instructor_Category_CandidateId";
+            this.Instructor_Category_CandidateId.HeaderText = "Id";
+            this.Instructor_Category_CandidateId.Name = "Instructor_Category_CandidateId";
+            this.Instructor_Category_CandidateId.ReadOnly = true;
+            this.Instructor_Category_CandidateId.Visible = false;
             // 
             // FirstName
             // 
@@ -114,18 +114,18 @@
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
             // 
-            // PolozenPrakticniTest
+            // DrivingTestPassed
             // 
-            this.PolozenPrakticniTest.DataPropertyName = "PolozenPrakticniTest";
-            this.PolozenPrakticniTest.HeaderText = "PolozenPrakticniTest";
-            this.PolozenPrakticniTest.Name = "PolozenPrakticniTest";
-            this.PolozenPrakticniTest.ReadOnly = true;
+            this.DrivingTestPassed.DataPropertyName = "DrivingTestPassed";
+            this.DrivingTestPassed.HeaderText = "Driving test passed";
+            this.DrivingTestPassed.Name = "DrivingTestPassed";
+            this.DrivingTestPassed.ReadOnly = true;
             // 
             // frmDrivingTestData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 450);
+            this.ClientSize = new System.Drawing.Size(1340, 450);
             this.Controls.Add(this.dgvDrivingTestData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -143,11 +143,11 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvDrivingTestData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Instructor_Category_CandidateId;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PolozenPrakticniTest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DrivingTestPassed;
     }
 }

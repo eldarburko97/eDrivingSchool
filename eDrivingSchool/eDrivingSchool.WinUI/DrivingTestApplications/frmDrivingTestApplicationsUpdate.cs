@@ -51,7 +51,7 @@ namespace eDrivingSchool.WinUI.DrivingTestApplications
             {
                 insert_request.Status = status;
             }
-
+            insert_request.Passed = _driving_test_application.Passed;
             if (_id.HasValue)
             {
                 var updated = await _driving_test_applicationsService.Update<Model.DrivingTestApplications>(_id, insert_request);

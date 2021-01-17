@@ -26,7 +26,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
 
         private async void BtnSearch_Click(object sender, EventArgs e)
         {
-            
+
             TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest();
             Model.Status status;
             if (Enum.TryParse(txtSearch.Text, out status))
@@ -34,7 +34,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 search_request.Status = status;
             }
             var result = await _theory_test_applicationsService.GetAll<List<Model.TheoryTestApplications>>(search_request);
-            List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
+            //  List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
             foreach (var item in result)
             {
                 var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(item.Instructor_Category_CandidateId);
@@ -45,10 +45,17 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 instructor_category_candidate.LastName = candidate.LastName;
                 instructor_category_candidate.Username = candidate.Username;
                 instructor_category_candidate.Category = category.Name;
-                list.Add(instructor_category_candidate);
+                // list.Add(instructor_category_candidate);
+                item.FirstName = candidate.FirstName;
+                item.LastName = candidate.LastName;
+                item.Username = candidate.Username;
+                item.Category = category.Name;
+                item.PolozenTestPrvePomoci = !item.FirstAid;
+                item.PolozenTeorijskiTest = !item.TheoryTest;
             }
             dgvTheoryTestData.AutoGenerateColumns = false;
-            dgvTheoryTestData.DataSource = list;
+            // dgvTheoryTestData.DataSource = list;
+            dgvTheoryTestData.DataSource = result;
         }
 
         private void DgvTheoryTestData_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -63,7 +70,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
             TheoryTestApplicationsSearchRequest search_request = new TheoryTestApplicationsSearchRequest();
             search_request.Status = Model.Status.Active;
             var result = await _theory_test_applicationsService.GetAll<List<Model.TheoryTestApplications>>(search_request);
-            List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
+            // List<Instructor_Category_Candidate> list = new List<Instructor_Category_Candidate>();
             foreach (var item in result)
             {
                 var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(item.Instructor_Category_CandidateId);
@@ -74,10 +81,17 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 instructor_category_candidate.LastName = candidate.LastName;
                 instructor_category_candidate.Username = candidate.Username;
                 instructor_category_candidate.Category = category.Name;
-                list.Add(instructor_category_candidate);
+                // list.Add(instructor_category_candidate);
+                item.FirstName = candidate.FirstName;
+                item.LastName = candidate.LastName;
+                item.Username = candidate.Username;
+                item.Category = category.Name;
+                item.PolozenTestPrvePomoci = !item.FirstAid;
+                item.PolozenTeorijskiTest = !item.TheoryTest;
             }
             dgvTheoryTestData.AutoGenerateColumns = false;
-            dgvTheoryTestData.DataSource = list;
+            //  dgvTheoryTestData.DataSource = list;
+            dgvTheoryTestData.DataSource = result;
         }
     }
 }

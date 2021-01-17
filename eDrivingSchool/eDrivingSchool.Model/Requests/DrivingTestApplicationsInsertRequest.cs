@@ -8,6 +8,7 @@ namespace eDrivingSchool.Model.Requests
     {
         public int Instructor_Category_CandidateId { get; set; }
         public DateTime Date { get; set; }
+        public bool Passed { get; set; }
         public Status Status { get; set; }
     }
 }

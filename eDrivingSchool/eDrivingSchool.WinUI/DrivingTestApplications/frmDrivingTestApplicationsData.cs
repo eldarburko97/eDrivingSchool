@@ -54,7 +54,7 @@ namespace eDrivingSchool.WinUI.DrivingTestApplications
         private async void FrmDrivingTestApplicationsData_Load(object sender, EventArgs e)
         {
             DrivingTestApplicationsSearchRequest search_request = new DrivingTestApplicationsSearchRequest();
-            search_request.Status = Model.Status.Active;
+            search_request.Status = Model.Status.Inactive;
             var result = await _driving_test_applicationsService.GetAll<List<Model.DrivingTestApplications>>(search_request);
             foreach (var driving_test_application in result)
             {

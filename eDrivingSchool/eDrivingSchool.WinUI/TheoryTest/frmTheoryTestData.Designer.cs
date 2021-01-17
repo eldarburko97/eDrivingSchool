@@ -31,7 +31,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvTheoryTestData = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instructor_Category_CandidateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             this.dgvTheoryTestData.AllowUserToDeleteRows = false;
             this.dgvTheoryTestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTheoryTestData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
+            this.Instructor_Category_CandidateId,
             this.FirstName,
             this.LastName,
             this.Username,
@@ -80,13 +80,13 @@
             this.dgvTheoryTestData.TabIndex = 3;
             this.dgvTheoryTestData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvTheoryTestData_MouseDoubleClick);
             // 
-            // Id
+            // Instructor_Category_CandidateId
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.Instructor_Category_CandidateId.DataPropertyName = "Instructor_Category_CandidateId";
+            this.Instructor_Category_CandidateId.HeaderText = "Id";
+            this.Instructor_Category_CandidateId.Name = "Instructor_Category_CandidateId";
+            this.Instructor_Category_CandidateId.ReadOnly = true;
+            this.Instructor_Category_CandidateId.Visible = false;
             // 
             // FirstName
             // 
@@ -152,7 +152,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvTheoryTestData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Instructor_Category_CandidateId;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;

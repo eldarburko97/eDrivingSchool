@@ -76,6 +76,7 @@ namespace Mobile.ViewModels
                 {
                     request3.UserId = candidate.Id;
                     request3.PolozenTeorijskiTest = true;
+                    request3.PolozenTestPrvePomoci = true;
                     request3.PolozenPrakticniTest = false;
                     request3.Prijavljen = false;
                     var instructors_categories_candidates = await _instructor_categories_candidateService.GetAll<List<Instructor_Category_Candidate>>(request3);
@@ -83,6 +84,7 @@ namespace Mobile.ViewModels
                     {
                         insert_request.Instructor_Category_CandidateId = instructor_category_candidate.Id;
                         insert_request.Date = DateTime.Now;
+                        insert_request.Passed = false;
                         insert_request.Status = Status.Inactive;
                         await _driving_test_applicationsService.Insert<DrivingTestApplications>(insert_request);
                         count++;

@@ -38,7 +38,7 @@ namespace eDrivingSchool.WinUI.DrivingTest
                 txtLastName.Text = candidate.LastName;
                 txtUsername.Text = candidate.Username;
                 txtCategory.Text = category.Name;
-                checkBoxPolozenPrakticniTest.Checked = instructor_category_candidate.PolozenPrakticniTest; 
+                checkBoxPolozenPrakticniTest.Checked = instructor_category_candidate.PolozenPrakticniTest;
                 checkBoxPrijavljen.Checked = instructor_category_candidate.Prijavljen;
             }
         }
@@ -57,7 +57,7 @@ namespace eDrivingSchool.WinUI.DrivingTest
                 NumberOfLessons = instructor_category_candidate.NumberOfLessons,
                 Paid = instructor_category_candidate.Paid
             };
-            await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);
+            var updated = await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);
             DrivingTestApplicationsSearchRequest search_request = new DrivingTestApplicationsSearchRequest
             {
                 Instructor_Category_CandidateId = instructor_category_candidate.Id,
@@ -69,6 +69,7 @@ namespace eDrivingSchool.WinUI.DrivingTest
             {
                 update_request2.Instructor_Category_CandidateId = item.Instructor_Category_CandidateId;
                 update_request2.Date = item.Date;
+                update_request2.Passed = updated.PolozenPrakticniTest;
                 update_request2.Status = Model.Status.Expired;
                 await _driving_test_applicationsService.Update<Model.DrivingTestApplications>(item.Id, update_request2);
             }

@@ -90,7 +90,8 @@ namespace Mobile.ViewModels
                     {
                         insert_request.Instructor_Category_CandidateId = instructor_category_candidate.Id;
                         insert_request.Date = DateTime.Now;
-                        insert_request.FirstAid = true;
+                        insert_request.FirstAid = !instructor_category_candidate.PolozenTestPrvePomoci;
+                        insert_request.TheoryTest = !instructor_category_candidate.PolozenTeorijskiTest;
                         insert_request.Status = Status.Inactive;
                         await _theoryTestApplicationsService.Insert<TheoryTestApplications>(insert_request);
                         count++;
