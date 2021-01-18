@@ -39,6 +39,10 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(z => z.Instructor_CategoryId == request.Instructor_CategoryId && z.PolozenTeorijskiTest == request.PolozenTeorijskiTest && z.PolozenTestPrvePomoci == request.PolozenTestPrvePomoci && z.PolozenPrakticniTest == request.PolozenPrakticniTest && z.Prijavljen == request.Prijavljen).Include(i => i.Instructor_Category);
             }
+            else if(request != null && request.PolozenPrakticniTest == true && request.Prijavljen == false)
+            {
+                query = query.Where(p => p.PolozenPrakticniTest == request.PolozenPrakticniTest && p.Prijavljen == request.Prijavljen).Include(i => i.Instructor_Category).ThenInclude(t => t.Category);
+            }
             else if (request.Paid == false)
             {
                 query = query.Where(p => p.Paid == request.Paid).Include(i => i.Instructor_Category);

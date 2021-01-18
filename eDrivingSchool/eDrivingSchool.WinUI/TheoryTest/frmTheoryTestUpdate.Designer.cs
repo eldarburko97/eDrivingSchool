@@ -58,7 +58,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(50, 70);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(169, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(227, 22);
             this.txtFirstName.TabIndex = 2;
             // 
             // label2
@@ -74,7 +74,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(50, 136);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(169, 22);
+            this.txtLastName.Size = new System.Drawing.Size(227, 22);
             this.txtLastName.TabIndex = 4;
             // 
             // label8
@@ -90,7 +90,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(50, 201);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(169, 22);
+            this.txtUsername.Size = new System.Drawing.Size(227, 22);
             this.txtUsername.TabIndex = 16;
             // 
             // label3
@@ -106,13 +106,13 @@
             // 
             this.txtCategory.Location = new System.Drawing.Point(50, 265);
             this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(169, 22);
+            this.txtCategory.Size = new System.Drawing.Size(227, 22);
             this.txtCategory.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 311);
+            this.label4.Location = new System.Drawing.Point(47, 337);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 17);
             this.label4.TabIndex = 19;
@@ -121,7 +121,7 @@
             // checkBoxPolozenTeorijskiIspit
             // 
             this.checkBoxPolozenTeorijskiIspit.AutoSize = true;
-            this.checkBoxPolozenTeorijskiIspit.Location = new System.Drawing.Point(226, 311);
+            this.checkBoxPolozenTeorijskiIspit.Location = new System.Drawing.Point(259, 338);
             this.checkBoxPolozenTeorijskiIspit.Name = "checkBoxPolozenTeorijskiIspit";
             this.checkBoxPolozenTeorijskiIspit.Size = new System.Drawing.Size(18, 17);
             this.checkBoxPolozenTeorijskiIspit.TabIndex = 20;
@@ -130,7 +130,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 356);
+            this.label5.Location = new System.Drawing.Point(47, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 17);
             this.label5.TabIndex = 21;
@@ -139,7 +139,7 @@
             // checkBoxPolozenTestPrvePomoci
             // 
             this.checkBoxPolozenTestPrvePomoci.AutoSize = true;
-            this.checkBoxPolozenTestPrvePomoci.Location = new System.Drawing.Point(226, 356);
+            this.checkBoxPolozenTestPrvePomoci.Location = new System.Drawing.Point(259, 398);
             this.checkBoxPolozenTestPrvePomoci.Name = "checkBoxPolozenTestPrvePomoci";
             this.checkBoxPolozenTestPrvePomoci.Size = new System.Drawing.Size(18, 17);
             this.checkBoxPolozenTestPrvePomoci.TabIndex = 22;
@@ -147,7 +147,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(139, 477);
+            this.btnSave.Location = new System.Drawing.Point(96, 501);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 23;
@@ -158,7 +158,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 400);
+            this.label6.Location = new System.Drawing.Point(47, 452);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 24;
@@ -167,7 +167,7 @@
             // checkBoxPrijavljen
             // 
             this.checkBoxPrijavljen.AutoSize = true;
-            this.checkBoxPrijavljen.Location = new System.Drawing.Point(226, 400);
+            this.checkBoxPrijavljen.Location = new System.Drawing.Point(259, 452);
             this.checkBoxPrijavljen.Name = "checkBoxPrijavljen";
             this.checkBoxPrijavljen.Size = new System.Drawing.Size(18, 17);
             this.checkBoxPrijavljen.TabIndex = 25;

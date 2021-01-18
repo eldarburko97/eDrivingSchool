@@ -193,6 +193,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("Date");
+
                     b.Property<int>("Instructor_CategoryId");
 
                     b.Property<int>("NumberOfLessons");

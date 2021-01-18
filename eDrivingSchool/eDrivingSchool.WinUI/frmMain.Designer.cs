@@ -56,11 +56,13 @@
             this.theoryTestDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingTestApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingTestApplicationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingTestDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.drivingTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drivingTestDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingLicencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingLicencesDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -79,10 +81,11 @@
             this.theoryTestApplicationsToolStripMenuItem,
             this.theoryTestToolStripMenuItem,
             this.drivingTestApplicationsToolStripMenuItem,
-            this.drivingTestToolStripMenuItem});
+            this.drivingTestToolStripMenuItem,
+            this.drivingLicencesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1436, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1650, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -265,7 +268,7 @@
             // theoryTestDataToolStripMenuItem
             // 
             this.theoryTestDataToolStripMenuItem.Name = "theoryTestDataToolStripMenuItem";
-            this.theoryTestDataToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.theoryTestDataToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.theoryTestDataToolStripMenuItem.Text = "Theory test data";
             this.theoryTestDataToolStripMenuItem.Click += new System.EventHandler(this.TheoryTestDataToolStripMenuItem_Click);
             // 
@@ -284,24 +287,6 @@
             this.drivingTestApplicationsDataToolStripMenuItem.Text = "Driving test applications data";
             this.drivingTestApplicationsDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingTestApplicationsDataToolStripMenuItem_Click);
             // 
-            // statusStrip
-            // 
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 533);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1436, 25);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
-            this.toolStripStatusLabel.Text = "Status";
-            // 
             // drivingTestToolStripMenuItem
             // 
             this.drivingTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -313,15 +298,48 @@
             // drivingTestDataToolStripMenuItem
             // 
             this.drivingTestDataToolStripMenuItem.Name = "drivingTestDataToolStripMenuItem";
-            this.drivingTestDataToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.drivingTestDataToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.drivingTestDataToolStripMenuItem.Text = "Driving test data";
             this.drivingTestDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingTestDataToolStripMenuItem_Click);
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 533);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1650, 25);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
+            this.toolStripStatusLabel.Text = "Status";
+            // 
+            // drivingLicencesToolStripMenuItem
+            // 
+            this.drivingLicencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.drivingLicencesDataToolStripMenuItem});
+            this.drivingLicencesToolStripMenuItem.Name = "drivingLicencesToolStripMenuItem";
+            this.drivingLicencesToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.drivingLicencesToolStripMenuItem.Text = "Driving licences";
+            // 
+            // drivingLicencesDataToolStripMenuItem
+            // 
+            this.drivingLicencesDataToolStripMenuItem.Name = "drivingLicencesDataToolStripMenuItem";
+            this.drivingLicencesDataToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.drivingLicencesDataToolStripMenuItem.Text = "Driving licences data";
+            this.drivingLicencesDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingLicencesDataToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 558);
+            this.ClientSize = new System.Drawing.Size(1650, 558);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -372,6 +390,8 @@
         private System.Windows.Forms.ToolStripMenuItem drivingTestApplicationsDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drivingTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drivingTestDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drivingLicencesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drivingLicencesDataToolStripMenuItem;
     }
 }
 

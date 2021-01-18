@@ -1,5 +1,6 @@
 ﻿using eDrivingSchool.WinUI.Candidate;
 using eDrivingSchool.WinUI.Category;
+using eDrivingSchool.WinUI.Driving_Licences;
 using eDrivingSchool.WinUI.DrivingSchool;
 using eDrivingSchool.WinUI.DrivingTest;
 using eDrivingSchool.WinUI.DrivingTestApplications;
@@ -219,6 +220,12 @@ namespace eDrivingSchool.WinUI
         private void DrivingTestDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDrivingTestData frm = new frmDrivingTestData();
+            frm.Show();
+        }
+
+        private void DrivingLicencesDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDrivingLicencesData frm = new frmDrivingLicencesData();
             frm.Show();
         }
     }

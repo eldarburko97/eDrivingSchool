@@ -76,7 +76,7 @@
             this.dgvTheoryTestData.ReadOnly = true;
             this.dgvTheoryTestData.RowTemplate.Height = 24;
             this.dgvTheoryTestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTheoryTestData.Size = new System.Drawing.Size(1014, 362);
+            this.dgvTheoryTestData.Size = new System.Drawing.Size(1370, 362);
             this.dgvTheoryTestData.TabIndex = 3;
             this.dgvTheoryTestData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvTheoryTestData_MouseDoubleClick);
             // 
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 450);
+            this.ClientSize = new System.Drawing.Size(1394, 450);
             this.Controls.Add(this.dgvTheoryTestData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
