@@ -265,6 +265,9 @@
     <EmbeddedResource Include="CertificateRequests\frmCertificatesRequestsData.resx">
       <DependentUpon>frmCertificatesRequestsData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CertificateRequests\frmUpdateCertificateRequest.resx">
+      <DependentUpon>frmUpdateCertificateRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Certificate\frmAddCertificate.resx">
       <DependentUpon>frmAddCertificate.cs</DependentUpon>
     </EmbeddedResource>

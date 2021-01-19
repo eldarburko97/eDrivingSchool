@@ -63,12 +63,11 @@
             this.certificatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.certificateDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificateRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificateRequestsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.certificateRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.certificateRequestsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCertificateRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -348,6 +347,21 @@
             this.certificateDataToolStripMenuItem.Text = "Certificate data";
             this.certificateDataToolStripMenuItem.Click += new System.EventHandler(this.CertificateDataToolStripMenuItem_Click);
             // 
+            // certificateRequestsToolStripMenuItem
+            // 
+            this.certificateRequestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.certificateRequestsDataToolStripMenuItem});
+            this.certificateRequestsToolStripMenuItem.Name = "certificateRequestsToolStripMenuItem";
+            this.certificateRequestsToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.certificateRequestsToolStripMenuItem.Text = "Certificate requests";
+            // 
+            // certificateRequestsDataToolStripMenuItem
+            // 
+            this.certificateRequestsDataToolStripMenuItem.Name = "certificateRequestsDataToolStripMenuItem";
+            this.certificateRequestsDataToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.certificateRequestsDataToolStripMenuItem.Text = "Certificate requests data";
+            this.certificateRequestsDataToolStripMenuItem.Click += new System.EventHandler(this.CertificateRequestsDataToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -365,29 +379,6 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
             this.toolStripStatusLabel.Text = "Status";
-            // 
-            // certificateRequestsToolStripMenuItem
-            // 
-            this.certificateRequestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.certificateRequestsDataToolStripMenuItem,
-            this.updateCertificateRequestToolStripMenuItem});
-            this.certificateRequestsToolStripMenuItem.Name = "certificateRequestsToolStripMenuItem";
-            this.certificateRequestsToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
-            this.certificateRequestsToolStripMenuItem.Text = "Certificate requests";
-            // 
-            // certificateRequestsDataToolStripMenuItem
-            // 
-            this.certificateRequestsDataToolStripMenuItem.Name = "certificateRequestsDataToolStripMenuItem";
-            this.certificateRequestsDataToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
-            this.certificateRequestsDataToolStripMenuItem.Text = "Certificate requests data";
-            this.certificateRequestsDataToolStripMenuItem.Click += new System.EventHandler(this.CertificateRequestsDataToolStripMenuItem_Click);
-            // 
-            // updateCertificateRequestToolStripMenuItem
-            // 
-            this.updateCertificateRequestToolStripMenuItem.Name = "updateCertificateRequestToolStripMenuItem";
-            this.updateCertificateRequestToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
-            this.updateCertificateRequestToolStripMenuItem.Text = "Update certificate request";
-            this.updateCertificateRequestToolStripMenuItem.Click += new System.EventHandler(this.UpdateCertificateRequestToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -451,7 +442,6 @@
         private System.Windows.Forms.ToolStripMenuItem certificateDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificateRequestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificateRequestsDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateCertificateRequestToolStripMenuItem;
     }
 }
 

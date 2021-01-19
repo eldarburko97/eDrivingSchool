@@ -249,10 +249,11 @@ namespace eDrivingSchool.WinUI
             frm.Show();
         }
 
+        /*
         private void UpdateCertificateRequestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUpdateCertificateRequest frm = new frmUpdateCertificateRequest();
             frm.Show();
-        }
+        }*/
     }
 }

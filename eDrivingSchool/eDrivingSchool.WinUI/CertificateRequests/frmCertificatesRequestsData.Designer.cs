@@ -78,6 +78,7 @@
             this.dgvCertificate_RequestsData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCertificate_RequestsData.Size = new System.Drawing.Size(949, 362);
             this.dgvCertificate_RequestsData.TabIndex = 3;
+            this.dgvCertificate_RequestsData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvCertificate_RequestsData_MouseDoubleClick);
             // 
             // CertificateRequestId
             // 

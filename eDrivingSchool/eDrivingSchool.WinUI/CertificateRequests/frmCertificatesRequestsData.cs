@@ -37,5 +37,12 @@ namespace eDrivingSchool.WinUI.CertificateRequests
             dgvCertificate_RequestsData.AutoGenerateColumns = false;
             dgvCertificate_RequestsData.DataSource = result;
         }
+
+        private void DgvCertificate_RequestsData_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var id = dgvCertificate_RequestsData.SelectedRows[0].Cells[0].Value;
+            frmUpdateCertificateRequest frm = new frmUpdateCertificateRequest(int.Parse(id.ToString()));
+            frm.Show();
+        }
     }
 }
