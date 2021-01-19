@@ -20,6 +20,7 @@ namespace eDrivingSchool.WebAPI.Database
         [ForeignKey("UserId")]
         public User User { get; set; }
         public string Purpose { get; set; }
+        [Column(TypeName = "date")]
         public DateTime Date { get; set; }
         public string Status { get; set; }
     }

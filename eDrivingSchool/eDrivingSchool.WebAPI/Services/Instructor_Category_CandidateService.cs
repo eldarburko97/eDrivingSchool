@@ -39,9 +39,13 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(z => z.Instructor_CategoryId == request.Instructor_CategoryId && z.PolozenTeorijskiTest == request.PolozenTeorijskiTest && z.PolozenTestPrvePomoci == request.PolozenTestPrvePomoci && z.PolozenPrakticniTest == request.PolozenPrakticniTest && z.Prijavljen == request.Prijavljen).Include(i => i.Instructor_Category);
             }
-            else if(request != null && request.PolozenPrakticniTest == true && request.Prijavljen == false)
+            else if (request != null && request.PolozenPrakticniTest == true && request.Prijavljen == false && request.Date != null)
             {
-                query = query.Where(p => p.PolozenPrakticniTest == request.PolozenPrakticniTest && p.Prijavljen == request.Prijavljen).Include(i => i.Instructor_Category).ThenInclude(t => t.Category);
+                query = query.Where(p => p.PolozenPrakticniTest == request.PolozenPrakticniTest && p.Prijavljen == request.Prijavljen && p.Date == request.Date).Include(i => i.Instructor_Category).ThenInclude(t => t.Category);
+            }
+            else if(request != null && request.PolozenPrakticniTest == true && request.Prijavljen == false )
+            {
+                query = query.Where(p => p.PolozenPrakticniTest == request.PolozenPrakticniTest && p.Prijavljen == request.Prijavljen && p.Paid == request.Paid).Include(i => i.Instructor_Category).ThenInclude(t => t.Category);
             }
             else if (request.Paid == false)
             {

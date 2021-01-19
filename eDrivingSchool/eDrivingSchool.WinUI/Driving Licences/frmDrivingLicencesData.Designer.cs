@@ -31,7 +31,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvDrivingLicencesData = new System.Windows.Forms.DataGridView();
-            this.Instructor_Category_CandidateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +39,8 @@
             this.NumberOfLessons = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Uplatio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duzan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivingLicencesData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // dgvDrivingLicencesData
             // 
@@ -64,14 +67,16 @@
             this.dgvDrivingLicencesData.AllowUserToDeleteRows = false;
             this.dgvDrivingLicencesData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDrivingLicencesData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Instructor_Category_CandidateId,
+            this.Id,
             this.FirstName,
             this.LastName,
             this.Username,
             this.Category,
             this.NumberOfLessons,
             this.Paid,
-            this.Date});
+            this.Date,
+            this.Uplatio,
+            this.Duzan});
             this.dgvDrivingLicencesData.Location = new System.Drawing.Point(32, 56);
             this.dgvDrivingLicencesData.Name = "dgvDrivingLicencesData";
             this.dgvDrivingLicencesData.ReadOnly = true;
@@ -81,13 +86,13 @@
             this.dgvDrivingLicencesData.TabIndex = 5;
             this.dgvDrivingLicencesData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvDrivingLicencesData_MouseDoubleClick);
             // 
-            // Instructor_Category_CandidateId
+            // Id
             // 
-            this.Instructor_Category_CandidateId.DataPropertyName = "Instructor_Category_CandidateId";
-            this.Instructor_Category_CandidateId.HeaderText = "Id";
-            this.Instructor_Category_CandidateId.Name = "Instructor_Category_CandidateId";
-            this.Instructor_Category_CandidateId.ReadOnly = true;
-            this.Instructor_Category_CandidateId.Visible = false;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // FirstName
             // 
@@ -138,6 +143,20 @@
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             // 
+            // Uplatio
+            // 
+            this.Uplatio.DataPropertyName = "Uplatio";
+            this.Uplatio.HeaderText = "Uplatio";
+            this.Uplatio.Name = "Uplatio";
+            this.Uplatio.ReadOnly = true;
+            // 
+            // Duzan
+            // 
+            this.Duzan.DataPropertyName = "Duzan";
+            this.Duzan.HeaderText = "Duzan";
+            this.Duzan.Name = "Duzan";
+            this.Duzan.ReadOnly = true;
+            // 
             // frmDrivingLicencesData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,7 +167,6 @@
             this.Controls.Add(this.txtSearch);
             this.Name = "frmDrivingLicencesData";
             this.Text = "frmDrivingLicencesData";
-            this.Load += new System.EventHandler(this.FrmDrivingLicencesData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivingLicencesData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,7 +178,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvDrivingLicencesData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Instructor_Category_CandidateId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
@@ -168,5 +186,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfLessons;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Uplatio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duzan;
     }
 }

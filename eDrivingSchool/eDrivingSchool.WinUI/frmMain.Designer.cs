@@ -58,11 +58,17 @@
             this.drivingTestApplicationsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingTestDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingLicencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drivingLicencesDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificateDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.drivingLicencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drivingLicencesDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificateRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.certificateRequestsDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCertificateRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +88,9 @@
             this.theoryTestToolStripMenuItem,
             this.drivingTestApplicationsToolStripMenuItem,
             this.drivingTestToolStripMenuItem,
-            this.drivingLicencesToolStripMenuItem});
+            this.drivingLicencesToolStripMenuItem,
+            this.certificatesToolStripMenuItem,
+            this.certificateRequestsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1650, 28);
@@ -302,6 +310,44 @@
             this.drivingTestDataToolStripMenuItem.Text = "Driving test data";
             this.drivingTestDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingTestDataToolStripMenuItem_Click);
             // 
+            // drivingLicencesToolStripMenuItem
+            // 
+            this.drivingLicencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.drivingLicencesDataToolStripMenuItem});
+            this.drivingLicencesToolStripMenuItem.Name = "drivingLicencesToolStripMenuItem";
+            this.drivingLicencesToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.drivingLicencesToolStripMenuItem.Text = "Driving licences";
+            // 
+            // drivingLicencesDataToolStripMenuItem
+            // 
+            this.drivingLicencesDataToolStripMenuItem.Name = "drivingLicencesDataToolStripMenuItem";
+            this.drivingLicencesDataToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.drivingLicencesDataToolStripMenuItem.Text = "Driving licences data";
+            this.drivingLicencesDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingLicencesDataToolStripMenuItem_Click);
+            // 
+            // certificatesToolStripMenuItem
+            // 
+            this.certificatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCertificateToolStripMenuItem,
+            this.certificateDataToolStripMenuItem});
+            this.certificatesToolStripMenuItem.Name = "certificatesToolStripMenuItem";
+            this.certificatesToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.certificatesToolStripMenuItem.Text = "Certificates";
+            // 
+            // addCertificateToolStripMenuItem
+            // 
+            this.addCertificateToolStripMenuItem.Name = "addCertificateToolStripMenuItem";
+            this.addCertificateToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.addCertificateToolStripMenuItem.Text = "Add certificate";
+            this.addCertificateToolStripMenuItem.Click += new System.EventHandler(this.AddCertificateToolStripMenuItem_Click);
+            // 
+            // certificateDataToolStripMenuItem
+            // 
+            this.certificateDataToolStripMenuItem.Name = "certificateDataToolStripMenuItem";
+            this.certificateDataToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.certificateDataToolStripMenuItem.Text = "Certificate data";
+            this.certificateDataToolStripMenuItem.Click += new System.EventHandler(this.CertificateDataToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -320,20 +366,28 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // drivingLicencesToolStripMenuItem
+            // certificateRequestsToolStripMenuItem
             // 
-            this.drivingLicencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.drivingLicencesDataToolStripMenuItem});
-            this.drivingLicencesToolStripMenuItem.Name = "drivingLicencesToolStripMenuItem";
-            this.drivingLicencesToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
-            this.drivingLicencesToolStripMenuItem.Text = "Driving licences";
+            this.certificateRequestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.certificateRequestsDataToolStripMenuItem,
+            this.updateCertificateRequestToolStripMenuItem});
+            this.certificateRequestsToolStripMenuItem.Name = "certificateRequestsToolStripMenuItem";
+            this.certificateRequestsToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.certificateRequestsToolStripMenuItem.Text = "Certificate requests";
             // 
-            // drivingLicencesDataToolStripMenuItem
+            // certificateRequestsDataToolStripMenuItem
             // 
-            this.drivingLicencesDataToolStripMenuItem.Name = "drivingLicencesDataToolStripMenuItem";
-            this.drivingLicencesDataToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
-            this.drivingLicencesDataToolStripMenuItem.Text = "Driving licences data";
-            this.drivingLicencesDataToolStripMenuItem.Click += new System.EventHandler(this.DrivingLicencesDataToolStripMenuItem_Click);
+            this.certificateRequestsDataToolStripMenuItem.Name = "certificateRequestsDataToolStripMenuItem";
+            this.certificateRequestsDataToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.certificateRequestsDataToolStripMenuItem.Text = "Certificate requests data";
+            this.certificateRequestsDataToolStripMenuItem.Click += new System.EventHandler(this.CertificateRequestsDataToolStripMenuItem_Click);
+            // 
+            // updateCertificateRequestToolStripMenuItem
+            // 
+            this.updateCertificateRequestToolStripMenuItem.Name = "updateCertificateRequestToolStripMenuItem";
+            this.updateCertificateRequestToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.updateCertificateRequestToolStripMenuItem.Text = "Update certificate request";
+            this.updateCertificateRequestToolStripMenuItem.Click += new System.EventHandler(this.UpdateCertificateRequestToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -392,6 +446,12 @@
         private System.Windows.Forms.ToolStripMenuItem drivingTestDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drivingLicencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drivingLicencesDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem certificatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCertificateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem certificateDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem certificateRequestsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem certificateRequestsDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateCertificateRequestToolStripMenuItem;
     }
 }
 

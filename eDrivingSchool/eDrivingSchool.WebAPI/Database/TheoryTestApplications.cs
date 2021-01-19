@@ -14,6 +14,7 @@ namespace eDrivingSchool.WebAPI.Database
         public int Instructor_Category_CandidateId { get; set; }
         [ForeignKey("Instructor_Category_CandidateId")]
         public Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
+        [Column(TypeName = "date")]
         public DateTime Date { get; set; }
         public bool FirstAid { get; set; }
         public bool TheoryTest { get; set; }

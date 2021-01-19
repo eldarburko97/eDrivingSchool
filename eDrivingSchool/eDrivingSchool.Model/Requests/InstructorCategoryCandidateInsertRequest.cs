@@ -14,5 +14,6 @@ namespace eDrivingSchool.Model.Requests
         public bool PolozenTestPrvePomoci { get; set; }
         public int NumberOfLessons { get; set; }
         public bool Paid { get; set; }
+        public DateTime Date { get; set; }
     }
 }

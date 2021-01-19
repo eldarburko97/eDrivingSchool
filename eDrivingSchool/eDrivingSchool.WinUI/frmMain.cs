@@ -1,5 +1,7 @@
 ﻿using eDrivingSchool.WinUI.Candidate;
 using eDrivingSchool.WinUI.Category;
+using eDrivingSchool.WinUI.Certificate;
+using eDrivingSchool.WinUI.CertificateRequests;
 using eDrivingSchool.WinUI.Driving_Licences;
 using eDrivingSchool.WinUI.DrivingSchool;
 using eDrivingSchool.WinUI.DrivingTest;
@@ -226,6 +228,30 @@ namespace eDrivingSchool.WinUI
         private void DrivingLicencesDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDrivingLicencesData frm = new frmDrivingLicencesData();
+            frm.Show();
+        }
+
+        private void AddCertificateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddCertificate frm = new frmAddCertificate();
+            frm.Show();
+        }
+
+        private void CertificateDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCertificatesData frm = new frmCertificatesData();
+            frm.Show();
+        }
+
+        private void CertificateRequestsDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCertificatesRequestsData frm = new frmCertificatesRequestsData();
+            frm.Show();
+        }
+
+        private void UpdateCertificateRequestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateCertificateRequest frm = new frmUpdateCertificateRequest();
             frm.Show();
         }
     }

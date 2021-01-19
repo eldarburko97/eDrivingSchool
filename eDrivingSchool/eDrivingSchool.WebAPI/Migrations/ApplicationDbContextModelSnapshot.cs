@@ -55,7 +55,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("CertificateId");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<string>("Purpose");
 
@@ -78,7 +79,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<string>("Message");
 
@@ -153,7 +155,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<int>("Instructor_Category_CandidateId");
 
@@ -193,7 +196,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime?>("Date");
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("date");
 
                     b.Property<int>("Instructor_CategoryId");
 
@@ -230,7 +234,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<string>("Category");
 
-                    b.Property<DateTime>("DateOfPayment");
+                    b.Property<DateTime>("DateOfPayment")
+                        .HasColumnType("date");
 
                     b.Property<string>("Note");
 
@@ -281,7 +286,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<bool>("FirstAid");
 
@@ -304,7 +310,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<string>("Description");
 
@@ -329,9 +336,11 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<string>("Address");
 
-                    b.Property<DateTime>("Birthdate");
+                    b.Property<DateTime>("Birthdate")
+                        .HasColumnType("date");
 
-                    b.Property<DateTime>("DateOfHiring");
+                    b.Property<DateTime>("DateOfHiring")
+                        .HasColumnType("date");
 
                     b.Property<int>("DrivingSchoolId");
 

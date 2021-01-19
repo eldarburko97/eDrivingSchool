@@ -6,5 +6,7 @@ namespace eDrivingSchool.Model.Requests
 {
    public class CertificateSearchRequest
     {
+        public string Type { get; set; }
+        public decimal Price { get; set; }
     }
 }

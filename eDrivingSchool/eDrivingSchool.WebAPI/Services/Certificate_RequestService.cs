@@ -28,7 +28,10 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(q=> q.UserId == searchRequest.UserId);
             }
-
+            if( searchRequest != null && !string.IsNullOrWhiteSpace(searchRequest.Status))
+            {
+                query = query.Where(w => w.Status == searchRequest.Status);
+            }
             var list = query.Include(i => i.Certificate).ToList();
             return _mapper.Map<List<Model.Certificate_Request>>(query);
         }

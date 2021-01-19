@@ -17,5 +17,21 @@ namespace eDrivingSchool.WebAPI.Services
             _context = context;
             _mapper = mapper;
         }
+
+        public override List<Model.Certificate> GetAll(CertificateSearchRequest request)
+        {
+            var query = _context.Set<Database.Certificate>().AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(request.Type))
+            {
+                query = query.Where(x => x.Type == request.Type);
+            }
+            if (request.Price != 0)
+            {
+                query = query.Where(x => x.Price == request.Price);
+            }
+            var list = query.ToList();
+            return _mapper.Map<List<Model.Certificate>>(list);
+        }
     }
 }

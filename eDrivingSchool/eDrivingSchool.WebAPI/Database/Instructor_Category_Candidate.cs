@@ -25,6 +25,7 @@ namespace eDrivingSchool.WebAPI.Database
         public bool Prijavljen { get; set; }
         public int NumberOfLessons { get; set; }
         public bool Paid { get; set; }
+        [Column(TypeName ="date")]
         public DateTime? Date { get; set; }
     }
 }

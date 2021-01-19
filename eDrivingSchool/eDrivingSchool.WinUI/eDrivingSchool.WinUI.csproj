@@ -80,11 +80,41 @@
     <Compile Include="Category\frmCategoriesData.Designer.cs">
       <DependentUpon>frmCategoriesData.cs</DependentUpon>
     </Compile>
+    <Compile Include="CertificateRequests\frmCertificatesRequestsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificateRequests\frmCertificatesRequestsData.Designer.cs">
+      <DependentUpon>frmCertificatesRequestsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateRequests\frmUpdateCertificateRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificateRequests\frmUpdateCertificateRequest.Designer.cs">
+      <DependentUpon>frmUpdateCertificateRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Certificate\frmAddCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certificate\frmAddCertificate.Designer.cs">
+      <DependentUpon>frmAddCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Certificate\frmCertificatesData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certificate\frmCertificatesData.Designer.cs">
+      <DependentUpon>frmCertificatesData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving Licences\frmDrivingLicencesData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Driving Licences\frmDrivingLicencesData.Designer.cs">
       <DependentUpon>frmDrivingLicencesData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving Licences\frmDrivingLicencesUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving Licences\frmDrivingLicencesUpdate.Designer.cs">
+      <DependentUpon>frmDrivingLicencesUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="DrivingSchool\frmDrivingSchoolData.cs">
       <SubType>Form</SubType>
@@ -232,8 +262,20 @@
     <EmbeddedResource Include="Category\frmCategoriesData.resx">
       <DependentUpon>frmCategoriesData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CertificateRequests\frmCertificatesRequestsData.resx">
+      <DependentUpon>frmCertificatesRequestsData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificate\frmAddCertificate.resx">
+      <DependentUpon>frmAddCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificate\frmCertificatesData.resx">
+      <DependentUpon>frmCertificatesData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driving Licences\frmDrivingLicencesData.resx">
       <DependentUpon>frmDrivingLicencesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving Licences\frmDrivingLicencesUpdate.resx">
+      <DependentUpon>frmDrivingLicencesUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolData.resx">
       <DependentUpon>frmDrivingSchoolData.cs</DependentUpon>
