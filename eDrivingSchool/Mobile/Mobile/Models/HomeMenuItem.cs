@@ -13,7 +13,8 @@ namespace Mobile.Models
         Certificates,
         TheoryTestApplications,
         DrivingTestApplications,
-        Lessons
+        Lessons,
+        LogOut
     }
     public class HomeMenuItem
     {

@@ -10,7 +10,7 @@
         <StackLayout Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
             <StackLayout BackgroundColor="LightGray" Padding="10">
             <StackLayout BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand">
-                <Button Text="If you wish to change password click here !!!" HeightRequest="50" BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand" Command="{Binding ShowCommand}"></Button>
+                <Button Text="If you want to change password click here !!!" HeightRequest="50" BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand" Command="{Binding ShowCommand}"></Button>
             </StackLayout>
            
             <StackLayout Margin="0,20,0,0" IsVisible="{Binding EntryVisible}">

@@ -7,14 +7,15 @@
         <vm:LoginViewModel></vm:LoginViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="FillAndExpand" Padding="10" VerticalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="10,0,10,0" VerticalOptions="CenterAndExpand">
+            <Image VerticalOptions="Start" HeightRequest="300" WidthRequest="300" Source="DrivingSchool.jpg"></Image>
             <Label  Text="Username"></Label>
             <Entry x:Name="Username" Text="{Binding Username}"></Entry>
             <Label  Text="Password"></Label>
             <Entry Text="{Binding Password}" IsPassword="True"></Entry>
             <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Spacing="2" Padding="2">
                 <Button  Command="{Binding LoginCommand}" Text="Login" HorizontalOptions="CenterAndExpand" BackgroundColor="DodgerBlue" TextColor="White"/>
-                <Button Text="Register" HorizontalOptions="CenterAndExpand"  BackgroundColor="DodgerBlue" TextColor="White" Clicked="Button_Clicked"/>
+                <Button Text="Register" HorizontalOptions="CenterAndExpand" BackgroundColor="DodgerBlue" TextColor="White" Clicked="Button_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

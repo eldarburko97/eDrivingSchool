@@ -54,11 +54,13 @@
                 </ListView>
             </StackLayout>
             <StackLayout BackgroundColor="DodgerBlue" Margin="0,20,0,0">
-                <Label HorizontalOptions="Center" FontSize="Large" TextColor="Black">
+                <Label HorizontalOptions="Center" FontSize="Large" TextColor="White">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Total: "></Span>
                             <Span Text="{Binding Total, StringFormat='{}{0:f}'}"></Span>
+                            <Span Text=" "></Span>
+                            <Span Text="BAM"></Span>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>

@@ -54,21 +54,23 @@ namespace Mobile.Views
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
                  new HomeMenuItem {Id = MenuItemType.YourProfile, Title="Your Profile" },
-                  new HomeMenuItem {Id = MenuItemType.Forum, Title="Forum" },
-                   new HomeMenuItem {Id = MenuItemType.TheoryTestApplications, Title="Theory test applications" },
-                    new HomeMenuItem {Id = MenuItemType.DrivingTestApplications, Title="Driving test applications" },
-                   new HomeMenuItem {Id = MenuItemType.Lessons, Title="Lessons" }
+                  new HomeMenuItem {Id = MenuItemType.Forum, Title="Forum" }
             };
-
-           
-
+  
             request.Username = APIService.Username;
             var list = await _service.GetAll<List<User>>(request);
             var user = list[0];
+            if(user.RoleId == 2)
+            {
+                menuItems.Add(new HomeMenuItem { Id = MenuItemType.TheoryTestApplications, Title = "Theory test applications" });
+                menuItems.Add(new HomeMenuItem { Id = MenuItemType.DrivingTestApplications, Title = "Driving test applications" });
+                menuItems.Add(new HomeMenuItem { Id = MenuItemType.Lessons, Title = "Lessons" });
+            }
             if(user.RoleId == 3)
             {
                 menuItems.Add(new HomeMenuItem { Id = MenuItemType.Certificates, Title = "Certificates" });
             }
+            menuItems.Add(new HomeMenuItem { Id = MenuItemType.LogOut, Title = "Log out" });
 
             ListViewMenu.ItemsSource = menuItems;
 

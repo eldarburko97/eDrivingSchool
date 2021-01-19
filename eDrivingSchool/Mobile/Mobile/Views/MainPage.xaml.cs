@@ -53,6 +53,9 @@ namespace Mobile.Views
                     case (int)MenuItemType.Lessons:
                         MenuPages.Add(id, new NavigationPage(new NewLessonPage()));
                         break;
+                    case (int)MenuItemType.LogOut:
+                        MenuPages.Add(id, new NavigationPage(new LoginPage()));
+                        break;
                 }
             }
 
