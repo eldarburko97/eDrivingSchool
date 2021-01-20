@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +44,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtJMBG = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnAddPhoto = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.txtPhoto = new System.Windows.Forms.TextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +74,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(169, 22);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtFirstName_Validating);
             // 
             // label2
             // 
@@ -80,6 +91,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(169, 22);
             this.txtLastName.TabIndex = 3;
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLastName_Validating);
             // 
             // label3
             // 
@@ -96,6 +108,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(169, 22);
             this.txtPhone.TabIndex = 5;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPhone_Validating);
             // 
             // label4
             // 
@@ -112,6 +125,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(169, 22);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEmail_Validating);
             // 
             // label5
             // 
@@ -128,6 +142,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(169, 22);
             this.txtAddress.TabIndex = 9;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAddress_Validating);
             // 
             // label6
             // 
@@ -160,6 +175,7 @@
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Size = new System.Drawing.Size(169, 22);
             this.txtJMBG.TabIndex = 13;
+            this.txtJMBG.Validating += new System.ComponentModel.CancelEventHandler(this.TxtJMBG_Validating);
             // 
             // label8
             // 
@@ -170,13 +186,6 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Username";
             // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(303, 126);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(169, 22);
-            this.txtUsername.TabIndex = 15;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -186,16 +195,17 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Password";
             // 
-            // txtPassword
+            // txtUsername
             // 
-            this.txtPassword.Location = new System.Drawing.Point(303, 187);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(169, 22);
-            this.txtPassword.TabIndex = 17;
+            this.txtUsername.Location = new System.Drawing.Point(303, 126);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(169, 22);
+            this.txtUsername.TabIndex = 17;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsername_Validating);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(341, 252);
+            this.btnSave.Location = new System.Drawing.Point(433, 380);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 18;
@@ -203,15 +213,80 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(301, 232);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 17);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Photo";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(303, 191);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(204, 22);
+            this.txtPassword.TabIndex = 29;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword_Validating);
+            // 
+            // btnAddPhoto
+            // 
+            this.btnAddPhoto.Location = new System.Drawing.Point(570, 251);
+            this.btnAddPhoto.Name = "btnAddPhoto";
+            this.btnAddPhoto.Size = new System.Drawing.Size(105, 23);
+            this.btnAddPhoto.TabIndex = 30;
+            this.btnAddPhoto.Text = "Add";
+            this.btnAddPhoto.UseVisualStyleBackColor = true;
+            this.btnAddPhoto.Click += new System.EventHandler(this.BtnAddPhoto_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(745, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(296, 295);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // txtPhoto
+            // 
+            this.txtPhoto.Location = new System.Drawing.Point(304, 252);
+            this.txtPhoto.Name = "txtPhoto";
+            this.txtPhoto.Size = new System.Drawing.Size(204, 22);
+            this.txtPhoto.TabIndex = 32;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(692, 383);
+            this.maskedTextBox2.Mask = "(999) 000-0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(216, 22);
+            this.maskedTextBox2.TabIndex = 34;
+            // 
             // frmAddCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(1123, 450);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.txtPhoto);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAddPhoto);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtJMBG);
             this.Controls.Add(this.label7);
@@ -230,6 +305,8 @@
             this.Name = "frmAddCandidate";
             this.Text = "frmAddCandidate";
             this.Load += new System.EventHandler(this.FrmAddCandidate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,9 +329,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtJMBG;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnAddPhoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.TextBox txtPhoto;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }

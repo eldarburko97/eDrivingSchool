@@ -24,33 +24,37 @@ namespace eDrivingSchool.WinUI.Payment
         public frmAddPayment(int? id = null)
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
             _id = id;
         }
 
         private async void BtnSave_Click(object sender, EventArgs e)
         {
-            var idObj = cmbCandidate.SelectedValue;
-            if (int.TryParse(idObj.ToString(), out int CandidateId))
+            if (this.ValidateChildren())
             {
-                insert_request.UserId = CandidateId;
-            }
-            insert_request.Category = txtCategory.Text;
-            insert_request.Amount = float.Parse(txtAmount.Text);
-            insert_request.DateOfPayment = dtpDateOfPayment.Value;
-            insert_request.Note = txtNote.Text;
-            if (_id.HasValue)
-            {
-                await _apiService.Update<Model.Payment>(_id, insert_request);
-            }
-            else
-            {
-                await _apiService.Insert<Model.Payment>(insert_request);
+                var idObj = cmbCandidate.SelectedValue;
+                if (int.TryParse(idObj.ToString(), out int CandidateId))
+                {
+                    insert_request.UserId = CandidateId;
+                }
+                insert_request.Category = txtCategory.Text;
+                insert_request.Amount = float.Parse(txtAmount.Text);
+                insert_request.DateOfPayment = dtpDateOfPayment.Value;
+                insert_request.Note = txtNote.Text;
+                if (_id.HasValue)
+                {
+                    await _apiService.Update<Model.Payment>(_id, insert_request);
+                }
+                else
+                {
+                    await _apiService.Insert<Model.Payment>(insert_request);
+                }
             }
         }
 
         private async void FrmAddPayment_Load(object sender, EventArgs e)
         {
-          
+
             await LoadKandidati();
             if (_id.HasValue)
             {
@@ -77,7 +81,7 @@ namespace eDrivingSchool.WinUI.Payment
                 cmbCandidate.ValueMember = "Id";
                 cmbCandidate.DataSource = candidates;
                 cmbCandidate.SelectedValue = candidate.Id;
-               
+
             }
             else
             {
@@ -96,6 +100,54 @@ namespace eDrivingSchool.WinUI.Payment
                 cmbCandidate.DisplayMember = "candidate_category";
                 cmbCandidate.ValueMember = "Id";
                 cmbCandidate.DataSource = candidates;
+            }
+        }
+
+        private void TxtCategory_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCategory.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtCategory, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAmount.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtAmount, Messages.Validation_Field_Required);
+            }
+            else
+            {
+                try
+                {
+                    float amount = float.Parse(txtAmount.Text);
+                }
+                catch (Exception)
+                {
+                    e.Cancel = true;
+                    errorProvider.SetError(txtAmount, Messages.amount_err);
+                }
+            }
+        }
+
+        private void TxtNote_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNote.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtNote, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void CmbCandidate_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cmbCandidate.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(cmbCandidate, Messages.Validation_Field_Required);
             }
         }
     }

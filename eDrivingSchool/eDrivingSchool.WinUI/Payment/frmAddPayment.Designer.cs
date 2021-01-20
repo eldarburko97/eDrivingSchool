@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbCandidate = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +60,7 @@
             this.cmbCandidate.Name = "cmbCandidate";
             this.cmbCandidate.Size = new System.Drawing.Size(254, 24);
             this.cmbCandidate.TabIndex = 1;
+            this.cmbCandidate.Validating += new System.ComponentModel.CancelEventHandler(this.CmbCandidate_Validating);
             // 
             // label2
             // 
@@ -73,6 +77,7 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(254, 22);
             this.txtAmount.TabIndex = 3;
+            this.txtAmount.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAmount_Validating);
             // 
             // label3
             // 
@@ -105,6 +110,7 @@
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(254, 22);
             this.txtCategory.TabIndex = 7;
+            this.txtCategory.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCategory_Validating);
             // 
             // btnSave
             // 
@@ -132,6 +138,11 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(436, 81);
             this.txtNote.TabIndex = 10;
+            this.txtNote.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNote_Validating);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // frmAddPayment
             // 
@@ -152,6 +163,7 @@
             this.Name = "frmAddPayment";
             this.Text = "frmAddPayment";
             this.Load += new System.EventHandler(this.FrmAddPayment_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +182,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

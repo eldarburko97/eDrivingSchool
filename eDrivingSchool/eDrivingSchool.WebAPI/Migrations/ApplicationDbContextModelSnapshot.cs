@@ -344,38 +344,47 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<int>("DrivingSchoolId");
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .HasMaxLength(100);
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(50);
 
                     b.Property<byte[]>("Image");
 
-                    b.Property<string>("JMBG");
+                    b.Property<string>("JMBG")
+                        .HasMaxLength(13);
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .HasMaxLength(50);
 
                     b.Property<string>("LicenseNumber");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired();
+                        .HasMaxLength(50);
 
                     b.Property<string>("PasswordSalt")
-                        .IsRequired();
+                        .HasMaxLength(50);
 
-                    b.Property<string>("Phone");
+                    b.Property<string>("Phone")
+                        .HasMaxLength(20);
 
                     b.Property<int>("RoleId");
 
                     b.Property<string>("Salary");
 
                     b.Property<string>("Username")
-                        .IsRequired();
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
                     b.HasIndex("DrivingSchoolId");
 
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("Username")
+                        .IsUnique()
+                        .HasFilter("[Username] IS NOT NULL");
 
                     b.ToTable("Users");
                 });

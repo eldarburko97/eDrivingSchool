@@ -50,7 +50,7 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var entity = _context.Set<Database.User>().Find(id);
             var candidate = _mapper.Map<Model.Candidate>(entity);
-            candidate.candidate = candidate.FirstName + " " + candidate.LastName;
+            //candidate.candidate = candidate.FirstName + " " + candidate.LastName;
             return candidate;
         }
 

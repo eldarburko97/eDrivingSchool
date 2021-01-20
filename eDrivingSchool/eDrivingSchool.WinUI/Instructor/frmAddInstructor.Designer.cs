@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
@@ -58,7 +59,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnAddPhoto = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,6 +79,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(206, 22);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtFirstName_Validating);
             // 
             // txtLastName
             // 
@@ -83,6 +87,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(204, 22);
             this.txtLastName.TabIndex = 4;
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLastName_Validating);
             // 
             // label2
             // 
@@ -108,6 +113,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(204, 22);
             this.txtPhone.TabIndex = 7;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPhone_Validating);
             // 
             // label4
             // 
@@ -124,6 +130,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 22);
             this.txtEmail.TabIndex = 9;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEmail_Validating);
             // 
             // label5
             // 
@@ -140,6 +147,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(204, 22);
             this.txtAddress.TabIndex = 11;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAddress_Validating);
             // 
             // label6
             // 
@@ -172,6 +180,7 @@
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Size = new System.Drawing.Size(204, 22);
             this.txtJMBG.TabIndex = 15;
+            this.txtJMBG.Validating += new System.ComponentModel.CancelEventHandler(this.TxtJMBG_Validating);
             // 
             // label8
             // 
@@ -188,6 +197,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(204, 22);
             this.txtUsername.TabIndex = 17;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsername_Validating);
             // 
             // label9
             // 
@@ -204,6 +214,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(204, 22);
             this.txtPassword.TabIndex = 19;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword_Validating);
             // 
             // label10
             // 
@@ -220,6 +231,7 @@
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(204, 22);
             this.txtSalary.TabIndex = 21;
+            this.txtSalary.Validating += new System.ComponentModel.CancelEventHandler(this.TxtSalary_Validating);
             // 
             // label11
             // 
@@ -236,6 +248,7 @@
             this.txtLicenseNumber.Name = "txtLicenseNumber";
             this.txtLicenseNumber.Size = new System.Drawing.Size(204, 22);
             this.txtLicenseNumber.TabIndex = 23;
+            this.txtLicenseNumber.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLicenseNumber_Validating);
             // 
             // label12
             // 
@@ -303,6 +316,10 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmAddInstructor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -341,6 +358,7 @@
             this.Text = "frmAddInstructor";
             this.Load += new System.EventHandler(this.FrmAddInstructor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,5 +396,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnAddPhoto;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

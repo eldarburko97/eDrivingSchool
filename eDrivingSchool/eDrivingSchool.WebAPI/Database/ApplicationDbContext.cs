@@ -27,5 +27,10 @@ namespace eDrivingSchool.WebAPI.Database
         public DbSet<TheoryTestApplications> TheoryTestApplications { get; set; }
         public DbSet<DrivingLesson> DrivingLessons { get; set; }
         public DbSet<DrivingTestApplications> DrivingTestApplications { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>().HasIndex(u => u.Username).IsUnique();
+        }
     }
 }

@@ -21,47 +21,51 @@ namespace eDrivingSchool.WinUI.Instructor
         public frmAddInstructor(int? id = null)
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.Disable;
             _id = id;
         }
 
         private async void BtnSave_Click(object sender, EventArgs e)
         {
-            request.FirstName = txtFirstName.Text;
-            request.LastName = txtLastName.Text;
-            request.Phone = txtPhone.Text;
-            request.Email = txtEmail.Text;
-            request.Address = txtAddress.Text;
-            request.Birthdate = dtpBirthdate.Value;
-            request.JMBG = txtJMBG.Text;
-            request.Username = txtUsername.Text;
-            request.Password = txtPassword.Text;
-            request.Salary = txtSalary.Text;
-            request.LicenseNumber = txtLicenseNumber.Text;
-            request.DateOfHiring = dtpDateOfHiring.Value;
-            request.DrivingSchoolId = 1;
-            request.RoleId = 2;
-
-            if (string.IsNullOrWhiteSpace(txtPhoto.Text))
+            if (this.ValidateChildren())
             {
-                Assembly asm = Assembly.GetExecutingAssembly();
-                Stream stm = asm.GetManifestResourceStream("eDrivingSchool.WinUI.Image.userDefault.png");
-                
-                using (var memoryStream = new MemoryStream())
+                request.FirstName = txtFirstName.Text;
+                request.LastName = txtLastName.Text;
+                request.Phone = txtPhone.Text;
+                request.Email = txtEmail.Text;
+                request.Address = txtAddress.Text;
+                request.Birthdate = dtpBirthdate.Value;
+                request.JMBG = txtJMBG.Text;
+                request.Username = txtUsername.Text;
+                request.Password = txtPassword.Text;
+                request.Salary = txtSalary.Text;
+                request.LicenseNumber = txtLicenseNumber.Text;
+                request.DateOfHiring = dtpDateOfHiring.Value;
+                request.DrivingSchoolId = 1;
+                request.RoleId = 2;
+
+                if (string.IsNullOrWhiteSpace(txtPhoto.Text))
                 {
-                    stm.CopyTo(memoryStream);
-                    var file= memoryStream.ToArray();
-                    request.Image = file;
-                }
-                
-            }
+                    Assembly asm = Assembly.GetExecutingAssembly();
+                    Stream stm = asm.GetManifestResourceStream("eDrivingSchool.WinUI.Image.userDefault.png");
 
-            if (_id.HasValue)
-            {
-                await _apiService.Update<Model.Instructor>(_id, request);
-            }
-            else
-            {
-                await _apiService.Insert<Model.Instructor>(request);
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        stm.CopyTo(memoryStream);
+                        var file = memoryStream.ToArray();
+                        request.Image = file;
+                    }
+
+                }
+
+                if (_id.HasValue)
+                {
+                    await _apiService.Update<Model.Instructor>(_id, request);
+                }
+                else
+                {
+                    await _apiService.Insert<Model.Instructor>(request);
+                }
             }
         }
 
@@ -81,6 +85,7 @@ namespace eDrivingSchool.WinUI.Instructor
                 txtSalary.Text = request.Salary;
                 txtLicenseNumber.Text = request.LicenseNumber;
                 dtpDateOfHiring.Value = Convert.ToDateTime(request.DateOfHiring);
+                pictureBox1.Image = System.Drawing.Image.FromStream(new MemoryStream(request.Image));
             }
         }
 
@@ -96,7 +101,97 @@ namespace eDrivingSchool.WinUI.Instructor
 
                 Image image = Image.FromFile(fileName);
                 pictureBox1.Image = image;
-                
+
+            }
+        }
+
+        private void TxtFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtFirstName, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtLastName, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPhone.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtPhone, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtEmail, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtAddress_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAddress.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtAddress, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtJMBG_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtJMBG.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtJMBG, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtUsername, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtPassword, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtSalary_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSalary.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtSalary, Messages.Validation_Field_Required);
+            }
+        }
+
+        private void TxtLicenseNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLicenseNumber.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtLicenseNumber, Messages.Validation_Field_Required);
             }
         }
     }

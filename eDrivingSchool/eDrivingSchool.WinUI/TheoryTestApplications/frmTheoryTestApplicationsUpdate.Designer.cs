@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -41,6 +41,9 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.MaskedTextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +59,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(35, 51);
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(169, 22);
             this.txtFirstName.TabIndex = 2;
             // 
@@ -72,6 +76,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(35, 117);
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(169, 22);
             this.txtLastName.TabIndex = 4;
             // 
@@ -83,13 +88,6 @@
             this.label6.Size = new System.Drawing.Size(38, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Date";
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Location = new System.Drawing.Point(35, 304);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(246, 22);
-            this.dtpDate.TabIndex = 12;
             // 
             // label3
             // 
@@ -116,6 +114,7 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(169, 22);
             this.txtStatus.TabIndex = 16;
+            this.txtStatus.Validating += new System.ComponentModel.CancelEventHandler(this.TxtStatus_Validating);
             // 
             // label4
             // 
@@ -130,6 +129,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(35, 181);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(169, 22);
             this.txtUsername.TabIndex = 18;
             // 
@@ -146,14 +146,28 @@
             // 
             this.txtCategory.Location = new System.Drawing.Point(36, 241);
             this.txtCategory.Name = "txtCategory";
+            this.txtCategory.ReadOnly = true;
             this.txtCategory.Size = new System.Drawing.Size(169, 22);
             this.txtCategory.TabIndex = 20;
+            // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(35, 304);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(288, 22);
+            this.txtDate.TabIndex = 22;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // frmTheoryTestApplicationsUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtUsername);
@@ -161,7 +175,6 @@
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label2);
@@ -170,6 +183,7 @@
             this.Name = "frmTheoryTestApplicationsUpdate";
             this.Text = "frmTheoryTestApplicationsUpdate";
             this.Load += new System.EventHandler(this.FrmTheoryTestApplicationsUpdate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,7 +196,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtStatus;
@@ -190,5 +203,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCategory;
+        private System.Windows.Forms.MaskedTextBox txtDate;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
