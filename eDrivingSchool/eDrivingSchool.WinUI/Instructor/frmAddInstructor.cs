@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -157,6 +158,11 @@ namespace eDrivingSchool.WinUI.Instructor
                 e.Cancel = true;
                 errorProvider.SetError(txtJMBG, Messages.Validation_Field_Required);
             }
+            else if(!Regex.IsMatch(txtJMBG.Text, @"^[0-9]{13}$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtJMBG, Messages.jmbg_err);
+            }
         }
 
         private void TxtUsername_Validating(object sender, CancelEventArgs e)
@@ -174,6 +180,11 @@ namespace eDrivingSchool.WinUI.Instructor
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtPassword, Messages.Validation_Field_Required);
+            }
+            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtPassword, Messages.password_err);
             }
         }
 

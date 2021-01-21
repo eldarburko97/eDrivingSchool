@@ -20,6 +20,7 @@ namespace eDrivingSchool.WebAPI.Database
         public float Mileage { get; set; }   // Number of kilometers traveled on driving lesson
         public float AverageFuelConsumption { get; set; }
         public string Damage { get; set; }
+        [Column(TypeName = "date")]
         public DateTime Date { get; set; }
         [ForeignKey("Instructor")]
         public int InstructorId { get; set; }

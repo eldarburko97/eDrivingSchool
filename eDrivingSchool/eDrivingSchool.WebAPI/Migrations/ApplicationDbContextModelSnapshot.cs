@@ -107,7 +107,8 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<string>("Damage");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("date");
 
                     b.Property<int>("InstructorId");
 

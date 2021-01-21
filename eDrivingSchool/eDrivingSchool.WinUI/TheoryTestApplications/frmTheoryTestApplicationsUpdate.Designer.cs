@@ -36,13 +36,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbStatuses = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,14 +109,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(35, 366);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(169, 22);
-            this.txtStatus.TabIndex = 16;
-            this.txtStatus.Validating += new System.ComponentModel.CancelEventHandler(this.TxtStatus_Validating);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -162,17 +155,35 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // cmbStatuses
+            // 
+            this.cmbStatuses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatuses.FormattingEnabled = true;
+            this.cmbStatuses.Location = new System.Drawing.Point(36, 366);
+            this.cmbStatuses.Name = "cmbStatuses";
+            this.cmbStatuses.Size = new System.Drawing.Size(173, 24);
+            this.cmbStatuses.TabIndex = 24;
+            // 
             // frmTheoryTestApplicationsUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbStatuses);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
@@ -198,12 +209,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.MaskedTextBox txtDate;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ComboBox cmbStatuses;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

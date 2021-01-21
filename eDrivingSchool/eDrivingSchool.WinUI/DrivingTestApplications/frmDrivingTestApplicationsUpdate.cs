@@ -21,7 +21,13 @@ namespace eDrivingSchool.WinUI.DrivingTestApplications
         public frmDrivingTestApplicationsUpdate(int? id = null)
         {
             InitializeComponent();
+            InitializecmbStatuses();
             _id = id;
+        }
+
+        private void InitializecmbStatuses()
+        {
+            cmbStatuses.Items.AddRange(Enum.GetNames(typeof(Model.Status)));
         }
 
         private async void FrmDrivingTestApplicationsUpdate_Load(object sender, EventArgs e)
@@ -35,8 +41,10 @@ namespace eDrivingSchool.WinUI.DrivingTestApplications
                 var instructor_category = await _instructor_categoriesService.GetById<Model.Instructor_Category>(_driving_test_application.Instructor_Category_Candidate.Instructor_CategoryId);
                 var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
                 txtCategory.Text = category.Name;
-                dtpDate.Value = _driving_test_application.Date;
-                txtStatus.Text = _driving_test_application.Status.ToString();
+                // dtpDate.Value = _driving_test_application.Date;
+                txtDate.Text = _driving_test_application.Date.Date.ToString("MM/dd/yyyy");
+                // txtStatus.Text = _driving_test_application.Status.ToString();
+                cmbStatuses.SelectedIndex = (int)_driving_test_application.Status;
             }
         }
 
@@ -45,12 +53,13 @@ namespace eDrivingSchool.WinUI.DrivingTestApplications
             var _driving_test_application = await _driving_test_applicationsService.GetById<Model.DrivingTestApplications>(_id);
             DrivingTestApplicationsInsertRequest insert_request = new DrivingTestApplicationsInsertRequest();
             insert_request.Instructor_Category_CandidateId = _driving_test_application.Instructor_Category_CandidateId;
-            insert_request.Date = _driving_test_application.Date;
-            Model.Status status;
-            if (Enum.TryParse(txtStatus.Text, out status))
-            {
-                insert_request.Status = status;
-            }
+            insert_request.Date = _driving_test_application.Date.Date;
+            /* Model.Status status;
+             if (Enum.TryParse(txtStatus.Text, out status))
+             {
+                 insert_request.Status = status;
+             }*/
+            insert_request.Status = (Model.Status)cmbStatuses.SelectedIndex;
             insert_request.Passed = _driving_test_application.Passed;
             if (_id.HasValue)
             {

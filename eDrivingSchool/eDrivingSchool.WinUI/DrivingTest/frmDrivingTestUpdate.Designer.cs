@@ -93,6 +93,7 @@
             // 
             this.txtCategory.Location = new System.Drawing.Point(41, 255);
             this.txtCategory.Name = "txtCategory";
+            this.txtCategory.ReadOnly = true;
             this.txtCategory.Size = new System.Drawing.Size(169, 22);
             this.txtCategory.TabIndex = 48;
             // 
@@ -109,6 +110,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(41, 191);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(169, 22);
             this.txtUsername.TabIndex = 46;
             // 
@@ -125,6 +127,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(41, 126);
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(169, 22);
             this.txtLastName.TabIndex = 44;
             // 
@@ -141,6 +144,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(41, 60);
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(169, 22);
             this.txtFirstName.TabIndex = 42;
             // 

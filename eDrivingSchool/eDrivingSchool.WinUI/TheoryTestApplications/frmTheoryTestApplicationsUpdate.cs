@@ -21,8 +21,14 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
         public frmTheoryTestApplicationsUpdate(int? id = null)
         {
             InitializeComponent();
+            InitializecmbStatuses();
             this.AutoValidate = AutoValidate.Disable;
             _id = id;
+        }
+
+        private void InitializecmbStatuses()
+        {
+            cmbStatuses.Items.AddRange(Enum.GetNames(typeof(Model.Status)));
         }
 
         private async void FrmTheoryTestApplicationsUpdate_Load(object sender, EventArgs e)
@@ -36,8 +42,9 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
                 var instructor_category = await _instructors_categoriesService.GetById<Model.Instructor_Category>(_theory_test_application.Instructor_Category_Candidate.Instructor_CategoryId);
                 var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
                 txtCategory.Text = category.Name;
-                txtStatus.Text = _theory_test_application.Status.ToString();
+                //txtStatus.Text = _theory_test_application.Status.ToString();
                 txtDate.Text = _theory_test_application.Date.Date.ToString("MM/dd/yyyy");
+                cmbStatuses.SelectedIndex = (int)_theory_test_application.Status;
             }
         }
 
@@ -51,11 +58,12 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
                     TheoryTestApplicationsInsertRequest insert_request = new TheoryTestApplicationsInsertRequest();
                     insert_request.Instructor_Category_CandidateId = _theory_test_application.Instructor_Category_CandidateId;
                     insert_request.Date = _theory_test_application.Date.Date;
-                    Model.Status status;
-                    if (Enum.TryParse(txtStatus.Text, out status))
-                    {
-                        insert_request.Status = status;
-                    }
+                    /*   Model.Status status;
+                       if (Enum.TryParse(txtStatus.Text, out status))
+                       {
+                           insert_request.Status = status;
+                       }*/
+                    insert_request.Status = (Model.Status) cmbStatuses.SelectedIndex;
                     insert_request.FirstAid = _theory_test_application.FirstAid;
                     insert_request.TheoryTest = _theory_test_application.TheoryTest;
 
@@ -80,6 +88,7 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
             }
         }
 
+        /*
         private void TxtStatus_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtStatus.Text))
@@ -87,6 +96,6 @@ namespace eDrivingSchool.WinUI.TheoryTestApplications
                 e.Cancel = true;
                 errorProvider.SetError(txtStatus, Messages.Validation_Field_Required);
             }
-        }
+        }*/
     }
 }

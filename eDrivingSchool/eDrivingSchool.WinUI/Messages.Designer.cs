@@ -88,6 +88,24 @@ namespace eDrivingSchool.WinUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This field must contain thirteen digits!.
+        /// </summary>
+        internal static string jmbg_err {
+            get {
+                return ResourceManager.GetString("jmbg_err", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This field must contain at least eight characters (at least one letter and one number).
+        /// </summary>
+        internal static string password_err {
+            get {
+                return ResourceManager.GetString("password_err", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incorrect format of phone!.
         /// </summary>
         internal static string phone_err {

@@ -132,4 +132,10 @@
   <data name="cmbCandidate_err" xml:space="preserve">
     <value />
   </data>
+  <data name="jmbg_err" xml:space="preserve">
+    <value>This field must contain thirteen digits!</value>
+  </data>
+  <data name="password_err" xml:space="preserve">
+    <value>This field must contain at least eight characters (at least one letter and one number)</value>
+  </data>
 </root>
