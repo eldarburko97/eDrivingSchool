@@ -1,4 +1,5 @@
-﻿using eDrivingSchool.Model.Requests;
+﻿using eDrivingSchool.Model;
+using eDrivingSchool.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,17 @@ namespace eDrivingSchool.WinUI.CertificateRequests
         public frmUpdateCertificateRequest(int? id = null)
         {
             InitializeComponent();
+            InitializecmbStatuses();
             _id = id;
+        }
+
+        private void InitializecmbStatuses()
+        {
+            string[] enumElements = Enum.GetNames(typeof(Certificate_Request_Status));
+            foreach (var item in enumElements)
+            {
+                cmbStatuses.Items.Add(item.Replace("_", " "));
+            }
         }
 
         private async void FrmUpdateCertificateRequest_Load(object sender, EventArgs e)
@@ -31,8 +42,10 @@ namespace eDrivingSchool.WinUI.CertificateRequests
                 txtFirstName.Text = candidate.FirstName;
                 txtLastName.Text = candidate.LastName;
                 txtPurpose.Text = result.Purpose;
-                dtpDate.Value = result.Date;
-                txtStatus.Text = result.Status;
+                // dtpDate.Value = result.Date;
+                txtDate.Text = result.Date.Date.ToString("MM/dd/yyyy");
+                // txtStatus.Text = result.Status;
+                cmbStatuses.SelectedIndex = (int)result.Status;
             }
         }
 
@@ -45,7 +58,7 @@ namespace eDrivingSchool.WinUI.CertificateRequests
                 UserId = certificate_request.UserId,
                 Purpose = certificate_request.Purpose,
                 Date = certificate_request.Date.Date,
-                Status = txtStatus.Text
+                Status = (Certificate_Request_Status)cmbStatuses.SelectedIndex
             };
             await _apiService.Update<Model.Certificate_Request>(_id, insert_request);
         }

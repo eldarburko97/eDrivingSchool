@@ -1,4 +1,5 @@
-﻿using eDrivingSchool.Model.Requests;
+﻿using eDrivingSchool.Model;
+using eDrivingSchool.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,8 +25,17 @@ namespace eDrivingSchool.WinUI.CertificateRequests
         {
             var search = new Certificate_RequestSearch
             {
-                Status = txtSearch.Text,
+                //Status = txtSearch.Text,
             };
+            if (txtSearch.Text.Contains(" "))
+            {
+                txtSearch.Text.Replace(" ", "_");
+            }
+            Certificate_Request_Status status;
+            if (Enum.TryParse(txtSearch.Text, out status))
+            {
+                search.Status = status;
+            }
             var result = await _apiService.GetAll<List<Model.Certificate_Request>>(search);
             foreach (var item in result)
             {

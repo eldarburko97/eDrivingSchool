@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.drivingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataOfSchoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewVehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataOfVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +74,6 @@
             // 
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.drivingToolStripMenuItem,
             this.vehiclesToolStripMenuItem,
             this.categoriesToolStripMenuItem,
             this.instructorsToolStripMenuItem,
@@ -96,21 +93,6 @@
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
-            // drivingToolStripMenuItem
-            // 
-            this.drivingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataOfSchoolToolStripMenuItem});
-            this.drivingToolStripMenuItem.Name = "drivingToolStripMenuItem";
-            this.drivingToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.drivingToolStripMenuItem.Text = "Driving school";
-            // 
-            // dataOfSchoolToolStripMenuItem
-            // 
-            this.dataOfSchoolToolStripMenuItem.Name = "dataOfSchoolToolStripMenuItem";
-            this.dataOfSchoolToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.dataOfSchoolToolStripMenuItem.Text = "Data of  driving school";
-            this.dataOfSchoolToolStripMenuItem.Click += new System.EventHandler(this.dataOfSchoolToolStripMenuItem_Click);
-            // 
             // vehiclesToolStripMenuItem
             // 
             this.vehiclesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,14 +105,14 @@
             // addNewVehicleToolStripMenuItem
             // 
             this.addNewVehicleToolStripMenuItem.Name = "addNewVehicleToolStripMenuItem";
-            this.addNewVehicleToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.addNewVehicleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.addNewVehicleToolStripMenuItem.Text = "Add new vehicle";
             this.addNewVehicleToolStripMenuItem.Click += new System.EventHandler(this.addNewVehicleToolStripMenuItem_Click);
             // 
             // dataOfVehiclesToolStripMenuItem
             // 
             this.dataOfVehiclesToolStripMenuItem.Name = "dataOfVehiclesToolStripMenuItem";
-            this.dataOfVehiclesToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.dataOfVehiclesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.dataOfVehiclesToolStripMenuItem.Text = "Data of vehicles";
             this.dataOfVehiclesToolStripMenuItem.Click += new System.EventHandler(this.dataOfVehiclesToolStripMenuItem_Click);
             // 
@@ -407,7 +389,6 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem drivingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vehiclesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem instructorsToolStripMenuItem;
@@ -419,7 +400,6 @@
         private System.Windows.Forms.ToolStripMenuItem candidatesDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataOfSchoolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewVehicleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataOfVehiclesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewCategoryToolStripMenuItem;

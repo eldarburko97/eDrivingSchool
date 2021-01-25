@@ -12,7 +12,7 @@ namespace eDrivingSchool.Model
         public int UserId { get; set; }
         public string Purpose { get; set; }
         public DateTime Date { get; set; }
-        public string Status { get; set; }
+        public Certificate_Request_Status Status { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Type { get; set; }

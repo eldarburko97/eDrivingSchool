@@ -35,10 +35,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPurpose = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.cmbStatuses = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +54,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(46, 79);
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(270, 22);
             this.txtFirstName.TabIndex = 1;
             // 
@@ -70,6 +71,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(46, 157);
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(270, 22);
             this.txtLastName.TabIndex = 3;
             // 
@@ -86,6 +88,7 @@
             // 
             this.txtPurpose.Location = new System.Drawing.Point(46, 235);
             this.txtPurpose.Name = "txtPurpose";
+            this.txtPurpose.ReadOnly = true;
             this.txtPurpose.Size = new System.Drawing.Size(270, 22);
             this.txtPurpose.TabIndex = 5;
             // 
@@ -98,13 +101,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Date";
             // 
-            // dtpDate
-            // 
-            this.dtpDate.Location = new System.Drawing.Point(46, 313);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(270, 22);
-            this.dtpDate.TabIndex = 7;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -113,13 +109,6 @@
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Status";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(46, 391);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(270, 22);
-            this.txtStatus.TabIndex = 9;
             // 
             // btnSave
             // 
@@ -131,15 +120,32 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(46, 314);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(270, 22);
+            this.txtDate.TabIndex = 11;
+            // 
+            // cmbStatuses
+            // 
+            this.cmbStatuses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatuses.FormattingEnabled = true;
+            this.cmbStatuses.Location = new System.Drawing.Point(46, 392);
+            this.cmbStatuses.Name = "cmbStatuses";
+            this.cmbStatuses.Size = new System.Drawing.Size(270, 24);
+            this.cmbStatuses.TabIndex = 12;
+            // 
             // frmUpdateCertificateRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 516);
+            this.Controls.Add(this.cmbStatuses);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPurpose);
             this.Controls.Add(this.label3);
@@ -164,9 +170,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPurpose;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.ComboBox cmbStatuses;
     }
 }

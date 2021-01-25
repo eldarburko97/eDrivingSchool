@@ -61,6 +61,13 @@ namespace Mobile
         {
             var url = $"{_apiUrl}/{_route}";
             return await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
+            //ovdje vjerovatno baci FlurlException neki
+
+            /*
+             * Uglavnom, gdje se poziva insert za usera (registration form ili sta vec), tu hendliras FlurlException
+             * I onda kad ti se baci FlurlException, provjeris jel' HTTP status code 400 i ako jeste, ispises useru sta ne valja kroz neki alert
+             */
+
         }
         public async Task<T> Update<T>(object id, object request)
         {

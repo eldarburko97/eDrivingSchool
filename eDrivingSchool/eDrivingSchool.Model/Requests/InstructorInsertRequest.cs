@@ -30,7 +30,6 @@ namespace eDrivingSchool.Model.Requests
         [Required(AllowEmptyStrings = false)]
         public string LicenseNumber { get; set; }
         public DateTime DateOfHiring { get; set; }
-        public int DrivingSchoolId { get; set; }
         public int RoleId { get; set; }
     }
 }

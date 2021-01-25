@@ -60,7 +60,7 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<string>("Purpose");
 
-                    b.Property<string>("Status");
+                    b.Property<int>("Status");
 
                     b.Property<int>("UserId");
 
@@ -127,27 +127,6 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.HasIndex("VehicleId");
 
                     b.ToTable("DrivingLessons");
-                });
-
-            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingSchool", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Address");
-
-                    b.Property<string>("Email");
-
-                    b.Property<byte[]>("Logo");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Phone");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("DrivingSchool");
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingTestApplications", b =>
@@ -343,8 +322,6 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.Property<DateTime>("DateOfHiring")
                         .HasColumnType("date");
 
-                    b.Property<int>("DrivingSchoolId");
-
                     b.Property<string>("Email")
                         .HasMaxLength(100);
 
@@ -378,8 +355,6 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DrivingSchoolId");
 
                     b.HasIndex("RoleId");
 
@@ -523,11 +498,6 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.User", b =>
                 {
-                    b.HasOne("eDrivingSchool.WebAPI.Database.DrivingSchool", "DrivingSchool")
-                        .WithMany()
-                        .HasForeignKey("DrivingSchoolId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("eDrivingSchool.WebAPI.Database.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId")

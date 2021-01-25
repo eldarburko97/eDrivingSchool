@@ -11,9 +11,6 @@ namespace eDrivingSchool.WebAPI.Mappers
     {
         public AppMapper()
         {
-            CreateMap<Database.DrivingSchool, Model.DrivingSchool>().ReverseMap();
-            CreateMap<Model.DrivingSchool, Model.Requests.DrivingSchoolInsertRequest>().ReverseMap();
-            CreateMap<Database.DrivingSchool, Model.Requests.DrivingSchoolInsertRequest>().ReverseMap();
             CreateMap<Database.Vehicle, Model.Vehicle>().ReverseMap();
             CreateMap<Model.Vehicle, Model.Requests.VehicleInsertRequest>().ReverseMap();
             CreateMap<Database.Vehicle, Model.Requests.VehicleInsertRequest>().ReverseMap();

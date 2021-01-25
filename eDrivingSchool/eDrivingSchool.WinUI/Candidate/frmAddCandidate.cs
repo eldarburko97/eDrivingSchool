@@ -1,4 +1,5 @@
 ﻿using eDrivingSchool.Model.Requests;
+using Flurl.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,6 @@ namespace eDrivingSchool.WinUI.Candidate
                 request.JMBG = txtJMBG.Text;
                 request.Username = txtUsername.Text;
                 request.Password = txtPassword.Text;
-                request.DrivingSchoolId = 1;
                 request.RoleId = 3;        //RoleId je 3 kod kandidata
 
                 if (string.IsNullOrWhiteSpace(txtPhoto.Text))
@@ -61,7 +61,37 @@ namespace eDrivingSchool.WinUI.Candidate
                 }
                 else
                 {
-                    await _apiService.Insert<Model.Candidate>(request);
+                    try
+                    {
+                        var response = await _apiService.Insert<Model.Candidate>(request);
+                        MessageBox.Show("New candidate successfully added !");
+                    }
+                    catch (FlurlHttpException ex)
+                    {
+                        var status = ex.Call.HttpStatus;
+                        var result = await ex.GetResponseStringAsync();
+
+                        // var result = await ex.GetResponseJsonAsync();
+
+                        if (status == System.Net.HttpStatusCode.BadRequest)
+                        {
+                            if (result.Contains("Cannot insert duplicate username"))
+                            {
+                                var message = "Cannot insert duplicate username !";
+                                MessageBox.Show(message);
+                            }
+                            else
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+
+                            //  MessageBox.Show(ex.Message);
+                        }
+                        else
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
                 }
             }
         }
@@ -124,11 +154,11 @@ namespace eDrivingSchool.WinUI.Candidate
                 e.Cancel = true;
                 errorProvider.SetError(txtEmail, Messages.Validation_Field_Required);
             }
-            else
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtEmail, Messages.email_err);
-            }
+            /*    else
+                {
+                    e.Cancel = true;
+                    errorProvider.SetError(txtEmail, Messages.email_err);
+                }*/
         }
 
         private void TxtPhone_Validating(object sender, CancelEventArgs e)
@@ -138,11 +168,11 @@ namespace eDrivingSchool.WinUI.Candidate
                 e.Cancel = true;
                 errorProvider.SetError(txtPhone, Messages.Validation_Field_Required);
             }
-            else
-            {
-                e.Cancel = true;
-                errorProvider.SetError(txtPhone, Messages.phone_err);
-            }
+            /*  else
+              {
+                  e.Cancel = true;
+                  errorProvider.SetError(txtPhone, Messages.phone_err);
+              }*/
         }
 
         private void TxtAddress_Validating(object sender, CancelEventArgs e)

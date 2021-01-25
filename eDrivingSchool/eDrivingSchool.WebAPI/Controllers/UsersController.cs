@@ -7,6 +7,7 @@ using eDrivingSchool.WebAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace eDrivingSchool.WebAPI.Controllers
 {
@@ -35,9 +36,17 @@ namespace eDrivingSchool.WebAPI.Controllers
         }
 
         [HttpPost(Name = "insert")]
-        public Model.User Insert(UserInsertRequest korisnici)
+        public IActionResult Insert(UserInsertRequest korisnici)
         {
-            return _service.Insert(korisnici);
+            try
+            {
+                return Ok(_service.Insert(korisnici));
+            }
+            catch (DbUpdateException) // vjerovatno je ovog tipa taj exception sto se baci kad je unique constraint violated
+            {
+                // uhvatis specificni exception koji se baci za constraint
+                return BadRequest("Duplicate user"); // ili neki object po potrebi
+            }
         }
 
         [HttpPut("{id}")]

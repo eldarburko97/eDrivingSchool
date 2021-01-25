@@ -22,6 +22,8 @@ namespace eDrivingSchool.WinUI
         {
             try
             {
+                //var allUsers = (await _apiService.GetAll<IEnumerable<Model.User>>(null)).Select(_ => _.Username.ToLower());
+                //if (allUsers.Contains(txtUsername.Text))
                 Model.Requests.UserInsertRequest request = new Model.Requests.UserInsertRequest();
                 request.FirstName = txtFirstName.Text;
                 request.LastName = txtLastName.Text;
@@ -30,7 +32,7 @@ namespace eDrivingSchool.WinUI
                 request.Username = txtUsername.Text;
                 request.Password = txtPassword.Text;
                 request.PasswordConfirm = txtPasswordConfirm.Text;
-                request.DrivingSchoolId = 1;
+              //  request.DrivingSchoolId = 1;
                 request.RoleId = 1;
                 request.Birthdate = dtpBirthdate.Value;
                 await _apiService.Register<Model.User>(request);

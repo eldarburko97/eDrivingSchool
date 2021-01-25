@@ -11,7 +11,7 @@ namespace eDrivingSchool.WebAPI.Database
     {
         public int Id { get; set; }
         [StringLength(50)]
-       
+
         public string Username { get; set; }
         [StringLength(50)]
         public string PasswordHash { get; set; }
@@ -35,9 +35,6 @@ namespace eDrivingSchool.WebAPI.Database
         public string LicenseNumber { get; set; }
         [Column(TypeName = "date")]
         public DateTime DateOfHiring { get; set; }
-        [Required]
-        public int DrivingSchoolId { get; set; }
-        public DrivingSchool DrivingSchool { get; set; }
         public int RoleId { get; set; }
         public Role Role { get; set; }
     }

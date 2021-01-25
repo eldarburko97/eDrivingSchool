@@ -42,7 +42,6 @@ namespace eDrivingSchool.WinUI.Instructor
                 request.Salary = txtSalary.Text;
                 request.LicenseNumber = txtLicenseNumber.Text;
                 request.DateOfHiring = dtpDateOfHiring.Value;
-                request.DrivingSchoolId = 1;
                 request.RoleId = 2;
 
                 if (string.IsNullOrWhiteSpace(txtPhoto.Text))

@@ -12,10 +12,10 @@ namespace eDrivingSchool.Model.Requests
         [Required(AllowEmptyStrings = false)]
         public string LastName { get; set; }
         [Required(AllowEmptyStrings = false)]
-        [Phone]
+        //  [Phone]
         public string Phone { get; set; }
         [Required(AllowEmptyStrings = false)]
-        [EmailAddress]
+        //  [EmailAddress]
         public string Email { get; set; }
         [Required(AllowEmptyStrings = false)]
         public string Address { get; set; }
@@ -27,7 +27,6 @@ namespace eDrivingSchool.Model.Requests
         public string Username { get; set; }
         [Required(AllowEmptyStrings = false)]
         public string Password { get; set; }
-        public int DrivingSchoolId { get; set; }
         public int RoleId { get; set; }
         public byte[] Image { get; set; }
     }

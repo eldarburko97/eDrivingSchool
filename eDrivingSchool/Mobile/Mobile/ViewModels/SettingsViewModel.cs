@@ -104,7 +104,6 @@ namespace Mobile.ViewModels
                 Birthdate = user.Birthdate,
                 JMBG = user.JMBG,
                 RoleId = user.RoleId,
-                DrivingSchoolId = user.DrivingSchoolId
             };
             var returned_user = await _service.Update<eDrivingSchool.Model.User>(id, request2);
             Application.Current.MainPage = new LoginPage();
@@ -142,7 +141,6 @@ namespace Mobile.ViewModels
                 Birthdate = user.Birthdate,
                 JMBG = user.JMBG,
                 RoleId = user.RoleId,
-                DrivingSchoolId = user.DrivingSchoolId
             };
 
             var returned_user = await _service.Update<eDrivingSchool.Model.User>(id, request2);

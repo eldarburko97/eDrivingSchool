@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using eDrivingSchool.WebAPI.Filters;
 using eDrivingSchool.WebAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -37,9 +39,21 @@ namespace eDrivingSchool.WebAPI.Controllers
             return _service.GetByUsername(username);
         }*/
         [HttpPost]
-        public T Insert(TInsert request)
+        public IActionResult Insert(TInsert request)
         {
-            return _service.Insert(request);
+
+            try
+            {
+                return Ok(_service.Insert(request));
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException is SqlException)
+                {
+                    throw new UserException("Cannot insert duplicate username values");
+                }
+                else throw new Exception();
+            }
         }
         [HttpPut("{id}")]
         public T Update(int id, TUpdate request)

@@ -107,7 +107,7 @@ namespace Mobile.ViewModels
             certificate_requestInsert.CertificateId = SelectedCertificate.Id;
             certificate_requestInsert.Purpose = Purpose;
             certificate_requestInsert.Date = DateTime.Now;
-            certificate_requestInsert.Status = "On processing";
+            certificate_requestInsert.Status = Certificate_Request_Status.On_processing;
             await _certificate_requestService.Insert<Certificate_Request>(certificate_requestInsert);
             await Application.Current.MainPage.DisplayAlert("", "You have successfully submitted your request", "OK");
             Application.Current.MainPage = new CertificatesPage();

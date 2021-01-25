@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtType = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,6 +53,7 @@
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(293, 22);
             this.txtType.TabIndex = 1;
+            this.txtType.Validating += new System.ComponentModel.CancelEventHandler(this.TxtType_Validating);
             // 
             // label2
             // 
@@ -66,6 +70,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(293, 22);
             this.txtPrice.TabIndex = 3;
+            this.txtPrice.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPrice_Validating);
             // 
             // btnSave
             // 
@@ -76,6 +81,10 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // frmAddCertificate
             // 
@@ -90,6 +99,7 @@
             this.Name = "frmAddCertificate";
             this.Text = "frmAddCertificate";
             this.Load += new System.EventHandler(this.FrmAddCertificate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +112,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

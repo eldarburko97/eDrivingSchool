@@ -43,6 +43,10 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -115,18 +119,6 @@
     </Compile>
     <Compile Include="Driving Licences\frmDrivingLicencesUpdate.Designer.cs">
       <DependentUpon>frmDrivingLicencesUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DrivingSchool\frmDrivingSchoolData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DrivingSchool\frmDrivingSchoolData.Designer.cs">
-      <DependentUpon>frmDrivingSchoolData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DrivingSchool\frmDrivingSchoolDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DrivingSchool\frmDrivingSchoolDetails.Designer.cs">
-      <DependentUpon>frmDrivingSchoolDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="DrivingTestApplications\frmDrivingTestApplicationsData.cs">
       <SubType>Form</SubType>
@@ -284,12 +276,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving Licences\frmDrivingLicencesUpdate.resx">
       <DependentUpon>frmDrivingLicencesUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolData.resx">
-      <DependentUpon>frmDrivingSchoolData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DrivingSchool\frmDrivingSchoolDetails.resx">
-      <DependentUpon>frmDrivingSchoolDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DrivingTestApplications\frmDrivingTestApplicationsData.resx">
       <DependentUpon>frmDrivingTestApplicationsData.cs</DependentUpon>

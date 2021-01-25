@@ -22,6 +22,6 @@ namespace eDrivingSchool.WebAPI.Database
         public string Purpose { get; set; }
         [Column(TypeName = "date")]
         public DateTime Date { get; set; }
-        public string Status { get; set; }
+        public int Status { get; set; }
     }
 }

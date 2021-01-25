@@ -10,6 +10,6 @@ namespace eDrivingSchool.Model.Requests
         public int CertificateId { get; set; }
         public string Purpose { get; set; }
         public DateTime Date { get; set; }
-        public string Status { get; set; }
+        public Certificate_Request_Status Status { get; set; }
     }
 }

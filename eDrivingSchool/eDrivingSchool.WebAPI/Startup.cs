@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eDrivingSchool.Model.Requests;
 using eDrivingSchool.WebAPI.Database;
+using eDrivingSchool.WebAPI.Filters;
 using eDrivingSchool.WebAPI.Security;
 using eDrivingSchool.WebAPI.Services;
 using Microsoft.AspNetCore.Authentication;
@@ -26,7 +27,7 @@ namespace eDrivingSchool.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(x => x.Filters.Add<ErrorFilter>()).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
@@ -38,7 +39,6 @@ namespace eDrivingSchool.WebAPI
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ICRUDService<Model.DrivingSchool, object, Model.Requests.DrivingSchoolInsertRequest, Model.Requests.DrivingSchoolInsertRequest>, DrivingSchoolService>();
             services.AddScoped<ICRUDService<Model.Vehicle, Model.Requests.VehicleSearchRequest, Model.Requests.VehicleInsertRequest, Model.Requests.VehicleInsertRequest>, VehicleService>();
             services.AddScoped<ICRUDService<Model.Category, object, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>, CRUDService<Model.Category, object, Database.Category, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>>();
             services.AddScoped<ICRUDService<Model.TechnicalInspection, Model.Requests.TechnicalInspectionSearchRequest, Model.Requests.TechnicalInspectionInsertRequest, Model.Requests.TechnicalInspectionInsertRequest>, TechnicalInspectionService>();

@@ -24,13 +24,13 @@ namespace eDrivingSchool.WebAPI.Services
             var query = _context.Set<Database.Certificate_Request>().AsQueryable();
 
             // query = query.Where(w => w.TopicId == searchRequest.TopicId);
-            if(searchRequest != null && searchRequest.UserId != 0)
+            if (searchRequest != null && searchRequest.UserId != 0)
             {
-                query = query.Where(q=> q.UserId == searchRequest.UserId);
+                query = query.Where(q => q.UserId == searchRequest.UserId);
             }
-            if( searchRequest != null && !string.IsNullOrWhiteSpace(searchRequest.Status))
+            if (searchRequest != null && searchRequest.Status == Model.Certificate_Request_Status.On_processing)
             {
-                query = query.Where(w => w.Status == searchRequest.Status);
+                query = query.Where(w => w.Status == (int)searchRequest.Status);
             }
             var list = query.Include(i => i.Certificate).ToList();
             return _mapper.Map<List<Model.Certificate_Request>>(query);
