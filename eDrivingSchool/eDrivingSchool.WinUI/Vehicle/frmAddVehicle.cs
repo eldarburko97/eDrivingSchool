@@ -31,7 +31,7 @@ namespace eDrivingSchool.WinUI.Vehicle
             if (_id.HasValue)
             {
                 var request = await _apiService.GetById<Model.Vehicle>(_id);
-                txtName.Text = request.Name;
+               // txtName.Text = request.Name;
                 txtModel.Text = request.Model;
                 txtYear.Text = request.Year.ToString();
                 txtPower.Text = request.Power.ToString();

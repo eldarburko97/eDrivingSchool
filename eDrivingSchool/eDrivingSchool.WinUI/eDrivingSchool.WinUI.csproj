@@ -180,6 +180,12 @@
     <Compile Include="Instructor\frmInstructorData.Designer.cs">
       <DependentUpon>frmInstructorData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manufacturers\frmAddManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manufacturers\frmAddManufacturer.Designer.cs">
+      <DependentUpon>frmAddManufacturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Messages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Instructor\frmInstructorData.resx">
       <DependentUpon>frmInstructorData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manufacturers\frmAddManufacturer.resx">
+      <DependentUpon>frmAddManufacturer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>

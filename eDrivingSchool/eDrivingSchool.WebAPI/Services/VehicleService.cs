@@ -22,16 +22,16 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.Vehicle>().AsQueryable();
 
-            if (!string.IsNullOrEmpty(request.Name))
+          /*  if (!string.IsNullOrEmpty(request.Name))
             {
                 query = query.Where(x => x.Name.Contains(request.Name));
-            }
+            }*/
             var list = query.ToList();
             var vehicles = _mapper.Map<List<Model.Vehicle>>(list);
-            foreach (var vehicle in vehicles)
+         /*   foreach (var vehicle in vehicles)
             {
                 vehicle.vehicle = vehicle.Name + " " + vehicle.RegistrationNumber;
-            }
+            }*/
             return vehicles;
         }
     }

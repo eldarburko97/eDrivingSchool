@@ -66,6 +66,9 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.manufacturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addManufacturerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manufacturerDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -86,10 +89,11 @@
             this.drivingTestToolStripMenuItem,
             this.drivingLicencesToolStripMenuItem,
             this.certificatesToolStripMenuItem,
-            this.certificateRequestsToolStripMenuItem});
+            this.certificateRequestsToolStripMenuItem,
+            this.manufacturersToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1650, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1809, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -105,14 +109,14 @@
             // addNewVehicleToolStripMenuItem
             // 
             this.addNewVehicleToolStripMenuItem.Name = "addNewVehicleToolStripMenuItem";
-            this.addNewVehicleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addNewVehicleToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.addNewVehicleToolStripMenuItem.Text = "Add new vehicle";
             this.addNewVehicleToolStripMenuItem.Click += new System.EventHandler(this.addNewVehicleToolStripMenuItem_Click);
             // 
             // dataOfVehiclesToolStripMenuItem
             // 
             this.dataOfVehiclesToolStripMenuItem.Name = "dataOfVehiclesToolStripMenuItem";
-            this.dataOfVehiclesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.dataOfVehiclesToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.dataOfVehiclesToolStripMenuItem.Text = "Data of vehicles";
             this.dataOfVehiclesToolStripMenuItem.Click += new System.EventHandler(this.dataOfVehiclesToolStripMenuItem_Click);
             // 
@@ -352,7 +356,7 @@
             this.statusStrip.Location = new System.Drawing.Point(0, 533);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1650, 25);
+            this.statusStrip.Size = new System.Drawing.Size(1809, 25);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -362,11 +366,33 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // manufacturersToolStripMenuItem
+            // 
+            this.manufacturersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addManufacturerToolStripMenuItem,
+            this.manufacturerDataToolStripMenuItem});
+            this.manufacturersToolStripMenuItem.Name = "manufacturersToolStripMenuItem";
+            this.manufacturersToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.manufacturersToolStripMenuItem.Text = "Manufacturers";
+            // 
+            // addManufacturerToolStripMenuItem
+            // 
+            this.addManufacturerToolStripMenuItem.Name = "addManufacturerToolStripMenuItem";
+            this.addManufacturerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addManufacturerToolStripMenuItem.Text = "Add manufacturer";
+            this.addManufacturerToolStripMenuItem.Click += new System.EventHandler(this.AddManufacturerToolStripMenuItem_Click);
+            // 
+            // manufacturerDataToolStripMenuItem
+            // 
+            this.manufacturerDataToolStripMenuItem.Name = "manufacturerDataToolStripMenuItem";
+            this.manufacturerDataToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.manufacturerDataToolStripMenuItem.Text = "Manufacturer data";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1650, 558);
+            this.ClientSize = new System.Drawing.Size(1809, 558);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -422,6 +448,9 @@
         private System.Windows.Forms.ToolStripMenuItem certificateDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificateRequestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificateRequestsDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manufacturersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addManufacturerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manufacturerDataToolStripMenuItem;
     }
 }
 

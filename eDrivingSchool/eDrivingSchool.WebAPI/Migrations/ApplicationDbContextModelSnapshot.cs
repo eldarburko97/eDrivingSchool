@@ -204,6 +204,36 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.ToTable("Instructors_Categories_Candidates");
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Manufacturer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Manufacturers");
+                });
+
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ManufacturerId");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ManufacturerId");
+
+                    b.ToTable("Models");
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Payment", b =>
                 {
                     b.Property<int>("Id")
@@ -375,9 +405,7 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<float>("Mileage");
 
-                    b.Property<string>("Model");
-
-                    b.Property<string>("Name");
+                    b.Property<int>("ModelId");
 
                     b.Property<int>("Power");
 
@@ -388,6 +416,8 @@ namespace eDrivingSchool.WebAPI.Migrations
                     b.Property<int>("Year");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ModelId");
 
                     b.HasIndex("TechnicalInspectionId");
 
@@ -472,6 +502,14 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Model", b =>
+                {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Manufacturer", "Manufacturer")
+                        .WithMany()
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Payment", b =>
                 {
                     b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
@@ -506,6 +544,11 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Vehicle", b =>
                 {
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Model", "Model")
+                        .WithMany()
+                        .HasForeignKey("ModelId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("eDrivingSchool.WebAPI.Database.TechnicalInspection", "TechnicalInspection")
                         .WithMany()
                         .HasForeignKey("TechnicalInspectionId")

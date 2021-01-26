@@ -6,6 +6,7 @@ using eDrivingSchool.WinUI.Driving_Licences;
 using eDrivingSchool.WinUI.DrivingTest;
 using eDrivingSchool.WinUI.DrivingTestApplications;
 using eDrivingSchool.WinUI.Instructor;
+using eDrivingSchool.WinUI.Manufacturers;
 using eDrivingSchool.WinUI.Payment;
 using eDrivingSchool.WinUI.TechnicalInspection;
 using eDrivingSchool.WinUI.TheoryTest;
@@ -125,14 +126,15 @@ namespace eDrivingSchool.WinUI
 
         private void InstructorDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(!this.MdiChildren.Any(myForm => myForm.GetType() == typeof(frmInstructorData))){
+            if (!this.MdiChildren.Any(myForm => myForm.GetType() == typeof(frmInstructorData)))
+            {
 
                 frmInstructorData frm = new frmInstructorData()
                 {
                     WindowState = FormWindowState.Maximized
-             };
-            frm.MdiParent = this;
-            frm.Show();
+                };
+                frm.MdiParent = this;
+                frm.Show();
             }
         }
 
@@ -159,7 +161,7 @@ namespace eDrivingSchool.WinUI
             frmPaymentData frm = new frmPaymentData();
             frm.Show();
         }
-      
+
         private void addNewVehicleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddVehicle frm = new frmAddVehicle();
@@ -246,6 +248,12 @@ namespace eDrivingSchool.WinUI
         private void CertificateRequestsDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCertificatesRequestsData frm = new frmCertificatesRequestsData();
+            frm.Show();
+        }
+
+        private void AddManufacturerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddManufacturer frm = new frmAddManufacturer();
             frm.Show();
         }
 
