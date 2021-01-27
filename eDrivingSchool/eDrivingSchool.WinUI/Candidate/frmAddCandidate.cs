@@ -7,8 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,7 +34,7 @@ namespace eDrivingSchool.WinUI.Candidate
             {
                 request.FirstName = txtFirstName.Text;
                 request.LastName = txtLastName.Text;
-                request.Phone = txtPhone.Text;
+                request.Phone = maskedtxtPhone.Text;
                 request.Email = txtEmail.Text;
                 request.Address = txtAddress.Text;
                 request.Birthdate = dtpBirthdate.Value;
@@ -52,7 +54,6 @@ namespace eDrivingSchool.WinUI.Candidate
                         var file = memoryStream.ToArray();
                         request.Image = file;
                     }
-
                 }
 
                 if (_id.HasValue)
@@ -103,7 +104,7 @@ namespace eDrivingSchool.WinUI.Candidate
                 var request = await _apiService.GetById<Model.Candidate>(_id);
                 txtFirstName.Text = request.FirstName;
                 txtLastName.Text = request.LastName;
-                txtPhone.Text = request.Phone;
+                maskedtxtPhone.Text = request.Phone;
                 txtEmail.Text = request.Email;
                 txtAddress.Text = request.Address;
                 dtpBirthdate.Value = Convert.ToDateTime(request.Birthdate);
@@ -119,7 +120,12 @@ namespace eDrivingSchool.WinUI.Candidate
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtFirstName, Messages.Validation_Field_Required);
-            }
+            }/*
+            else
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtFirstName, "Polje ne moze sadrzavati preko 10 karaktera");
+            }*/
         }
 
         private void TxtLastName_Validating(object sender, CancelEventArgs e)
@@ -139,7 +145,7 @@ namespace eDrivingSchool.WinUI.Candidate
                 var fileName = openFileDialog.FileName;
                 var file = File.ReadAllBytes(fileName);
                 request.Image = file;
-                txtPassword.Text = fileName;
+                txtPhoto.Text = fileName;
 
                 Image image = Image.FromFile(fileName);
                 pictureBox1.Image = image;
@@ -154,13 +160,14 @@ namespace eDrivingSchool.WinUI.Candidate
                 e.Cancel = true;
                 errorProvider.SetError(txtEmail, Messages.Validation_Field_Required);
             }
-            /*    else
-                {
-                    e.Cancel = true;
-                    errorProvider.SetError(txtEmail, Messages.email_err);
-                }*/
+            else if (!Regex.IsMatch(txtEmail.Text, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtEmail, Messages.email_err);
+            }
         }
 
+        /*
         private void TxtPhone_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtPhone.Text))
@@ -168,12 +175,12 @@ namespace eDrivingSchool.WinUI.Candidate
                 e.Cancel = true;
                 errorProvider.SetError(txtPhone, Messages.Validation_Field_Required);
             }
-            /*  else
+              else
               {
                   e.Cancel = true;
                   errorProvider.SetError(txtPhone, Messages.phone_err);
-              }*/
-        }
+              }
+        }*/
 
         private void TxtAddress_Validating(object sender, CancelEventArgs e)
         {

@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,7 +53,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.txtPhoto = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedtxtPhone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +71,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(44, 60);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(169, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(198, 22);
             this.txtFirstName.TabIndex = 1;
             this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtFirstName_Validating);
             // 
@@ -89,7 +88,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(44, 126);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(169, 22);
+            this.txtLastName.Size = new System.Drawing.Size(198, 22);
             this.txtLastName.TabIndex = 3;
             this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLastName_Validating);
             // 
@@ -101,14 +100,6 @@
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Phone";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(44, 187);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(169, 22);
-            this.txtPhone.TabIndex = 5;
-            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPhone_Validating);
             // 
             // label4
             // 
@@ -123,7 +114,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(44, 252);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(169, 22);
+            this.txtEmail.Size = new System.Drawing.Size(198, 22);
             this.txtEmail.TabIndex = 7;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEmail_Validating);
             // 
@@ -140,7 +131,7 @@
             // 
             this.txtAddress.Location = new System.Drawing.Point(44, 318);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(169, 22);
+            this.txtAddress.Size = new System.Drawing.Size(198, 22);
             this.txtAddress.TabIndex = 9;
             this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAddress_Validating);
             // 
@@ -173,7 +164,7 @@
             // 
             this.txtJMBG.Location = new System.Drawing.Point(303, 59);
             this.txtJMBG.Name = "txtJMBG";
-            this.txtJMBG.Size = new System.Drawing.Size(169, 22);
+            this.txtJMBG.Size = new System.Drawing.Size(204, 22);
             this.txtJMBG.TabIndex = 13;
             this.txtJMBG.Validating += new System.ComponentModel.CancelEventHandler(this.TxtJMBG_Validating);
             // 
@@ -199,7 +190,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(303, 126);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(169, 22);
+            this.txtUsername.Size = new System.Drawing.Size(204, 22);
             this.txtUsername.TabIndex = 17;
             this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsername_Validating);
             // 
@@ -230,6 +221,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(303, 191);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(204, 22);
             this.txtPassword.TabIndex = 29;
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPassword_Validating);
@@ -265,20 +257,20 @@
             this.txtPhoto.Size = new System.Drawing.Size(204, 22);
             this.txtPhoto.TabIndex = 32;
             // 
-            // maskedTextBox2
+            // maskedtxtPhone
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(692, 383);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(216, 22);
-            this.maskedTextBox2.TabIndex = 34;
+            this.maskedtxtPhone.Location = new System.Drawing.Point(44, 187);
+            this.maskedtxtPhone.Mask = "(999) 000-0000";
+            this.maskedtxtPhone.Name = "maskedtxtPhone";
+            this.maskedtxtPhone.Size = new System.Drawing.Size(198, 22);
+            this.maskedtxtPhone.TabIndex = 34;
             // 
             // frmAddCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 450);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedtxtPhone);
             this.Controls.Add(this.txtPhoto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAddPhoto);
@@ -296,7 +288,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label2);
@@ -319,7 +310,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label5;
@@ -339,6 +329,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TextBox txtPhoto;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedtxtPhone;
     }
 }
