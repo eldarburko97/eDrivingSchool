@@ -186,10 +186,28 @@
     <Compile Include="Manufacturers\frmAddManufacturer.Designer.cs">
       <DependentUpon>frmAddManufacturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manufacturers\frmManufacturersData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manufacturers\frmManufacturersData.Designer.cs">
+      <DependentUpon>frmManufacturersData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Messages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\frmAddModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\frmAddModel.Designer.cs">
+      <DependentUpon>frmAddModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\frmModelsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\frmModelsData.Designer.cs">
+      <DependentUpon>frmModelsData.cs</DependentUpon>
     </Compile>
     <Compile Include="Payment\frmAddPayment.cs">
       <SubType>Form</SubType>
@@ -313,9 +331,18 @@
     <EmbeddedResource Include="Manufacturers\frmAddManufacturer.resx">
       <DependentUpon>frmAddManufacturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manufacturers\frmManufacturersData.resx">
+      <DependentUpon>frmManufacturersData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\frmAddModel.resx">
+      <DependentUpon>frmAddModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\frmModelsData.resx">
+      <DependentUpon>frmModelsData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment\frmAddPayment.resx">
       <DependentUpon>frmAddPayment.cs</DependentUpon>

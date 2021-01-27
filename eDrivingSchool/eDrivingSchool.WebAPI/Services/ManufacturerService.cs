@@ -17,5 +17,17 @@ namespace eDrivingSchool.WebAPI.Services
             _context = context;
             _mapper = mapper;
         }
+
+        public override List<Model.Manufacturer> GetAll(ManufacturerSearchRequest request)
+        {
+            var query = _context.Set<Database.Manufacturer>().AsQueryable();
+
+            if (!string.IsNullOrEmpty(request.Name))
+            {
+                query = query.Where(x => x.Name == request.Name);
+            }
+            var list = query.ToList();
+            return _mapper.Map<List<Model.Manufacturer>>(list);
+        }
     }
 }

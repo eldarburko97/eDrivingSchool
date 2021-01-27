@@ -44,7 +44,7 @@ namespace eDrivingSchool.WebAPI
             services.AddScoped<ICRUDService<Model.TechnicalInspection, Model.Requests.TechnicalInspectionSearchRequest, Model.Requests.TechnicalInspectionInsertRequest, Model.Requests.TechnicalInspectionInsertRequest>, TechnicalInspectionService>();
 
             services.AddScoped<ICRUDService<Model.Manufacturer, ManufacturerSearchRequest,ManufacturerInsertRequest, ManufacturerInsertRequest>, ManufacturerService>();
-
+            services.AddScoped<ICRUDService<Model.Model, ModelSearchRequest, ModelInsertRequest, ModelInsertRequest>, ModelService>();
 
             services.AddScoped<ICRUDService<Model.Instructor, InstructorSearchRequest, Model.Requests.InstructorInsertRequest, Model.Requests.InstructorInsertRequest>, InstructorService>();
             services.AddScoped<ICRUDService<Model.Candidate, CandidateSearchRequest, CandidateInsertRequest, CandidateInsertRequest>, CandidateService>();

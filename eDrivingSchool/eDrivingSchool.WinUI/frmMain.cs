@@ -7,6 +7,7 @@ using eDrivingSchool.WinUI.DrivingTest;
 using eDrivingSchool.WinUI.DrivingTestApplications;
 using eDrivingSchool.WinUI.Instructor;
 using eDrivingSchool.WinUI.Manufacturers;
+using eDrivingSchool.WinUI.Models;
 using eDrivingSchool.WinUI.Payment;
 using eDrivingSchool.WinUI.TechnicalInspection;
 using eDrivingSchool.WinUI.TheoryTest;
@@ -254,6 +255,24 @@ namespace eDrivingSchool.WinUI
         private void AddManufacturerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddManufacturer frm = new frmAddManufacturer();
+            frm.Show();
+        }
+
+        private void AddModelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddModel frm = new frmAddModel();
+            frm.Show();
+        }
+
+        private void ModelDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModelsData frm = new frmModelsData();
+            frm.Show();
+        }
+
+        private void ManufacturerDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManufacturersData frm = new frmManufacturersData();
             frm.Show();
         }
 
