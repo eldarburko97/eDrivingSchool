@@ -8,9 +8,10 @@ namespace eDrivingSchool.Model.Requests
     public class CandidateInsertRequest
     {
         [Required(AllowEmptyStrings = false)]
-      //  [StringLength(10)]
+        [RegularExpression("^[a-zA-Z ]*$")]
         public string FirstName { get; set; }
         [Required(AllowEmptyStrings = false)]
+        [RegularExpression("^[a-zA-Z ]*$")]
         public string LastName { get; set; }
         [Required(AllowEmptyStrings = false)]
         //  [Phone]
@@ -23,6 +24,7 @@ namespace eDrivingSchool.Model.Requests
 
         public DateTime Birthdate { get; set; }
         [Required(AllowEmptyStrings = false)]
+        [RegularExpression("^[0-9]{13}$")]
         public string JMBG { get; set; }
         [Required(AllowEmptyStrings = false)]
         public string Username { get; set; }

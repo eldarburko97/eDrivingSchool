@@ -50,7 +50,7 @@ namespace eDrivingSchool.WebAPI.Controllers
             {
                 if (ex.InnerException is SqlException)
                 {
-                    throw new UserException("Cannot insert duplicate username values");
+                    throw new UserException("Cannot insert duplicate");
                 }
                 else throw new Exception();
             }

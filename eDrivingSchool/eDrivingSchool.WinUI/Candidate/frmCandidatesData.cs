@@ -24,10 +24,12 @@ namespace eDrivingSchool.WinUI.Candidate
             var search = new CandidateSearchRequest
             {
                 FirstName = txtSearch.Text,
-                Username=txtSearch.Text
+                Username = txtSearch.Text
             };
             var result = await _apiService.GetAll<List<Model.Candidate>>(search);
+            dgvCandidatesData.AutoGenerateColumns = false;
             dgvCandidatesData.DataSource = result;
+
         }
 
         private void DgvCandidatesData_MouseDoubleClick(object sender, MouseEventArgs e)

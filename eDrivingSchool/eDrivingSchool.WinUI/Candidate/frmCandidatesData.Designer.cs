@@ -40,6 +40,7 @@
             this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCandidatesData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,13 +75,14 @@
             this.Address,
             this.Birthdate,
             this.JMBG,
-            this.Username});
+            this.Username,
+            this.Image});
             this.dgvCandidatesData.Location = new System.Drawing.Point(12, 82);
             this.dgvCandidatesData.Name = "dgvCandidatesData";
             this.dgvCandidatesData.ReadOnly = true;
-            this.dgvCandidatesData.RowTemplate.Height = 24;
+            this.dgvCandidatesData.RowTemplate.Height = 140;
             this.dgvCandidatesData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCandidatesData.Size = new System.Drawing.Size(837, 362);
+            this.dgvCandidatesData.Size = new System.Drawing.Size(1396, 434);
             this.dgvCandidatesData.TabIndex = 2;
             this.dgvCandidatesData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvCandidatesData_MouseDoubleClick);
             // 
@@ -148,11 +150,20 @@
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
             // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "Image";
+            this.Image.HeaderText = "Image";
+            this.Image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Width = 200;
+            // 
             // frmCandidatesData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 450);
+            this.ClientSize = new System.Drawing.Size(1420, 517);
             this.Controls.Add(this.dgvCandidatesData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -178,5 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn JMBG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
     }
 }

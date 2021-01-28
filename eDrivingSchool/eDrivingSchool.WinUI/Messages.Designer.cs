@@ -115,6 +115,15 @@ namespace eDrivingSchool.WinUI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This field must contain only letters!.
+        /// </summary>
+        internal static string string_err {
+            get {
+                return ResourceManager.GetString("string_err", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This field is required!.
         /// </summary>
         internal static string Validation_Field_Required {

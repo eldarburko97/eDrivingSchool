@@ -76,10 +76,10 @@ namespace eDrivingSchool.WinUI.Candidate
 
                         if (status == System.Net.HttpStatusCode.BadRequest)
                         {
-                            if (result.Contains("Cannot insert duplicate username"))
+                            if (result.Contains("Cannot insert duplicate"))
                             {
                                 var message = "Cannot insert duplicate username !";
-                                MessageBox.Show(message);
+                                MessageBox.Show(message, "Unique constraint", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -110,6 +110,7 @@ namespace eDrivingSchool.WinUI.Candidate
                 dtpBirthdate.Value = Convert.ToDateTime(request.Birthdate);
                 txtJMBG.Text = request.JMBG;
                 txtUsername.Text = request.Username;
+                txtPassword.Text = "Password123";
                 pictureBox1.Image = System.Drawing.Image.FromStream(new MemoryStream(request.Image));
             }
         }
@@ -120,12 +121,12 @@ namespace eDrivingSchool.WinUI.Candidate
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtFirstName, Messages.Validation_Field_Required);
-            }/*
-            else
+            }
+            else if (!Regex.IsMatch(txtFirstName.Text, "^[a-zA-Z ]*$"))
             {
                 e.Cancel = true;
-                errorProvider.SetError(txtFirstName, "Polje ne moze sadrzavati preko 10 karaktera");
-            }*/
+                errorProvider.SetError(txtFirstName, Messages.string_err);
+            }
         }
 
         private void TxtLastName_Validating(object sender, CancelEventArgs e)
@@ -134,6 +135,11 @@ namespace eDrivingSchool.WinUI.Candidate
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtLastName, Messages.Validation_Field_Required);
+            }
+            else if (!Regex.IsMatch(txtLastName.Text, "^[a-zA-Z ]*$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtLastName, Messages.string_err);
             }
         }
 
@@ -197,6 +203,11 @@ namespace eDrivingSchool.WinUI.Candidate
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtJMBG, Messages.Validation_Field_Required);
+            }
+            else if (!Regex.IsMatch(txtJMBG.Text, "^[0-9]{13}$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtJMBG, Messages.jmbg_err);
             }
         }
 

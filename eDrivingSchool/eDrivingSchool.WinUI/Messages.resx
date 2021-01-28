@@ -138,4 +138,7 @@
   <data name="password_err" xml:space="preserve">
     <value>This field must contain at least eight characters (at least one letter and one number)</value>
   </data>
+  <data name="string_err" xml:space="preserve">
+    <value>This field must contain only letters!</value>
+  </data>
 </root>
