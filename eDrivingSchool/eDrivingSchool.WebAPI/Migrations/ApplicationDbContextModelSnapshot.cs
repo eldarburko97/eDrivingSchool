@@ -242,18 +242,16 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<float>("Amount");
 
-                    b.Property<string>("Category");
-
                     b.Property<DateTime>("DateOfPayment")
                         .HasColumnType("date");
 
-                    b.Property<string>("Note");
+                    b.Property<int>("Instructor_Category_CandidateId");
 
-                    b.Property<int>("UserId");
+                    b.Property<string>("Note");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("Instructor_Category_CandidateId");
 
                     b.ToTable("Payments");
                 });
@@ -512,9 +510,9 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Payment", b =>
                 {
-                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("Instructor_Category_CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

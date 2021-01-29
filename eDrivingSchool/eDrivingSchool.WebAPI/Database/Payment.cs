@@ -10,11 +10,10 @@ namespace eDrivingSchool.WebAPI.Database
     {
         public int Id { get; set; }
         public float Amount { get; set; }
-        public string Category { get; set; }
         public string Note { get; set; }
         [Column(TypeName = "date")]
         public DateTime DateOfPayment { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public int Instructor_Category_CandidateId { get; set; }
+        public Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
     }
 }

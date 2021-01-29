@@ -7,11 +7,10 @@ namespace eDrivingSchool.Model.Requests
 {
     public class PaymentInsertRequest
     {
-        [Required]
-        public int UserId { get; set; }
+
+        //   public int UserId { get; set; }
+        public int Instructor_Category_CandidateId { get; set; }
         [Required(AllowEmptyStrings = false)]
-        public string Category { get; set; }
-        [Required]
         public float Amount { get; set; }
         [Required]
         public DateTime DateOfPayment { get; set; }

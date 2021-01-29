@@ -17,11 +17,10 @@ namespace eDrivingSchool.Model.Requests
         //  [Phone]
         public string Phone { get; set; }
         [Required(AllowEmptyStrings = false)]
-        //  [EmailAddress]
+        [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")]
         public string Email { get; set; }
         [Required(AllowEmptyStrings = false)]
         public string Address { get; set; }
-
         public DateTime Birthdate { get; set; }
         [Required(AllowEmptyStrings = false)]
         [RegularExpression("^[0-9]{13}$")]

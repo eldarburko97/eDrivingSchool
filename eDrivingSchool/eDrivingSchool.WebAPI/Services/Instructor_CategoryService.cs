@@ -22,7 +22,7 @@ namespace eDrivingSchool.WebAPI.Services
         {
             var query = _context.Set<Database.Instructor_Category>().AsQueryable();
 
-          
+
 
             if (request != null && request.UserId != 0)
             {
@@ -31,7 +31,5 @@ namespace eDrivingSchool.WebAPI.Services
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category>>(list);
         }
-
-       
     }
 }

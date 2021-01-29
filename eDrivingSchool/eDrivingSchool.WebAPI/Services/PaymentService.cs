@@ -24,13 +24,13 @@ namespace eDrivingSchool.WebAPI.Services
             var query = _context.Payments.AsQueryable();
             if (!string.IsNullOrEmpty(request.Category))
             {
-                query = query.Where(x => x.Category == request.Category);
+               // query = query.Where(x => x.Category == request.Category);
             }
-            if(request != null && request.UserId != 0)
-            {
-                query = query.Where(w => w.UserId == request.UserId);
-            }
-            var list = query.Include("User").ToList();
+            /*    if(request != null && request.UserId != 0)
+                {
+                    query = query.Where(w => w.UserId == request.UserId);
+                }*/
+            var list = query.Include(i => i.Instructor_Category_Candidate).ThenInclude(ii => ii.User).ToList();
             return _mapper.Map<List<Model.Payment>>(list);
         }
     }

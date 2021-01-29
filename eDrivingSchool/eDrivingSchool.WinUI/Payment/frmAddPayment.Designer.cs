@@ -35,8 +35,6 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDateOfPayment = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
@@ -65,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 182);
+            this.label2.Location = new System.Drawing.Point(71, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 2;
@@ -73,7 +71,7 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(74, 202);
+            this.txtAmount.Location = new System.Drawing.Point(74, 143);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(254, 22);
             this.txtAmount.TabIndex = 3;
@@ -82,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 250);
+            this.label3.Location = new System.Drawing.Point(71, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 17);
             this.label3.TabIndex = 4;
@@ -90,31 +88,14 @@
             // 
             // dtpDateOfPayment
             // 
-            this.dtpDateOfPayment.Location = new System.Drawing.Point(74, 270);
+            this.dtpDateOfPayment.Location = new System.Drawing.Point(74, 211);
             this.dtpDateOfPayment.Name = "dtpDateOfPayment";
             this.dtpDateOfPayment.Size = new System.Drawing.Size(254, 22);
             this.dtpDateOfPayment.TabIndex = 5;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 117);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Category";
-            // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(74, 137);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(254, 22);
-            this.txtCategory.TabIndex = 7;
-            this.txtCategory.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCategory_Validating);
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(74, 454);
+            this.btnSave.Location = new System.Drawing.Point(74, 395);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 8;
@@ -125,7 +106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 321);
+            this.label5.Location = new System.Drawing.Point(71, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 17);
             this.label5.TabIndex = 9;
@@ -133,7 +114,7 @@
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(74, 341);
+            this.txtNote.Location = new System.Drawing.Point(74, 282);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(436, 81);
@@ -152,8 +133,6 @@
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtCategory);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpDateOfPayment);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAmount);
@@ -177,8 +156,6 @@
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpDateOfPayment;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNote;

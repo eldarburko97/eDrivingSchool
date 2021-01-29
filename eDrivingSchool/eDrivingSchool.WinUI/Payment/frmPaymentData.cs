@@ -14,6 +14,8 @@ namespace eDrivingSchool.WinUI.Payment
     public partial class frmPaymentData : Form
     {
         private APIService _apiService = new APIService("Payments");
+        private APIService _instructor_categoryService = new APIService("Instructors_Categories");
+        private APIService _categoryService = new APIService("Categories");
         public frmPaymentData()
         {
             InitializeComponent();
@@ -28,8 +30,11 @@ namespace eDrivingSchool.WinUI.Payment
             var result = await _apiService.GetAll<List<Model.Payment>>(search);
             foreach (var payment in result)
             {
-                payment.FirstName = payment.User.FirstName;
-                payment.LastName = payment.User.LastName;
+                payment.FirstName = payment.Instructor_Category_Candidate.User.FirstName;
+                payment.LastName = payment.Instructor_Category_Candidate.User.LastName;
+                var instructor_category = await _instructor_categoryService.GetById<Model.Instructor_Category>(payment.Instructor_Category_Candidate.Instructor_CategoryId);
+                var category = await _categoryService.GetById<Model.Category>(instructor_category.CategoryId);
+                payment.Category = category.Name;
             }
             dgvPaymentsData.AutoGenerateColumns = false;
             dgvPaymentsData.DataSource = result;

@@ -24,5 +24,6 @@ namespace eDrivingSchool.Model
         public string Category { get; set; }
         public float Uplatio { get; set; }
         public float Duzan { get; set; }
+        public string candidate_category { get; set; }  //First name + last name + category 
     }
 }

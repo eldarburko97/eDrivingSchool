@@ -173,20 +173,15 @@ namespace eDrivingSchool.WinUI.Candidate
             }
         }
 
-        /*
+        
         private void TxtPhone_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPhone.Text))
+            if (string.IsNullOrWhiteSpace(maskedtxtPhone.Text))
             {
                 e.Cancel = true;
-                errorProvider.SetError(txtPhone, Messages.Validation_Field_Required);
+                errorProvider.SetError(maskedtxtPhone, Messages.Validation_Field_Required);
             }
-              else
-              {
-                  e.Cancel = true;
-                  errorProvider.SetError(txtPhone, Messages.phone_err);
-              }
-        }*/
+        }
 
         private void TxtAddress_Validating(object sender, CancelEventArgs e)
         {
@@ -226,6 +221,11 @@ namespace eDrivingSchool.WinUI.Candidate
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtPassword, Messages.Validation_Field_Required);
+            }
+            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtPassword, Messages.password_err);
             }
         }
     }

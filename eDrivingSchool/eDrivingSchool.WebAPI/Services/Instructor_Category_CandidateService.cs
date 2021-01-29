@@ -49,7 +49,7 @@ namespace eDrivingSchool.WebAPI.Services
             }
             else if (request.Paid == false)
             {
-                query = query.Where(p => p.Paid == request.Paid).Include(i => i.Instructor_Category);
+                query = query.Where(p => p.Paid == request.Paid).Include(i => i.User);
             }
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category_Candidate>>(list);

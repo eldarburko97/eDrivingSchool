@@ -7,8 +7,8 @@ namespace eDrivingSchool.Model
     public class Payment
     {
         public int Id { get; set; }
-        public User User { get; set; }
-        public int UserId { get; set; }
+        public int Instructor_Category_CandidateId { get; set; }
+        public Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Category { get; set; }

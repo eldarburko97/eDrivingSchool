@@ -112,6 +112,11 @@ namespace eDrivingSchool.WinUI.Instructor
                 e.Cancel = true;
                 errorProvider.SetError(txtFirstName, Messages.Validation_Field_Required);
             }
+            else if (!Regex.IsMatch(txtFirstName.Text, "^[a-zA-Z ]*$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtFirstName, Messages.string_err);
+            }
         }
 
         private void TxtLastName_Validating(object sender, CancelEventArgs e)
@@ -120,6 +125,11 @@ namespace eDrivingSchool.WinUI.Instructor
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtLastName, Messages.Validation_Field_Required);
+            }
+            else if (!Regex.IsMatch(txtLastName.Text, "^[a-zA-Z ]*$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtLastName, Messages.string_err);
             }
         }
 
@@ -138,6 +148,11 @@ namespace eDrivingSchool.WinUI.Instructor
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtEmail, Messages.Validation_Field_Required);
+            }
+            else if (!Regex.IsMatch(txtEmail.Text, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(txtEmail, Messages.email_err);
             }
         }
 

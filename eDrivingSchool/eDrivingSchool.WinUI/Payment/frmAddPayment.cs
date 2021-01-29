@@ -35,11 +35,12 @@ namespace eDrivingSchool.WinUI.Payment
                 var idObj = cmbCandidate.SelectedValue;
                 if (int.TryParse(idObj.ToString(), out int CandidateId))
                 {
-                    insert_request.UserId = CandidateId;
+                    //  insert_request.UserId = CandidateId;
+                    insert_request.Instructor_Category_CandidateId = CandidateId;
                 }
-                insert_request.Category = txtCategory.Text;
+              //  insert_request.Category = txtCategory.Text;
                 insert_request.Amount = float.Parse(txtAmount.Text);
-                insert_request.DateOfPayment = dtpDateOfPayment.Value;
+                insert_request.DateOfPayment = dtpDateOfPayment.Value.Date;
                 insert_request.Note = txtNote.Text;
                 if (_id.HasValue)
                 {
@@ -48,6 +49,7 @@ namespace eDrivingSchool.WinUI.Payment
                 else
                 {
                     await _apiService.Insert<Model.Payment>(insert_request);
+                    MessageBox.Show("Payment successfully added!");
                 }
             }
         }
@@ -55,54 +57,72 @@ namespace eDrivingSchool.WinUI.Payment
         private async void FrmAddPayment_Load(object sender, EventArgs e)
         {
 
-            await LoadKandidati();
+            await LoadCandidates();
             if (_id.HasValue)
             {
                 var payment = await _apiService.GetById<Model.Payment>(_id);
                 txtAmount.Text = payment.Amount.ToString();
-                txtCategory.Text = payment.Category;
+                //txtCategory.Text = payment.Category;
                 txtNote.Text = payment.Note;
             }
         }
-        private async Task LoadKandidati()
+        private async Task LoadCandidates()
         {
             if (_id.HasValue)
             {
                 var payment = await _apiService.GetById<Model.Payment>(_id);
-                var candidate = await _candidatesService.GetById<Model.Candidate>(payment.UserId);
-                candidate.candidate_category = candidate.FirstName + " " + candidate.LastName + " " + "(" + payment.Category + ")";
-                var candidates = await _candidatesService.GetAll<List<Model.Candidate>>(null);
-                foreach (var item in candidates)
+                //  var candidate = await _candidatesService.GetById<Model.Candidate>(payment.UserId);
+                //  candidate.candidate_category = candidate.FirstName + " " + candidate.LastName + " " + "(" + payment.Category + ")";
+                /*  var candidates = await _candidatesService.GetAll<List<Model.Candidate>>(null);
+                  foreach (var item in candidates)
+                  {
+                      item.candidate_category = item.FirstName + " " + item.LastName + " " + "(" + payment.Category + ")";
+                  }*/
+                search_request.Paid = false;
+                var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(payment.Instructor_Category_CandidateId);
+                var instructors_categories_candidates = await _instructors_categories_candidatesService.GetAll<List<Model.Instructor_Category_Candidate>>(search_request);
+                foreach (var item in instructors_categories_candidates)
                 {
-                    item.candidate_category = item.FirstName + " " + item.LastName + " " + "(" + payment.Category + ")";
+                    var instructor_category = await _instructors_categoriesService.GetById<Model.Instructor_Category>(item.Instructor_CategoryId);
+                    var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
+                    item.candidate_category = item.User.FirstName + " " + item.User.LastName + " " + "(" + category.Name + ")";
                 }
 
                 cmbCandidate.DisplayMember = "candidate_category";
                 cmbCandidate.ValueMember = "Id";
-                cmbCandidate.DataSource = candidates;
-                cmbCandidate.SelectedValue = candidate.Id;
+                cmbCandidate.DataSource = instructors_categories_candidates;
+                cmbCandidate.SelectedValue = instructor_category_candidate.Id;
 
             }
             else
             {
                 search_request.Paid = false;
                 var instructors_categories_candidates = await _instructors_categories_candidatesService.GetAll<List<Model.Instructor_Category_Candidate>>(search_request);
-                List<Model.Candidate> candidates = new List<Model.Candidate>();
-                candidates.Insert(0, new Model.Candidate());
+                //List<Model.Candidate> candidates = new List<Model.Candidate>();
+                // candidates.Insert(0, new Model.Candidate());
                 foreach (var instructor_category_candidate in instructors_categories_candidates)
                 {
-                    var candidate = await _candidatesService.GetById<Model.Candidate>(instructor_category_candidate.UserId);
+                    
+                  //  var candidate = await _candidatesService.GetById<Model.Candidate>(instructor_category_candidate.UserId);
                     var instructor_category = await _instructors_categoriesService.GetById<Model.Instructor_Category>(instructor_category_candidate.Instructor_CategoryId);
                     var category = await _categoriesService.GetById<Model.Category>(instructor_category.CategoryId);
-                    candidate.candidate_category = candidate.FirstName + " " + candidate.LastName + " " + "(" + category.Name + ")";
-                    candidates.Add(candidate);
+                    instructor_category_candidate.candidate_category = instructor_category_candidate.User.FirstName + " " + instructor_category_candidate.User.LastName + " " + "(" + category.Name + ")";
+                  //  candidate.candidate_category = candidate.FirstName + " " + candidate.LastName + " " + "(" + category.Name + ")";
+                  //  candidates.Add(candidate);
                 }
+                /*
                 cmbCandidate.DisplayMember = "candidate_category";
                 cmbCandidate.ValueMember = "Id";
-                cmbCandidate.DataSource = candidates;
+                cmbCandidate.DataSource = candidates;*/
+                instructors_categories_candidates.Insert(0, new Model.Instructor_Category_Candidate());
+
+                cmbCandidate.DisplayMember = "candidate_category";
+                cmbCandidate.ValueMember = "Id";
+                cmbCandidate.DataSource = instructors_categories_candidates;
             }
         }
 
+        /*
         private void TxtCategory_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtCategory.Text))
@@ -110,7 +130,7 @@ namespace eDrivingSchool.WinUI.Payment
                 e.Cancel = true;
                 errorProvider.SetError(txtCategory, Messages.Validation_Field_Required);
             }
-        }
+        }*/
 
         private void TxtAmount_Validating(object sender, CancelEventArgs e)
         {
