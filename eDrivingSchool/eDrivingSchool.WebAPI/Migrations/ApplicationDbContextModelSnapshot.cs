@@ -105,6 +105,10 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<float>("AverageFuelConsumption");
 
+                    b.Property<int>("CandidateId");
+
+                    b.Property<int>("CategoryId");
+
                     b.Property<string>("Damage");
 
                     b.Property<DateTime>("Date")
@@ -114,17 +118,13 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<float>("Mileage");
 
-                    b.Property<int>("UserId");
-
                     b.Property<int>("VehicleId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InstructorId");
-
-                    b.HasIndex("UserId");
-
                     b.HasIndex("VehicleId");
+
+                    b.HasIndex("InstructorId", "CategoryId", "CandidateId");
 
                     b.ToTable("DrivingLessons");
                 });
@@ -135,51 +135,49 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Active");
+
+                    b.Property<int>("CandidateId");
+
+                    b.Property<int>("CategoryId");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("date");
 
-                    b.Property<int>("Instructor_Category_CandidateId");
+                    b.Property<int>("InstructorId");
 
                     b.Property<bool>("Passed");
 
-                    b.Property<int>("Status");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("Instructor_Category_CandidateId");
+                    b.HasIndex("InstructorId", "CategoryId", "CandidateId");
 
                     b.ToTable("DrivingTestApplications");
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("InstructorId");
 
                     b.Property<int>("CategoryId");
 
-                    b.Property<int>("UserId");
-
-                    b.HasKey("Id");
+                    b.HasKey("InstructorId", "CategoryId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Instructors_Categories");
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int>("InstructorId");
+
+                    b.Property<int>("CategoryId");
+
+                    b.Property<int>("CandidateId");
 
                     b.Property<DateTime?>("Date")
                         .HasColumnType("date");
-
-                    b.Property<int>("Instructor_CategoryId");
 
                     b.Property<int>("NumberOfLessons");
 
@@ -193,13 +191,9 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<bool>("Prijavljen");
 
-                    b.Property<int>("UserId");
+                    b.HasKey("InstructorId", "CategoryId", "CandidateId");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("Instructor_CategoryId");
-
-                    b.HasIndex("UserId");
+                    b.HasIndex("CandidateId");
 
                     b.ToTable("Instructors_Categories_Candidates");
                 });
@@ -242,16 +236,20 @@ namespace eDrivingSchool.WebAPI.Migrations
 
                     b.Property<float>("Amount");
 
+                    b.Property<int>("CandidateId");
+
+                    b.Property<int>("CategoryId");
+
                     b.Property<DateTime>("DateOfPayment")
                         .HasColumnType("date");
 
-                    b.Property<int>("Instructor_Category_CandidateId");
+                    b.Property<int>("InstructorId");
 
                     b.Property<string>("Note");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Instructor_Category_CandidateId");
+                    b.HasIndex("InstructorId", "CategoryId", "CandidateId");
 
                     b.ToTable("Payments");
                 });
@@ -294,20 +292,24 @@ namespace eDrivingSchool.WebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Active");
+
+                    b.Property<int>("CandidateId");
+
+                    b.Property<int>("CategoryId");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("date");
 
                     b.Property<bool>("FirstAid");
 
-                    b.Property<int>("Instructor_Category_CandidateId");
-
-                    b.Property<int>("Status");
+                    b.Property<int>("InstructorId");
 
                     b.Property<bool>("TheoryTest");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Instructor_Category_CandidateId");
+                    b.HasIndex("InstructorId", "CategoryId", "CandidateId");
 
                     b.ToTable("TheoryTestApplications");
                 });
@@ -450,53 +452,48 @@ namespace eDrivingSchool.WebAPI.Migrations
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingLesson", b =>
                 {
-                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "Instructor")
-                        .WithMany()
-                        .HasForeignKey("InstructorId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("eDrivingSchool.WebAPI.Database.Vehicle", "Vehicle")
-                        .WithMany()
+                        .WithMany("DrivingLessons")
                         .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
+                        .WithMany("DrivingLessons")
+                        .HasForeignKey("InstructorId", "CategoryId", "CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.DrivingTestApplications", b =>
                 {
                     b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
-                        .WithMany()
-                        .HasForeignKey("Instructor_Category_CandidateId")
+                        .WithMany("DrivingTestApplications")
+                        .HasForeignKey("InstructorId", "CategoryId", "CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category", b =>
                 {
                     b.HasOne("eDrivingSchool.WebAPI.Database.Category", "Category")
-                        .WithMany()
+                        .WithMany("Instructor_Categories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "Instructor")
+                        .WithMany("Instructor_Categories")
+                        .HasForeignKey("InstructorId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", b =>
                 {
-                    b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category", "Instructor_Category")
-                        .WithMany()
-                        .HasForeignKey("Instructor_CategoryId")
+                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "Candidate")
+                        .WithMany("Instructor_Category_Candidates")
+                        .HasForeignKey("CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("eDrivingSchool.WebAPI.Database.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                    b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category", "Instructor_Category")
+                        .WithMany("Instructor_Category_Candidates")
+                        .HasForeignKey("InstructorId", "CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -511,16 +508,16 @@ namespace eDrivingSchool.WebAPI.Migrations
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.Payment", b =>
                 {
                     b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
-                        .WithMany()
-                        .HasForeignKey("Instructor_Category_CandidateId")
+                        .WithMany("Payments")
+                        .HasForeignKey("InstructorId", "CategoryId", "CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("eDrivingSchool.WebAPI.Database.TheoryTestApplications", b =>
                 {
                     b.HasOne("eDrivingSchool.WebAPI.Database.Instructor_Category_Candidate", "Instructor_Category_Candidate")
-                        .WithMany()
-                        .HasForeignKey("Instructor_Category_CandidateId")
+                        .WithMany("TheoryTestApplications")
+                        .HasForeignKey("InstructorId", "CategoryId", "CandidateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

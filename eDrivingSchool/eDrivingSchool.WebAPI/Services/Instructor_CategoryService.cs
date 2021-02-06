@@ -18,6 +18,7 @@ namespace eDrivingSchool.WebAPI.Services
             _mapper = mapper;
         }
 
+        /*
         public override List<Model.Instructor_Category> GetAll(InstructorCategorySearchRequest request)
         {
             var query = _context.Set<Database.Instructor_Category>().AsQueryable();
@@ -27,6 +28,20 @@ namespace eDrivingSchool.WebAPI.Services
             if (request != null && request.UserId != 0)
             {
                 query = query.Where(x => x.UserId == request.UserId);
+            }
+            var list = query.ToList();
+            return _mapper.Map<List<Model.Instructor_Category>>(list);
+        }*/
+
+        public override List<Model.Instructor_Category> GetAll(InstructorCategorySearchRequest request)
+        {
+            var query = _context.Set<Database.Instructor_Category>().AsQueryable();
+
+
+
+            if (request != null && request.InstructorId != 0)
+            {
+                query = query.Where(x => x.InstructorId == request.InstructorId);  // Returns all categories of specific instructor
             }
             var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category>>(list);

@@ -168,6 +168,7 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorCategoryCandidateAPIService.cs" />
     <Compile Include="Instructor\frmAddInstructor.cs">
       <SubType>Form</SubType>
     </Compile>

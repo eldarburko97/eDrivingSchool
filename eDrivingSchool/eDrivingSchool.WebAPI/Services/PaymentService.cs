@@ -19,18 +19,25 @@ namespace eDrivingSchool.WebAPI.Services
             _mapper = mapper;
         }
 
+        
+        
         public override List<Model.Payment> GetAll(PaymentSearchRequest request)
         {
             var query = _context.Payments.AsQueryable();
+            /*
             if (!string.IsNullOrEmpty(request.Category))
             {
-               // query = query.Where(x => x.Category == request.Category);
+                query = query.Where(x => x.Category == request.Category);
             }
-            /*    if(request != null && request.UserId != 0)
+                if(request != null && request.UserId != 0)
                 {
                     query = query.Where(w => w.UserId == request.UserId);
                 }*/
-            var list = query.Include(i => i.Instructor_Category_Candidate).ThenInclude(ii => ii.User).ToList();
+            if (request != null && request.CandidateId != 0)
+            {
+                query = query.Where(w => w.CandidateId == request.CandidateId);
+            }
+            var list = query.Include(i => i.Instructor_Category_Candidate).ThenInclude(ii => ii.Candidate).ToList();
             return _mapper.Map<List<Model.Payment>>(list);
         }
     }

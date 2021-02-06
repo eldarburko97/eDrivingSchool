@@ -18,5 +18,23 @@ namespace eDrivingSchool.WebAPI.Controllers
         {
 
         }
+
+        /*
+        [HttpGet]
+        public IActionResult Find()
+        {
+
+        }
+        [HttpGet]
+        [Route("{categoryId:int}")]
+        public IActionResult FindByCategoryId()
+        {
+
+        }
+        [HttpPost]
+        public IActionResult Post(int instructorId, List<int> categoryId)
+        {
+
+        }*/
     }
 }

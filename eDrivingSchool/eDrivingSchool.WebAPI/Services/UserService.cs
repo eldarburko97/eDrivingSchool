@@ -130,11 +130,10 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 entity.PasswordHash = GenerateHash(entity.PasswordSalt, request.Password);
             }
-
             _mapper.Map(request, entity);
-
+            _context.Users.Attach(entity);
+            _context.Users.Update(entity);
             _context.SaveChanges();
-
             return _mapper.Map<Model.User>(entity);
         }
         public static string GenerateSalt()

@@ -15,6 +15,6 @@ namespace eDrivingSchool.Model
         public int TechnicalInspectionId { get; set; }
         public byte[] Image { get; set; }
         public string RegistrationNumber { get; set; }
-        public string vehicle { get; set; } // Name + registration number
+        public string vehicle { get; set; } // Model + registration number
     }
 }

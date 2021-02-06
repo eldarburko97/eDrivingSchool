@@ -55,7 +55,7 @@
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+           // this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // dgvDrivingTestData
             // 
@@ -76,7 +76,7 @@
             this.dgvDrivingTestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDrivingTestData.Size = new System.Drawing.Size(1290, 362);
             this.dgvDrivingTestData.TabIndex = 4;
-            this.dgvDrivingTestData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvDrivingTestData_MouseDoubleClick);
+           // this.dgvDrivingTestData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvDrivingTestData_MouseDoubleClick);
             // 
             // Instructor_Category_CandidateId
             // 
@@ -131,7 +131,7 @@
             this.Controls.Add(this.txtSearch);
             this.Name = "frmDrivingTestData";
             this.Text = "frmDrivingTestData";
-            this.Load += new System.EventHandler(this.FrmDrivingTestData_Load);
+           // this.Load += new System.EventHandler(this.FrmDrivingTestData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivingTestData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

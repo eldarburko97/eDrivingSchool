@@ -29,6 +29,10 @@ namespace Mobile.Views
         {
             base.OnAppearing();
             await model.Init();
+            if(candidates.Count > 0)
+            {
+                candidates.Clear();
+            }
         }
 
         private void AwesomeCheckbox_IsCheckedChanged(object sender, TappedEventArgs e)

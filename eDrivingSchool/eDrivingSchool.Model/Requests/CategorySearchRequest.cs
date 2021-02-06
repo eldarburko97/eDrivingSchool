@@ -6,6 +6,7 @@ namespace eDrivingSchool.Model.Requests
 {
     public class CategorySearchRequest
     {
-        public string Type { get; set; }
+        // public string Type { get; set; }
+        public string Name { get; set; }
     }
 }

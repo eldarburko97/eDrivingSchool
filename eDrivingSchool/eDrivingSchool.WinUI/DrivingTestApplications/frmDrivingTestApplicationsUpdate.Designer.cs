@@ -41,6 +41,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.cmbStatuses = new System.Windows.Forms.ComboBox();
             this.txtDate = new System.Windows.Forms.TextBox();
+            this.checkBoxPolozenPrakticniTest = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBoxActive = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +61,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(35, 50);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(169, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(194, 22);
             this.txtFirstName.TabIndex = 3;
             // 
             // label2
@@ -74,7 +78,7 @@
             this.txtLastName.Location = new System.Drawing.Point(35, 117);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(169, 22);
+            this.txtLastName.Size = new System.Drawing.Size(194, 22);
             this.txtLastName.TabIndex = 5;
             // 
             // label6
@@ -89,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 341);
+            this.label3.Location = new System.Drawing.Point(471, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 14;
@@ -109,7 +113,7 @@
             this.txtUsername.Location = new System.Drawing.Point(35, 180);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(169, 22);
+            this.txtUsername.Size = new System.Drawing.Size(194, 22);
             this.txtUsername.TabIndex = 19;
             // 
             // label5
@@ -126,12 +130,12 @@
             this.txtCategory.Location = new System.Drawing.Point(36, 240);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.ReadOnly = true;
-            this.txtCategory.Size = new System.Drawing.Size(169, 22);
+            this.txtCategory.Size = new System.Drawing.Size(193, 22);
             this.txtCategory.TabIndex = 21;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(69, 420);
+            this.btnSave.Location = new System.Drawing.Point(64, 530);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 22;
@@ -143,7 +147,7 @@
             // 
             this.cmbStatuses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatuses.FormattingEnabled = true;
-            this.cmbStatuses.Location = new System.Drawing.Point(35, 361);
+            this.cmbStatuses.Location = new System.Drawing.Point(474, 314);
             this.cmbStatuses.Name = "cmbStatuses";
             this.cmbStatuses.Size = new System.Drawing.Size(170, 24);
             this.cmbStatuses.TabIndex = 24;
@@ -153,14 +157,54 @@
             this.txtDate.Location = new System.Drawing.Point(36, 298);
             this.txtDate.Name = "txtDate";
             this.txtDate.ReadOnly = true;
-            this.txtDate.Size = new System.Drawing.Size(169, 22);
+            this.txtDate.Size = new System.Drawing.Size(193, 22);
             this.txtDate.TabIndex = 25;
+            // 
+            // checkBoxPolozenPrakticniTest
+            // 
+            this.checkBoxPolozenPrakticniTest.AutoSize = true;
+            this.checkBoxPolozenPrakticniTest.Location = new System.Drawing.Point(211, 370);
+            this.checkBoxPolozenPrakticniTest.Name = "checkBoxPolozenPrakticniTest";
+            this.checkBoxPolozenPrakticniTest.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxPolozenPrakticniTest.TabIndex = 52;
+            this.checkBoxPolozenPrakticniTest.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(32, 370);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 17);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Polozen prakticni test";
+            // 
+            // checkBoxActive
+            // 
+            this.checkBoxActive.AutoSize = true;
+            this.checkBoxActive.Location = new System.Drawing.Point(210, 432);
+            this.checkBoxActive.Name = "checkBoxActive";
+            this.checkBoxActive.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxActive.TabIndex = 54;
+            this.checkBoxActive.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(33, 432);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "Active";
             // 
             // frmDrivingTestApplicationsUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 536);
+            this.ClientSize = new System.Drawing.Size(786, 646);
+            this.Controls.Add(this.checkBoxActive);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.checkBoxPolozenPrakticniTest);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtDate);
             this.Controls.Add(this.cmbStatuses);
             this.Controls.Add(this.btnSave);
@@ -197,5 +241,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cmbStatuses;
         private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.CheckBox checkBoxPolozenPrakticniTest;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBoxActive;
+        private System.Windows.Forms.Label label8;
     }
 }

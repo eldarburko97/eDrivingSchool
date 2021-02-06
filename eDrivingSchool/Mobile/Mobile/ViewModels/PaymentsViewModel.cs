@@ -14,6 +14,7 @@ namespace Mobile.ViewModels
         public CandidateSearchRequest search_request = new CandidateSearchRequest();
         private readonly APIService _candidateService = new APIService("Candidates");
         public PaymentSearchRequest search_request2 = new PaymentSearchRequest();
+        private readonly APIService categoryService = new APIService("Categories");
 
         public ObservableCollection<Payment> PaymentsList { get; set; } = new ObservableCollection<Payment>();
 
@@ -35,10 +36,12 @@ namespace Mobile.ViewModels
             search_request.Username = APIService.Username;
             var candidates = await _candidateService.GetAll<List<Candidate>>(search_request);
             var candidate = candidates[0];
-            search_request2.UserId = candidate.Id;
+            search_request2.CandidateId = candidate.Id;
             var payments = await _paymentService.GetAll<List<Payment>>(search_request2);
             foreach (var payment in payments)
             {
+                var category = await categoryService.GetById<Category>(payment.CategoryId);
+                payment.Category = category.Name;
                 PaymentsList.Add(payment);
                 Total += payment.Amount;
             }

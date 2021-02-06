@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace eDrivingSchool.WinUI.DrivingTest
 {
     public partial class frmDrivingTestUpdate : Form
-    {
+    {/*
         APIService _instructors_categories_candidatesService = new APIService("Instructors_Categories_Candidates");
         APIService _candidatesService = new APIService("Candidates");
         APIService _instructors_categoriesService = new APIService("Instructors_Categories");
@@ -74,5 +74,5 @@ namespace eDrivingSchool.WinUI.DrivingTest
                 await _driving_test_applicationsService.Update<Model.DrivingTestApplications>(item.Id, update_request2);
             }
         }
-    }
+    */}
 }

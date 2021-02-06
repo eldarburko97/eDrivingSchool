@@ -15,6 +15,9 @@ namespace Mobile.Views
         public NewTopicPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasBackButton(this, true);
         }
+
+       
     }
 }

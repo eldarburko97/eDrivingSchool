@@ -37,5 +37,8 @@ namespace eDrivingSchool.WebAPI.Database
         public DateTime DateOfHiring { get; set; }
         public int RoleId { get; set; }
         public Role Role { get; set; }
+
+        public ICollection<Instructor_Category> Instructor_Categories { get; set; }
+        public ICollection<Instructor_Category_Candidate> Instructor_Category_Candidates { get; set; }
     }
 }

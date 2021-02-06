@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eDrivingSchool.Model.Requests;
 using eDrivingSchool.WebAPI.Database;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace eDrivingSchool.WebAPI.Services
             {
                 query = query.Where(x => x.Name.Contains(request.Name));
             }*/
-            var list = query.ToList();
+            var list = query.Include(i => i.Model).ToList();
             var vehicles = _mapper.Map<List<Model.Vehicle>>(list);
          /*   foreach (var vehicle in vehicles)
             {

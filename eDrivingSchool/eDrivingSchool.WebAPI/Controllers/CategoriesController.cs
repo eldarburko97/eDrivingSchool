@@ -15,9 +15,9 @@ namespace eDrivingSchool.WebAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class CategoriesController : BaseCRUDController<Model.Category, object, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>
+    public class CategoriesController : BaseCRUDController<Model.Category, CategorySearchRequest, Model.Requests.CategoryInsertRequest, Model.Requests.CategoryInsertRequest>
     {
-        public CategoriesController(ICRUDService<Category, object, CategoryInsertRequest, CategoryInsertRequest> repository, IMapper mapper) : base(repository, mapper)
+        public CategoriesController(ICRUDService<Category, CategorySearchRequest, CategoryInsertRequest, CategoryInsertRequest> repository, IMapper mapper) : base(repository, mapper)
         {
         }
     }

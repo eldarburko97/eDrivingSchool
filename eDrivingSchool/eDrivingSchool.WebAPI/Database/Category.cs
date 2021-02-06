@@ -9,5 +9,6 @@ namespace eDrivingSchool.WebAPI.Database
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public ICollection<Instructor_Category> Instructor_Categories { get; set; }
     }
 }

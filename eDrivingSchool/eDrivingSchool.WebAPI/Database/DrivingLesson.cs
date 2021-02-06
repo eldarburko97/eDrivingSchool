@@ -9,21 +9,27 @@ namespace eDrivingSchool.WebAPI.Database
 {
     public class DrivingLesson
     {
-        [Key]
+      //  [Key]
         public int Id { get; set; }
-        public int UserId { get; set; }
-        [ForeignKey("UserId")]
-        public User User { get; set; }   // Candidate
-        public int VehicleId { get; set; }
-        [ForeignKey("VehicleId")]
-        public Vehicle Vehicle { get; set; }
+       // public int UserId { get; set; }
+       // [ForeignKey("UserId")]
+      //  public User User { get; set; }   // Candidate
+       // public int VehicleId { get; set; }
+      //  [ForeignKey("VehicleId")]
+      //  public Vehicle Vehicle { get; set; }
         public float Mileage { get; set; }   // Number of kilometers traveled on driving lesson
         public float AverageFuelConsumption { get; set; }
         public string Damage { get; set; }
         [Column(TypeName = "date")]
         public DateTime Date { get; set; }
-        [ForeignKey("Instructor")]
+        //  [ForeignKey("Instructor")]
+        //  public int InstructorId { get; set; }
+        // public User Instructor { get; set; }
+        public int CandidateId { get; set; }
         public int InstructorId { get; set; }
-        public User Instructor { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
+        public int VehicleId { get; set; }
+        public Vehicle Vehicle { get; set; }
     }
 }

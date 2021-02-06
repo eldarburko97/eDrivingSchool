@@ -9,16 +9,16 @@ namespace eDrivingSchool.WebAPI.Database
 {
     public class Instructor_Category_Candidate  //This class represents relation between  Instructor_Category and Candidate (User table with RoleId == 3)
     {
-        [Key]
-        public int Id { get; set; }
+        public int InstructorId { get; set; }       
+        public int CategoryId { get; set; }
+        public int CandidateId { get; set; }        
+        public virtual Instructor_Category Instructor_Category { get; set; }
+        public virtual User Candidate { get; set; }
+        public ICollection<DrivingTestApplications> DrivingTestApplications { get; set; }
+        public ICollection<TheoryTestApplications> TheoryTestApplications { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+        public ICollection<DrivingLesson> DrivingLessons { get; set; }
 
-        public int Instructor_CategoryId { get; set; }
-        [ForeignKey("Instructor_CategoryId")]
-        public Instructor_Category Instructor_Category { get; set; }
-
-        public int UserId { get; set; }
-        [ForeignKey("UserId")]
-        public User User { get; set; }                // Candidate
         public bool PolozenTeorijskiTest { get; set; }
         public bool PolozenTestPrvePomoci { get; set; }
         public bool PolozenPrakticniTest { get; set; }

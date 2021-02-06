@@ -69,7 +69,7 @@
             this.btnSave.TabIndex = 53;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+           // this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // checkBoxPolozenPrakticniTest
             // 
@@ -177,7 +177,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDrivingTestUpdate";
             this.Text = "frmDrivingTestUpdate";
-            this.Load += new System.EventHandler(this.FrmDrivingTestUpdate_Load);
+           // this.Load += new System.EventHandler(this.FrmDrivingTestUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

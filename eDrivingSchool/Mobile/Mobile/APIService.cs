@@ -50,6 +50,7 @@ namespace Mobile
         public async Task<T> GetById<T>(object id)
         {
             var url = $"{_apiUrl}/{_route}/{id}";
+
             return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
         }
         public async Task<T> GetByUsername<T>(object username)

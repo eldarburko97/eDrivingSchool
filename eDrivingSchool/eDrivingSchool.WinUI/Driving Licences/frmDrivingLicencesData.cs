@@ -52,6 +52,7 @@ namespace eDrivingSchool.WinUI.Driving_Licences
 
         private async void BtnSearch_Click(object sender, EventArgs e)
         {
+            /*
             bool validValue;
             DateTime validValue2;
             InstructorCategoryCandidateSearchRequest search_request = new InstructorCategoryCandidateSearchRequest
@@ -82,7 +83,7 @@ namespace eDrivingSchool.WinUI.Driving_Licences
                 item.Duzan = (item.NumberOfLessons * 20) - item.Uplatio;
             }
             dgvDrivingLicencesData.AutoGenerateColumns = false;
-            dgvDrivingLicencesData.DataSource = result;
+            dgvDrivingLicencesData.DataSource = result;*/
         }
     }
 }

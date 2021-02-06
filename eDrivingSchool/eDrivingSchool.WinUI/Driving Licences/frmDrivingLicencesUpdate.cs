@@ -26,6 +26,7 @@ namespace eDrivingSchool.WinUI.Driving_Licences
 
         private async void FrmDrivingLicencesUpdate_Load(object sender, EventArgs e)
         {
+            /*
             if (_id.HasValue)
             {
                 var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(_id);
@@ -40,11 +41,12 @@ namespace eDrivingSchool.WinUI.Driving_Licences
                 txtNumberOfLessons.Text = instructor_category_candidate.NumberOfLessons.ToString();
                 checkBoxPaid.Checked = instructor_category_candidate.Paid;
                 dtpDate.Value = instructor_category_candidate.Date == null ? DateTime.Now.Date : instructor_category_candidate.Date.Value.Date;
-            }
+            }*/
         }
 
         private async void BtnSave_Click(object sender, EventArgs e)
         {
+            /*
             var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(_id);
             InstructorCategoryCandidateInsertRequest update_request = new InstructorCategoryCandidateInsertRequest
             {
@@ -58,7 +60,7 @@ namespace eDrivingSchool.WinUI.Driving_Licences
                 Paid = checkBoxPaid.Checked,
                 Date = dtpDate.Value.Date,
             };
-            var updated = await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);
+            var updated = await _instructors_categories_candidatesService.Update<Model.Instructor_Category_Candidate>(_id, update_request);*/
         }
     }
 }

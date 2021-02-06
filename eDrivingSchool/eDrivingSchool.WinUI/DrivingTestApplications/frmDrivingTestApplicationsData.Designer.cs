@@ -37,7 +37,9 @@
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Passed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Active = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBoxActive = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivingTestApplicationsData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +72,8 @@
             this.Username,
             this.Category,
             this.Date,
-            this.Status});
+            this.Passed,
+            this.Active});
             this.dgvDrivingTestApplicationsData.Location = new System.Drawing.Point(23, 76);
             this.dgvDrivingTestApplicationsData.Name = "dgvDrivingTestApplicationsData";
             this.dgvDrivingTestApplicationsData.ReadOnly = true;
@@ -123,18 +126,36 @@
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             // 
-            // Status
+            // Passed
             // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.Passed.DataPropertyName = "Passed";
+            this.Passed.HeaderText = "Passed";
+            this.Passed.Name = "Passed";
+            this.Passed.ReadOnly = true;
+            // 
+            // Active
+            // 
+            this.Active.DataPropertyName = "Active";
+            this.Active.HeaderText = "Active";
+            this.Active.Name = "Active";
+            this.Active.ReadOnly = true;
+            // 
+            // checkBoxActive
+            // 
+            this.checkBoxActive.AutoSize = true;
+            this.checkBoxActive.Location = new System.Drawing.Point(435, 31);
+            this.checkBoxActive.Name = "checkBoxActive";
+            this.checkBoxActive.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxActive.TabIndex = 5;
+            this.checkBoxActive.Text = "Active";
+            this.checkBoxActive.UseVisualStyleBackColor = true;
             // 
             // frmDrivingTestApplicationsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 450);
+            this.Controls.Add(this.checkBoxActive);
             this.Controls.Add(this.dgvDrivingTestApplicationsData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -158,6 +179,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Passed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Active;
+        private System.Windows.Forms.CheckBox checkBoxActive;
     }
 }

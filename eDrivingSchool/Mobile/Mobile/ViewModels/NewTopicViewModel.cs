@@ -75,7 +75,8 @@ namespace Mobile.ViewModels
                 _commentRequest.Message = Message;
                 await _commentService.Insert<Comment>(_commentRequest);
                 await Application.Current.MainPage.DisplayAlert("", "You have successfully posted new topic", "OK");
-                Application.Current.MainPage = new ForumPage();
+                //  Application.Current.MainPage = new ForumPage(); 
+                //await Application.Current.MainPage.Navigation.PopAsync();
             }
             catch (Exception ex)
             {

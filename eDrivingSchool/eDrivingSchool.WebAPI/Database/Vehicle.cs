@@ -21,5 +21,6 @@ namespace eDrivingSchool.WebAPI.Database
         public TechnicalInspection TechnicalInspection { get; set; }
         public byte[] Image { get; set; }
         public string RegistrationNumber { get; set; }
+        public ICollection<DrivingLesson> DrivingLessons { get; set; }
     }
 }

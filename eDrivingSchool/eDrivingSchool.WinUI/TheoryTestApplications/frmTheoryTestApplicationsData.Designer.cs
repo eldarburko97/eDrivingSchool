@@ -31,13 +31,16 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dgvTheoryTestApplicationsData = new System.Windows.Forms.DataGridView();
+            this.checkBoxActive = new System.Windows.Forms.CheckBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TheoryTest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstAid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Active = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheoryTestApplicationsData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,16 +72,28 @@
             this.LastName,
             this.Username,
             this.Category,
+            this.TheoryTest,
+            this.FirstAid,
             this.Date,
-            this.Status});
+            this.Active});
             this.dgvTheoryTestApplicationsData.Location = new System.Drawing.Point(12, 64);
             this.dgvTheoryTestApplicationsData.Name = "dgvTheoryTestApplicationsData";
             this.dgvTheoryTestApplicationsData.ReadOnly = true;
             this.dgvTheoryTestApplicationsData.RowTemplate.Height = 24;
             this.dgvTheoryTestApplicationsData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTheoryTestApplicationsData.Size = new System.Drawing.Size(837, 362);
+            this.dgvTheoryTestApplicationsData.Size = new System.Drawing.Size(1100, 362);
             this.dgvTheoryTestApplicationsData.TabIndex = 3;
             this.dgvTheoryTestApplicationsData.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DgvTheoryTestApplicationsData_MouseDoubleClick);
+            // 
+            // checkBoxActive
+            // 
+            this.checkBoxActive.AutoSize = true;
+            this.checkBoxActive.Location = new System.Drawing.Point(441, 12);
+            this.checkBoxActive.Name = "checkBoxActive";
+            this.checkBoxActive.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxActive.TabIndex = 4;
+            this.checkBoxActive.Text = "Active";
+            this.checkBoxActive.UseVisualStyleBackColor = true;
             // 
             // Id
             // 
@@ -116,6 +131,20 @@
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
             // 
+            // TheoryTest
+            // 
+            this.TheoryTest.DataPropertyName = "TheoryTest";
+            this.TheoryTest.HeaderText = "TheoryTest";
+            this.TheoryTest.Name = "TheoryTest";
+            this.TheoryTest.ReadOnly = true;
+            // 
+            // FirstAid
+            // 
+            this.FirstAid.DataPropertyName = "FirstAid";
+            this.FirstAid.HeaderText = "First aid";
+            this.FirstAid.Name = "FirstAid";
+            this.FirstAid.ReadOnly = true;
+            // 
             // Date
             // 
             this.Date.DataPropertyName = "Date";
@@ -123,18 +152,19 @@
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             // 
-            // Status
+            // Active
             // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.Active.DataPropertyName = "Active";
+            this.Active.HeaderText = "Active";
+            this.Active.Name = "Active";
+            this.Active.ReadOnly = true;
             // 
             // frmTheoryTestApplicationsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 450);
+            this.ClientSize = new System.Drawing.Size(1118, 450);
+            this.Controls.Add(this.checkBoxActive);
             this.Controls.Add(this.dgvTheoryTestApplicationsData);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -152,12 +182,15 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvTheoryTestApplicationsData;
+        private System.Windows.Forms.CheckBox checkBoxActive;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TheoryTest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstAid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Active;
     }
 }

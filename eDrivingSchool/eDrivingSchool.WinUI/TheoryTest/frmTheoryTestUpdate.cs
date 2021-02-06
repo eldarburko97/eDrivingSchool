@@ -27,6 +27,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
 
         private async void FrmTheoryTestUpdate_Load(object sender, EventArgs e)
         {
+            /*
             if (_id.HasValue)
             {
                 var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(_id);
@@ -41,12 +42,12 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 checkBoxPolozenTeorijskiIspit.Checked = instructor_category_candidate.PolozenTeorijskiTest;
                 checkBoxPolozenTestPrvePomoci.Checked = instructor_category_candidate.PolozenTestPrvePomoci;
                 checkBoxPrijavljen.Checked = instructor_category_candidate.Prijavljen;
-            }
+            }*/
 
         }
 
         private async void BtnSave_Click(object sender, EventArgs e)
-        {
+        {/*
             var instructor_category_candidate = await _instructors_categories_candidatesService.GetById<Model.Instructor_Category_Candidate>(_id);
             InstructorCategoryCandidateInsertRequest update_request = new InstructorCategoryCandidateInsertRequest
             {
@@ -75,7 +76,7 @@ namespace eDrivingSchool.WinUI.TheoryTest
                 update_request2.TheoryTest = !updated.PolozenTeorijskiTest;
                 update_request2.Status = Model.Status.Expired;
                 await _theory_test_applicationsService.Update<Model.TheoryTestApplications>(item.Id, update_request2);
-            }
+            }*/
         }
     }
 }

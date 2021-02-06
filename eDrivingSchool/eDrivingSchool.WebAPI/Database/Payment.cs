@@ -13,7 +13,11 @@ namespace eDrivingSchool.WebAPI.Database
         public string Note { get; set; }
         [Column(TypeName = "date")]
         public DateTime DateOfPayment { get; set; }
-        public int Instructor_Category_CandidateId { get; set; }
-        public Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
+
+        public int CandidateId { get; set; }
+        public int InstructorId { get; set; }
+        public int CategoryId { get; set; }
+
+        public virtual Instructor_Category_Candidate Instructor_Category_Candidate { get; set; }
     }
 }

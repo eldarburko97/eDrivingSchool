@@ -20,5 +20,9 @@ namespace eDrivingSchool.Model
         public string DateOfHiring { get; set; }
         public int RoleId { get; set; }
         public byte[] Image { get; set; }
+        public string FullName
+        {
+            get { return FirstName + " " + LastName; }
+        }
     }
 }

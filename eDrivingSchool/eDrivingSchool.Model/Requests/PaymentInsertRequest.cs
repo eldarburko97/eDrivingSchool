@@ -9,7 +9,10 @@ namespace eDrivingSchool.Model.Requests
     {
 
         //   public int UserId { get; set; }
-        public int Instructor_Category_CandidateId { get; set; }
+        //    public int Instructor_Category_CandidateId { get; set; }
+        public int InstructorId { get; set; }
+        public int CategoryId { get; set; }
+        public int CandidateId { get; set; }
         [Required(AllowEmptyStrings = false)]
         public float Amount { get; set; }
         [Required]

@@ -18,7 +18,11 @@ namespace eDrivingSchool.Model
         public string Username { get; set; }
         public byte[] Image { get; set; }
         public bool isChecked { get; set; }
-        public string candidate { get; set; }   // First_name + last_name
+        public string candidate   // First_name + last_name
+        {
+            get { return FirstName + " " + LastName; }
+        }
+        public string category { get; set; }
         public string candidate_category { get; set; } // Candidate + category
     }
 }

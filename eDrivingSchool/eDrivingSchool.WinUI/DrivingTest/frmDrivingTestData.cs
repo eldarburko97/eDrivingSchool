@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace eDrivingSchool.WinUI.DrivingTest
 {
     public partial class frmDrivingTestData : Form
-    {
+    {/*
         private APIService _driving_test_applicationsService = new APIService("DrivingTestApplications");
         private APIService _instructors_categories_candidatesService = new APIService("Instructors_Categories_Candidates");
         private APIService _candidatesService = new APIService("Candidates");
@@ -90,5 +90,5 @@ namespace eDrivingSchool.WinUI.DrivingTest
             frmDrivingTestUpdate frm = new frmDrivingTestUpdate(int.Parse(id.ToString()));
             frm.Show();
         }
-    }
+   */ }
 }

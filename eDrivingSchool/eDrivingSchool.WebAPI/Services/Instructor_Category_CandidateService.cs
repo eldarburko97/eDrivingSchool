@@ -19,9 +19,11 @@ namespace eDrivingSchool.WebAPI.Services
             _mapper = mapper;
         }
 
+
         public override List<Model.Instructor_Category_Candidate> GetAll(InstructorCategoryCandidateSearchRequest request)
         {
             var query = _context.Set<Database.Instructor_Category_Candidate>().AsQueryable();
+            /*
 
             if (request != null && request.Instructor_CategoryId != 0 && request.UserId != 0 && (request.PolozenTeorijskiTest == false || request.PolozenTestPrvePomoci == false) && request.Prijavljen == false)    // Selects list of checked candidates of logged in instructor and instructor's category
             {
@@ -52,7 +54,18 @@ namespace eDrivingSchool.WebAPI.Services
                 query = query.Where(p => p.Paid == request.Paid).Include(i => i.User);
             }
             var list = query.ToList();
+            return _mapper.Map<List<Model.Instructor_Category_Candidate>>(list);*/
+
+            
+
+          
+
+            var list = query.ToList();
             return _mapper.Map<List<Model.Instructor_Category_Candidate>>(list);
+
         }
+
+
+
     }
 }
