@@ -13,10 +13,13 @@ namespace eDrivingSchool.Model.Requests
         public string Address { get; set; }
         public DateTime Birthdate { get; set; }
         public string JMBG { get; set; }
-        public int RoleId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string PasswordConfirm { get; set; }
         public int DrivingSchoolId { get; set; }
+        public byte[] Image { get; set; }
+        public string Salary { get; set; }
+        public DateTime DateOfHiring { get; set; }
+        public int RoleId { get; set; }
     }
 }

@@ -14,55 +14,53 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-        <Grid Padding="10" VerticalOptions="CenterAndExpand">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+            <Grid Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image HeightRequest="100" WidthRequest="100" Grid.Row="0" Grid.Column="0" Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
+                <Button Grid.Row="1" Grid.Column="0" Text="Change profile picture" BackgroundColor="DodgerBlue" TextColor="White" Clicked="Button_Clicked"></Button>
+                <StackLayout Grid.Column="1"   HorizontalOptions="CenterAndExpand">
+                    <Label FontSize="Medium">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Username: "/>
+                                <Span Text="{Binding Username}"></Span>
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
 
-                <Image Grid.Column="0" Source="{Binding Image, Converter={StaticResource imgConv}}"></Image>
+                                <Span Text="First name: "/>
+                                <Span Text="{Binding FirstName}" ></Span>
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
 
-            <Label Grid.Column="1" FontSize="Medium">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Username: "/>
-                            <Span Text="{Binding Username}"></Span>
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-                        <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="Last name: "/>
+                                <Span Text="{Binding LastName}" ></Span>
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
 
-                        <Span Text="First name: "/>
-                        <Span Text="{Binding FirstName}" ></Span>
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-                        <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="Address: "/>
+                                <Span Text="{Binding Address}" ></Span>
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
 
-                        <Span Text="Last name: "/>
-                            <Span Text="{Binding LastName}" ></Span>
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-                        <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="JMBG: "/>
+                                <Span Text="{Binding JMBG}" ></Span>
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
 
-                        <Span Text="Address: "/>
-                            <Span Text="{Binding Address}" ></Span>
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-
-                        <Span Text="JMBG: "/>
-                            <Span Text="{Binding JMBG}" ></Span>
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-                        <Span Text="{x:Static x:Environment.NewLine}" />
-
-                        <Span Text="Birthdate: "/>
-                            <Span Text="{Binding Birthdate}" ></Span>
-
-
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-           
-        </Grid>
-           
+                                <Span Text="Birthdate: "/>
+                                <Span Text="{Binding Birthdate}" ></Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Grid>
         </StackLayout>
-
-     
-
     </ContentPage.Content>
 </ContentPage>
